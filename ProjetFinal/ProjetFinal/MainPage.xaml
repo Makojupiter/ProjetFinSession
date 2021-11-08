@@ -10,5 +10,33 @@
 
     <Grid>
 
+        <NavigationView Name="nvMenue"
+                        IsSettingsVisible="False">
+            <NavigationView.MenuItems>
+                <ListViewHeaderItem Content="Materiel"/>
+                <NavigationViewItem Icon="Add" Content="Ajouter"/>
+                <NavigationViewItem Icon="View" Content="Visualiser"/>
+                <NavigationViewItemSeparator/>
+                <ListViewHeaderItem Content="Utilisateurs"/>
+                <NavigationViewItem Icon="Add" Content="Ajouter"/>
+                <NavigationViewItem Icon="View" Content="Visualiser"/>
+                <NavigationViewItemSeparator/>
+                <ListViewHeaderItem Content="Prets"/>
+                <NavigationViewItem Icon="Add" Content="Ajouter"/>
+                <NavigationViewItem Icon="View" Content="Visualiser"/>
+                <NavigationViewItemSeparator/>
+                <ListViewHeaderItem Content="Clients"/>
+                <NavigationViewItem Icon="Add" Content="Ajouter"/>
+                <NavigationViewItem Icon="View" Content="Visualiser"/>
+            </NavigationView.MenuItems>
+            <NavigationView.AutoSuggestBox>
+                <AutoSuggestBox QueryIcon="Find"/>
+            </NavigationView.AutoSuggestBox>
+
+            <NavigationView.PaneFooter>
+                <NavigationViewItem x:Name="connexion" Icon="Contact" Content="Compte"/>
+            </NavigationView.PaneFooter>
+        </NavigationView>
+
     </Grid>
 </Page>

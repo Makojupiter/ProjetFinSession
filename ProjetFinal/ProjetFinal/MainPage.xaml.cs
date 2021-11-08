@@ -25,6 +25,9 @@ namespace ProjetFinal
         public MainPage()
         {
             this.InitializeComponent();
+            //connexion.Icon = new SymbolIcon(Symbol.LeaveChat);
+            //connexion.Content = "test";
+            //connexion.Foreground = new SolidColorBrush(Color."red")
         }
     }
 }
