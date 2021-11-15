@@ -12,6 +12,7 @@
 
 
         <TextBlock Text="PAGE Visualier Materiels"
+                   Foreground="Green"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    FontSize="40"/>
