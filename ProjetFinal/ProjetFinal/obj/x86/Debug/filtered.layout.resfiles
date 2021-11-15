@@ -14,8 +14,8 @@ App.xbf
 MainPage.xbf
 PageConnexion.xbf
 ProjetFinal.xr.xml
-ViewMateriel.xbf
 VisualiserClient.xbf
+VisualiserMateriel.xbf
 VisualiserPret.xbf
 VisualiserUsager.xbf
 Properties\Default.rd.xml

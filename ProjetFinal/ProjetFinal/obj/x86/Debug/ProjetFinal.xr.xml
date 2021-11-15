@@ -78,8 +78,8 @@
       <RootProperty Name="Header" />
     </RootType>
     <RootType FullName="ProjetFinal.PageConnexion" />
-    <RootType FullName="ProjetFinal.ViewMateriel" />
     <RootType FullName="ProjetFinal.VisualiserClient" />
+    <RootType FullName="ProjetFinal.VisualiserMateriel" />
     <RootType FullName="ProjetFinal.VisualiserPret" />
     <RootType FullName="ProjetFinal.VisualiserUsager" />
   </Roots.RootTypes>

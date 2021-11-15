@@ -138,11 +138,11 @@
       <DependentUpon>PageConnexion.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewMateriel.xaml.cs">
-      <DependentUpon>ViewMateriel.xaml</DependentUpon>
-    </Compile>
     <Compile Include="VisualiserClient.xaml.cs">
       <DependentUpon>VisualiserClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisualiserMateriel.xaml.cs">
+      <DependentUpon>VisualiserMateriel.xaml</DependentUpon>
     </Compile>
     <Compile Include="VisualiserPret.xaml.cs">
       <DependentUpon>VisualiserPret.xaml</DependentUpon>
@@ -195,11 +195,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ViewMateriel.xaml">
+    <Page Include="VisualiserClient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VisualiserClient.xaml">
+    <Page Include="VisualiserMateriel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

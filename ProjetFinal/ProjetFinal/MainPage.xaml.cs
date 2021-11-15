@@ -43,7 +43,7 @@ namespace ProjetFinal
                     mainFrame.Navigate(typeof(AjoutMateriel));
                     break;
                 case "ViewMateriel":
-                    mainFrame.Navigate(typeof(ViewMateriel));
+                    mainFrame.Navigate(typeof(VisualiserMateriel));
                     break;
                 case "AddUser":
                     mainFrame.Navigate(typeof(AjouterUsager));
