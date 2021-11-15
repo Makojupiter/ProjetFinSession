@@ -11,32 +11,41 @@
     <Grid>
 
         <NavigationView Name="nvMenue"
-                        IsSettingsVisible="False">
+                        IsSettingsVisible="False"
+                        SelectionChanged="nvMenue_SelectionChanged"
+                        PaneDisplayMode="Auto">
             <NavigationView.MenuItems>
                 <ListViewHeaderItem Content="Materiel"/>
-                <NavigationViewItem Icon="Add" Content="Ajouter"/>
-                <NavigationViewItem Icon="View" Content="Visualiser"/>
+                <NavigationViewItem Icon="Add" Content="Ajouter" x:Name="AddMateriel"/>
+                <NavigationViewItem Icon="View" Content="Visualiser" x:Name="ViewMateriel"/>
                 <NavigationViewItemSeparator/>
                 <ListViewHeaderItem Content="Utilisateurs"/>
-                <NavigationViewItem Icon="Add" Content="Ajouter"/>
-                <NavigationViewItem Icon="View" Content="Visualiser"/>
+                <NavigationViewItem Icon="Add" Content="Ajouter" x:Name="AddUser"/>
+                <NavigationViewItem Icon="View" Content="Visualiser" x:Name="ViewUsers"/>
                 <NavigationViewItemSeparator/>
                 <ListViewHeaderItem Content="Prets"/>
-                <NavigationViewItem Icon="Add" Content="Ajouter"/>
-                <NavigationViewItem Icon="View" Content="Visualiser"/>
+                <NavigationViewItem Icon="Add" Content="Ajouter" x:Name="AddPret"/>
+                <NavigationViewItem Icon="View" Content="Visualiser" x:Name="ViewPrets"/>
                 <NavigationViewItemSeparator/>
                 <ListViewHeaderItem Content="Clients"/>
-                <NavigationViewItem Icon="Add" Content="Ajouter"/>
-                <NavigationViewItem Icon="View" Content="Visualiser"/>
+                <NavigationViewItem Icon="Add" Content="Ajouter" x:Name="AddClient"/>
+                <NavigationViewItem Icon="View" Content="Visualiser" x:Name="ViewClients"/>
             </NavigationView.MenuItems>
             <NavigationView.AutoSuggestBox>
-                <AutoSuggestBox QueryIcon="Find"/>
+                <AutoSuggestBox QueryIcon="Find" x:Name="SearchBar"/>
             </NavigationView.AutoSuggestBox>
 
             <NavigationView.PaneFooter>
                 <NavigationViewItem x:Name="connexion" Icon="Contact" Content="Compte"/>
             </NavigationView.PaneFooter>
+
+            <Frame x:Name="mainFrame"/>
         </NavigationView>
 
+        
+        
+
+        
+        
     </Grid>
 </Page>

@@ -28,6 +28,45 @@ namespace ProjetFinal
             //connexion.Icon = new SymbolIcon(Symbol.LeaveChat);
             //connexion.Content = "test";
             //connexion.Foreground = new SolidColorBrush(Color."red")
+
+            mainFrame.Navigate(typeof(PageConnexion));
+        }
+
+        private void nvMenue_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        {
+
+            var item = (NavigationViewItem)args.SelectedItem;
+
+            switch (item.Name)
+            {
+                case "AddMateriel":
+                    mainFrame.Navigate(typeof(AjoutMateriel));
+                    break;
+                case "ViewMateriel":
+                    mainFrame.Navigate(typeof(ViewMateriel));
+                    break;
+                case "AddUser":
+                    mainFrame.Navigate(typeof(AjouterUsager));
+                    break;
+                case "ViewUsers":
+                    mainFrame.Navigate(typeof(VisualiserUsager));
+                    break;
+                case "AddPret":
+                    mainFrame.Navigate(typeof(AjouterPret));
+                    break;
+                case "ViewPrets":
+                    mainFrame.Navigate(typeof(VisualiserPret));
+                    break;
+                case "AddClient":
+                    mainFrame.Navigate(typeof(AjoutClient));
+                    break;
+                case "ViewClients":
+                    mainFrame.Navigate(typeof(VisualiserClient));
+                    break;
+                default:
+                    break;
+            }
+
         }
     }
 }

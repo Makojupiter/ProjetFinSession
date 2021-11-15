@@ -116,13 +116,40 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AjoutClient.xaml.cs">
+      <DependentUpon>AjoutClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AjouterPret.xaml.cs">
+      <DependentUpon>AjouterPret.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AjouterUsager.xaml.cs">
+      <DependentUpon>AjouterUsager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AjoutMateriel.xaml.cs">
+      <DependentUpon>AjoutMateriel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageConnexion.xaml.cs">
+      <DependentUpon>PageConnexion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewMateriel.xaml.cs">
+      <DependentUpon>ViewMateriel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisualiserClient.xaml.cs">
+      <DependentUpon>VisualiserClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisualiserPret.xaml.cs">
+      <DependentUpon>VisualiserPret.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisualiserUsager.xaml.cs">
+      <DependentUpon>VisualiserUsager.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -144,9 +171,45 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AjoutClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AjouterPret.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AjouterUsager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AjoutMateriel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageConnexion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewMateriel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisualiserClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisualiserPret.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisualiserUsager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
