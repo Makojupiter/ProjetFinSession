@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Landry\\Source\\Repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj": {}
+    "C:\\Users\\Landry\\source\\repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Landry\\Source\\Repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj": {
+    "C:\\Users\\Landry\\source\\repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Landry\\Source\\Repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj",
+        "projectUniqueName": "C:\\Users\\Landry\\source\\repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj",
         "projectName": "ProjetFinal",
-        "projectPath": "C:\\Users\\Landry\\Source\\Repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj",
+        "projectPath": "C:\\Users\\Landry\\source\\repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj",
         "packagesPath": "C:\\Users\\Landry\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Landry\\Source\\Repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\obj\\",
+        "outputPath": "C:\\Users\\Landry\\source\\repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

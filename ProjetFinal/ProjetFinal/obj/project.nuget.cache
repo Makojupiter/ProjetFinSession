@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wZ23XtOMoK6CY04aj2NKrjxWiW9frBXJKbMRTr/1BXEScRThbvopMXb4J+dtOkjS+yxclNwZh+zNvwUritt1Bg==",
+  "dgSpecHash": "ghZvVjw44rdShbjWkXMSnDQi8L/aoguAhl9BpUwGg8W9UOcl286L9OzGndqwSEBPgDBsBdZeDI9q/OGNQbk0qg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Landry\\Source\\Repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj",
+  "projectFilePath": "C:\\Users\\Landry\\source\\repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.10-rel-29722-00\\microsoft.net.native.compiler.2.2.10-rel-29722-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.12\\microsoft.net.uwpcoreruntimesdk.2.2.12.nupkg.sha512",

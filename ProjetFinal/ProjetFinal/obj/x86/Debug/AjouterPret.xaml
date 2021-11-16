@@ -48,12 +48,13 @@
             <StackPanel Orientation="Horizontal"
                         Margin="0,15,0,0">
                 <CalendarDatePicker
-                    Header="Date de pret"/>
+                    Header="Date de pret"
+                    DateFormat="{}{dayofweek.full} {month.full} {year.full}"/>
                 <TimePicker
                     Header="Heure de pret"
                     ClockIdentifier="24HourClock"/>
             </StackPanel>
-            <Button x:Name="btnAjouterPret"
+            <Button x:ConnectionId='4' x:Name="btnAjouterPret"
                     Content="Ajouter"
                     Margin="0,15,0,0"
                     CornerRadius="15"
@@ -81,7 +82,7 @@
                     Header="Heure de retour"
                     ClockIdentifier="24HourClock"/>
             </StackPanel>
-            <Button x:Name="btnModifier"
+            <Button x:ConnectionId='3' x:Name="btnModifier"
                     Content="Modifier"
                     Margin="0,15,0,0"
                     CornerRadius="15"
@@ -89,7 +90,7 @@
                     Background="MediumSeaGreen"/>
         </StackPanel>
 
-        <controls:DataGrid x:Name="grille" AutoGenerateColumns="False"
+        <controls:DataGrid x:ConnectionId='2' x:Name="grille" AutoGenerateColumns="False"
                            Grid.Row="1">
             <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn 
@@ -108,3 +109,4 @@
 
     </Grid>
 </Page>
+
