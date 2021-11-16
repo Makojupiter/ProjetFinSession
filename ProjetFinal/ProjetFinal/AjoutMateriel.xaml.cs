@@ -25,6 +25,116 @@ namespace ProjetFinal
         public AjoutMateriel()
         {
             this.InitializeComponent();
+            btnAddMateriel.IsEnabled = false;
+            txtIDMateriel.MaxLength = 7;
+            verifID = verifMarque = verifNote = verifModel = false;
+        }
+
+        bool verifID ,verifMarque , verifNote ,verifModel;
+
+        private void txtNoteMateriel_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtNoteMateriel.Text.Trim() == "")
+            {
+                txtNoteMaterielErr.Text = "Ne peut etre vide";
+                verifNote = false;
+            }
+            else
+            {
+                txtNoteMaterielErr.Text = "";
+                verifNote = true;
+            }
+
+            if (verifID && verifMarque && verifNote && verifModel)
+            {
+                btnAddMateriel.IsEnabled = true;
+            }
+            else
+                btnAddMateriel.IsEnabled = false;
+        }
+
+        private void btnAddMateriel_Click(object sender, RoutedEventArgs e)
+        {
+            // Ajouter Materiel 
+        }
+
+        private void txtModelMateriel_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            if (txtModelMateriel.Text.Trim() == "")
+            {
+                txtModelMaterielErr.Text = "Ne peut etre vide";
+                verifModel = false;
+            }
+            else
+            {
+                txtModelMaterielErr.Text = "";
+                verifModel = true;
+            }
+
+            if (verifID && verifMarque && verifNote && verifModel)
+            {
+                btnAddMateriel.IsEnabled = true;
+            }
+            else
+                btnAddMateriel.IsEnabled = false;
+
+        }
+
+        private void txtMarqueMateriel_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtMarqueMateriel.Text.Trim() == "")
+            {
+                txtMarqueMaterielErr.Text = "Ne peut etre vide";
+                verifMarque = false;
+            }
+            else
+            {
+                txtMarqueMaterielErr.Text = "";
+                verifMarque = true;
+            }
+
+            if(verifID && verifMarque && verifNote && verifModel)
+            {
+                btnAddMateriel.IsEnabled = true;
+            }
+            else
+                btnAddMateriel.IsEnabled = false;
+
+        }
+
+        private void txtIDMateriel_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            if (txtIDMateriel.Text.Trim() == "")
+            {
+                txtIDMaterielErr.Text = "Ne peut etre vide";
+                verifID = false;
+            }
+
+            else if (txtIDMateriel.Text.Length > 7)
+            {
+                txtIDMaterielErr.Text = "Ne dois pas contenir plus de 7 caracteres";
+                verifID = false;
+            }
+            else if (txtIDMateriel.Text.Length < 7)
+            {
+                txtIDMaterielErr.Text = "Dois contenir 7 caracteres";
+                verifID = false;
+            }
+            else
+            {
+                txtIDMaterielErr.Text = "";
+                verifID = true;
+            }
+
+            if (verifID && verifMarque && verifNote && verifModel)
+            {
+                btnAddMateriel.IsEnabled = true;
+            }
+            else
+                btnAddMateriel.IsEnabled = false;
+
         }
     }
 }

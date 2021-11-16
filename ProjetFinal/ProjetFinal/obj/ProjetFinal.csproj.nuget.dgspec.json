@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Utilisateur\\source\\repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj": {}
+    "C:\\Users\\Landry\\Source\\Repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Utilisateur\\source\\repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj": {
+    "C:\\Users\\Landry\\Source\\Repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Utilisateur\\source\\repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj",
+        "projectUniqueName": "C:\\Users\\Landry\\Source\\Repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj",
         "projectName": "ProjetFinal",
-        "projectPath": "C:\\Users\\Utilisateur\\source\\repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj",
-        "packagesPath": "C:\\Users\\Utilisateur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Utilisateur\\source\\repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\obj\\",
+        "projectPath": "C:\\Users\\Landry\\Source\\Repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\ProjetFinal.csproj",
+        "packagesPath": "C:\\Users\\Landry\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Landry\\Source\\Repos\\ProjetFinSession\\ProjetFinal\\ProjetFinal\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -20,7 +20,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Utilisateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Landry\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -29,6 +29,7 @@
           "uap10.0.17763"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,6 +44,10 @@
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
               "version": "[6.2.12, )"
+            },
+            "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid": {
+              "target": "Package",
+              "version": "[7.1.1, )"
             }
           },
           "imports": [

@@ -4,16 +4,112 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ProjetFinal"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
 
-        <TextBlock Text="PAGE AJOUT PRET"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="40"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel HorizontalAlignment="Center">
+            <ComboBox MinWidth="300"
+                      Margin="0,50,0,0"
+                      Header="Usager"
+                      SelectedIndex="0">
+                <ComboBoxItem Content="AA"/>
+                <ComboBoxItem Content="BB"/>
+                <ComboBoxItem Content="CC"/>
+                <ComboBoxItem Content="DD"/>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center"
+                    Grid.Column="1"
+                    Margin="0,0,0,75">
+            <ComboBox HorizontalAlignment="Stretch"
+                      Margin="0,50,0,0"
+                      Header="Materiel"
+                      SelectedIndex="0">
+                <ComboBoxItem Content="AA"/>
+                <ComboBoxItem Content="BB"/>
+                <ComboBoxItem Content="CC"/>
+                <ComboBoxItem Content="DD"/>
+            </ComboBox>
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,15,0,0">
+                <CalendarDatePicker
+                    Header="Date de Retour"/>
+                <TimePicker
+                    Header="Heure de retour"
+                    ClockIdentifier="24HourClock"/>
+            </StackPanel>
+            <Button x:Name="btnAjouterPret"
+                    Content="Ajouter"
+                    Margin="0,15,0,0"
+                    CornerRadius="15"
+                    HorizontalAlignment="Stretch"
+                    Background="DeepSkyBlue"/>
+        </StackPanel>
+        
+        <StackPanel HorizontalAlignment="Center"
+                    Margin="0,0,0,75"
+                    Grid.Column="1"
+                    Grid.Row="1">
+            <ComboBox HorizontalAlignment="Stretch"
+                      Margin="0,50,0,0"
+                      Header="Materiel">
+                <ComboBoxItem Content="AA"/>
+                <ComboBoxItem Content="BB"/>
+                <ComboBoxItem Content="CC"/>
+                <ComboBoxItem Content="DD"/>
+            </ComboBox>
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,15,0,0">
+                <CalendarDatePicker
+                    Header="Date de Retour"/>
+                <TimePicker
+                    Header="Heure de retour"
+                    ClockIdentifier="24HourClock"/>
+            </StackPanel>
+            <Button x:Name="btnModifier"
+                    Content="Modifier"
+                    Margin="0,15,0,0"
+                    CornerRadius="15"
+                    HorizontalAlignment="Stretch"
+                    Background="MediumSeaGreen"/>
+        </StackPanel>
+
+        <controls:DataGrid x:Name="grille" AutoGenerateColumns="False" >
+            <controls:DataGrid.Columns>
+                <controls:DataGridTextColumn 
+                    Header="ID"
+                    Width="SizeToHeader"/>
+                <controls:DataGridTextColumn 
+                    Header="Nom"
+                    Width="SizeToHeader"/>
+                <controls:DataGridTextColumn 
+                    Header="Prénom" 
+                    Width="SizeToHeader"/>
+                <controls:DataGridTextColumn 
+                    Header="E-mail" 
+                    Width="SizeToHeader"/>
+            </controls:DataGrid.Columns>
+
+        </controls:DataGrid>
+
+
+
+
 
     </Grid>
 </Page>

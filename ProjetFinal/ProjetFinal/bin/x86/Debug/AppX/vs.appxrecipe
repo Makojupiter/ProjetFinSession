@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>LAPTOP-HHA0TR9O</Machine>
-    <WindowsUser>Utilisateur</WindowsUser>
+    <Machine>DESKTOP-GFKQNP1</Machine>
+    <WindowsUser>Landry</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>c922caf2-2e60-4c5b-9cf4-e6cb59682088</PackageIdentityName>
     <PackageIdentityPublisher>CN=Utilisateur</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>B489950D13B6603656FA27ADC068856BEF35D80ADBC810A4283181E52AEC18DF</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>905F40EAD3C877D63E1FAC53E405080F2F56DED88A2CD6F88227FD27E894FD12</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>c922caf2-2e60-4c5b-9cf4-e6cb59682088_1.0.0.0_x86__9tmd3bzya7s40</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c922caf2-2e60-4c5b-9cf4-e6cb59682088_9tmd3bzya7s40!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c922caf2-2e60-4c5b-9cf4-e6cb59682088</RegisteredPackageID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-15T22:07:03.287</Modified>
+      <Modified>2021-11-16T18:47:56.221</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ProjetFinal.exe">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ProjetFinal.exe">
       <PackagePath>entrypoint\ProjetFinal.exe</PackagePath>
-      <Modified>2021-11-15T22:07:02.872</Modified>
+      <Modified>2021-11-16T18:47:55.434</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -46,103 +46,103 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T08:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2021-11-08T21:31:25.898</Modified>
+      <Modified>2021-11-16T15:46:27.584</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2021-10-28T18:51:45.333</Modified>
+      <Modified>2021-11-16T15:46:27.578</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-10-28T18:51:45.335</Modified>
+      <Modified>2021-11-16T15:46:27.579</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-10-28T18:51:45.335</Modified>
+      <Modified>2021-11-16T15:46:27.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-10-28T18:51:45.336</Modified>
+      <Modified>2021-11-16T15:46:27.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-10-28T18:51:45.336</Modified>
+      <Modified>2021-11-16T15:46:27.581</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-10-28T18:51:45.336</Modified>
+      <Modified>2021-11-16T15:46:27.581</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-10-28T18:51:45.337</Modified>
+      <Modified>2021-11-16T15:46:27.581</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ProjetFinal.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ProjetFinal.xr.xml">
       <PackagePath>ProjetFinal.xr.xml</PackagePath>
-      <Modified>2021-11-15T22:07:02.797</Modified>
+      <Modified>2021-11-16T18:47:55.255</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-11-15T22:07:02.813</Modified>
+      <Modified>2021-11-16T18:47:55.297</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjoutClient.xbf">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjoutClient.xbf">
       <PackagePath>AjoutClient.xbf</PackagePath>
-      <Modified>2021-11-15T22:07:02.814</Modified>
+      <Modified>2021-11-16T18:47:55.297</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjouterPret.xbf">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjouterPret.xbf">
       <PackagePath>AjouterPret.xbf</PackagePath>
-      <Modified>2021-11-15T22:07:02.814</Modified>
+      <Modified>2021-11-16T18:47:55.297</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjouterUsager.xbf">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjouterUsager.xbf">
       <PackagePath>AjouterUsager.xbf</PackagePath>
-      <Modified>2021-11-15T22:07:02.814</Modified>
+      <Modified>2021-11-16T18:47:55.297</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjoutMateriel.xbf">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjoutMateriel.xbf">
       <PackagePath>AjoutMateriel.xbf</PackagePath>
-      <Modified>2021-11-15T22:07:02.814</Modified>
+      <Modified>2021-11-16T18:47:55.298</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-11-15T22:07:02.814</Modified>
+      <Modified>2021-11-16T18:47:55.298</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\PageConnexion.xbf">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\PageConnexion.xbf">
       <PackagePath>PageConnexion.xbf</PackagePath>
-      <Modified>2021-11-15T22:07:02.814</Modified>
+      <Modified>2021-11-16T18:47:55.298</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserClient.xbf">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserClient.xbf">
       <PackagePath>VisualiserClient.xbf</PackagePath>
-      <Modified>2021-11-15T22:07:02.814</Modified>
+      <Modified>2021-11-16T18:47:55.298</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserMateriel.xbf">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserMateriel.xbf">
       <PackagePath>VisualiserMateriel.xbf</PackagePath>
-      <Modified>2021-11-15T22:07:02.814</Modified>
+      <Modified>2021-11-16T18:47:55.299</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserPret.xbf">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserPret.xbf">
       <PackagePath>VisualiserPret.xbf</PackagePath>
-      <Modified>2021-11-15T22:07:02.815</Modified>
+      <Modified>2021-11-16T18:47:55.299</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserUsager.xbf">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserUsager.xbf">
       <PackagePath>VisualiserUsager.xbf</PackagePath>
-      <Modified>2021-11-15T22:07:02.815</Modified>
+      <Modified>2021-11-16T18:47:55.299</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2020-12-02T06:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-11-15T22:07:02.940</Modified>
+      <Modified>2021-11-16T15:59:50.447</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Core\ProjetFinal.exe">
+    <AppxPackagedFile Include="C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Core\ProjetFinal.exe">
       <PackagePath>ProjetFinal.exe</PackagePath>
-      <Modified>2021-11-15T22:07:03.284</Modified>
+      <Modified>2021-11-16T18:47:56.207</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
