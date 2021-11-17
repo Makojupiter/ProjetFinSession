@@ -10,10 +10,44 @@
 
     <Grid>
 
-        <TextBlock Text="PAGE AJOUT USAGER"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="40"/>
+        <TextBlock Text="Ajouter un utilisateur"
+                   FontSize="50"
+                   Margin="10,15,0,0"/>
+
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    MinWidth="300">
+            <TextBox x:ConnectionId='2' x:Name="txtUserName"
+                       Header="Nom d'utilisateur"
+                     HorizontalAlignment="Stretch" 
+                                                          />
+            <TextBlock x:ConnectionId='3' x:Name="txtUserNameErr"
+                       Foreground="red"/>
+            <TextBox x:ConnectionId='4' x:Name="txtPrenom"
+                       Header="Prenom"
+                     HorizontalAlignment="Stretch"
+                                                        />
+            <TextBlock x:ConnectionId='5' x:Name="txtPrenomErr"
+                       Foreground="red"/>
+            <TextBox x:ConnectionId='6' x:Name="txtNom"
+                       Header="Nom"
+                     HorizontalAlignment="Stretch" 
+                                                     />
+            <TextBlock x:ConnectionId='7' x:Name="txtNomErr"
+                       Foreground="red"/>
+            <PasswordBox x:ConnectionId='8' x:Name="pwdPassword"
+                         Header="Mot de passe"                                              />
+            <TextBlock x:ConnectionId='9' x:Name="txtPasswordErr"
+                       Foreground="red"/>
+            <Button x:ConnectionId='10' x:Name="btnAjouter"
+                    Content="Ajouter"
+                    CornerRadius="10"
+                    Background="DeepSkyBlue"
+                    HorizontalAlignment="Stretch"
+                                            />
+        </StackPanel>
+
+
 
     </Grid>
 </Page>

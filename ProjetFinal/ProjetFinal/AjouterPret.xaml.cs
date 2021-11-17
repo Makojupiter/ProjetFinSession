@@ -26,5 +26,23 @@ namespace ProjetFinal
         {
             this.InitializeComponent();
         }
+
+        private void toggleSwitch_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (toggleSwitch.IsOn)
+            {
+                nbrDuree.Header = "Nombre d'heures";
+                nbrDuree.Maximum = 24;
+            }
+            else
+            {
+
+                nbrDuree.Header = "Nombre de jours";
+                nbrDuree.Maximum = 31;
+            }
+
+        }
+
+
     }
 }

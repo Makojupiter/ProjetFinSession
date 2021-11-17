@@ -10,10 +10,44 @@
 
     <Grid>
 
-        <TextBlock Text="PAGE AJOUT USAGER"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="40"/>
+        <TextBlock Text="Ajouter un utilisateur"
+                   FontSize="50"
+                   Margin="10,15,0,0"/>
+
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    MinWidth="300">
+            <TextBox x:Name="txtUserName"
+                       Header="Nom d'utilisateur"
+                     HorizontalAlignment="Stretch" 
+                     TextChanged="txtUserName_TextChanged"/>
+            <TextBlock x:Name="txtUserNameErr"
+                       Foreground="red"/>
+            <TextBox x:Name="txtPrenom"
+                       Header="Prenom"
+                     HorizontalAlignment="Stretch"
+                     TextChanged="txtPrenom_TextChanged"/>
+            <TextBlock x:Name="txtPrenomErr"
+                       Foreground="red"/>
+            <TextBox x:Name="txtNom"
+                       Header="Nom"
+                     HorizontalAlignment="Stretch" 
+                     TextChanged="txtNom_TextChanged"/>
+            <TextBlock x:Name="txtNomErr"
+                       Foreground="red"/>
+            <PasswordBox x:Name="pwdPassword"
+                         Header="Mot de passe" PasswordChanged="pwdPassword_PasswordChanged"/>
+            <TextBlock x:Name="txtPasswordErr"
+                       Foreground="red"/>
+            <Button x:Name="btnAjouter"
+                    Content="Ajouter"
+                    CornerRadius="10"
+                    Background="DeepSkyBlue"
+                    HorizontalAlignment="Stretch"
+                    Click="btnAjouter_Click"/>
+        </StackPanel>
+
+
 
     </Grid>
 </Page>

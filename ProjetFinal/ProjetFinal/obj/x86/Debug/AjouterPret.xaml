@@ -5,7 +5,8 @@
     xmlns:local="using:ProjetFinal"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls" 
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -21,40 +22,45 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel HorizontalAlignment="Center">
-            <ComboBox MinWidth="300"
-                      Margin="0,50,0,0"
-                      Header="Usager"
-                      SelectedIndex="0">
-                <ComboBoxItem Content="AA"/>
-                <ComboBoxItem Content="BB"/>
-                <ComboBoxItem Content="CC"/>
-                <ComboBoxItem Content="DD"/>
-            </ComboBox>
+
+
+        <StackPanel HorizontalAlignment="Stretch"
+                    Margin="0,30,0,0">
+            
+            <TextBlock  Text="Ajouter un Pret"
+                        FontSize="30"
+                        Margin="10,0,50,0"/>
+            
+            <AutoSuggestBox x:ConnectionId='9' Name="boxUser" Header="Usager"
+                            MinWidth="300"
+                            HorizontalAlignment="Center">
+            </AutoSuggestBox>
         </StackPanel>
 
         <StackPanel HorizontalAlignment="Center"
                     Grid.Column="1"
-                    Margin="0,0,0,75">
-            <ComboBox HorizontalAlignment="Stretch"
-                      Margin="0,50,0,0"
-                      Header="Materiel"
-                      SelectedIndex="0">
-                <ComboBoxItem Content="AA"/>
-                <ComboBoxItem Content="BB"/>
-                <ComboBoxItem Content="CC"/>
-                <ComboBoxItem Content="DD"/>
-            </ComboBox>
-            <StackPanel Orientation="Horizontal"
-                        Margin="0,15,0,0">
-                <CalendarDatePicker
-                    Header="Date de pret"
-                    DateFormat="{}{dayofweek.full} {month.full} {year.full}"/>
-                <TimePicker
-                    Header="Heure de pret"
-                    ClockIdentifier="24HourClock"/>
-            </StackPanel>
-            <Button x:ConnectionId='4' x:Name="btnAjouterPret"
+                    Margin="0,30,0,0">
+            <AutoSuggestBox x:ConnectionId='5' Name="boxMateriel" Header="Materiel"
+                            MinWidth="300">
+            </AutoSuggestBox>
+
+            <muxc:NumberBox x:ConnectionId='6' x:Name="nbrDuree"
+                              VerticalAlignment="Top"
+                              Header="Nombre de jours" 
+                              Value="0" 
+                              SpinButtonPlacementMode="Compact" 
+                              SmallChange="1"
+                              LargeChange="10"
+                              Minimum="0"
+                              Maximum="30"
+                            Margin="0,20,0,0">
+            </muxc:NumberBox>
+            <ToggleSwitch x:ConnectionId='7'   x:Name="toggleSwitch" 
+                            OffContent="Jour" OnContent="Heure"
+                                                          >
+            </ToggleSwitch>
+
+            <Button x:ConnectionId='8' x:Name="btnAjouterPret"
                     Content="Ajouter"
                     Margin="0,15,0,0"
                     CornerRadius="15"
@@ -63,42 +69,39 @@
         </StackPanel>
         
         <StackPanel HorizontalAlignment="Center"
-                    Margin="0,0,0,75"
+                    VerticalAlignment="center"
                     Grid.Column="1"
-                    Grid.Row="1">
-            <ComboBox HorizontalAlignment="Stretch"
-                      Margin="0,50,0,0"
-                      Header="Materiel">
-                <ComboBoxItem Content="AA"/>
-                <ComboBoxItem Content="BB"/>
-                <ComboBoxItem Content="CC"/>
-                <ComboBoxItem Content="DD"/>
-            </ComboBox>
-            <StackPanel Orientation="Horizontal"
-                        Margin="0,15,0,0">
-                <CalendarDatePicker
-                    Header="Date de Retour"/>
-                <TimePicker
-                    Header="Heure de retour"
-                    ClockIdentifier="24HourClock"/>
-            </StackPanel>
-            <Button x:ConnectionId='3' x:Name="btnModifier"
-                    Content="Modifier"
+                    Grid.Row="1"
+                    MinWidth="300">
+
+            <Button x:ConnectionId='4' x:Name="btnSupprimer"
+                    Content="Supprimer"
                     Margin="0,15,0,0"
                     CornerRadius="15"
                     HorizontalAlignment="Stretch"
-                    Background="MediumSeaGreen"/>
-        </StackPanel>
+                    Background="Red"
+                    IsEnabled="False"/>
 
-        <controls:DataGrid x:ConnectionId='2' x:Name="grille" AutoGenerateColumns="False"
-                           Grid.Row="1">
+
+        </StackPanel>
+        <Button x:ConnectionId='2' x:Name="btnAddPret"
+                Grid.Row="1"
+                Grid.Column="1"
+                    Content="Ajouter Pret"
+                    VerticalAlignment="Bottom"
+                    Margin="0,50,30,30"
+                    CornerRadius="5"
+                    HorizontalAlignment="Right"
+                    Background="Brown"/>
+
+        <controls:DataGrid x:ConnectionId='3' x:Name="grille" AutoGenerateColumns="False"
+                           Grid.Row="1"
+                           Margin="15">
             <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn 
                     Header="Article"
                     Width="*"/>
-                <controls:DataGridTextColumn 
-                    Header="Date de retour"
-                    Width="*"/>
+
             </controls:DataGrid.Columns>
 
         </controls:DataGrid>

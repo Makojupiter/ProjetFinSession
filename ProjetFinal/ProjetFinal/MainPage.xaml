@@ -13,21 +13,21 @@
         <NavigationView Name="nvMenue"
                         IsSettingsVisible="False"
                         SelectionChanged="nvMenue_SelectionChanged"
-                        PaneDisplayMode="Auto">
+                        IsPaneOpen="True">
             <NavigationView.MenuItems>
-                <ListViewHeaderItem Content="Materiel"/>
+                <NavigationViewItemHeader Content="Materiel"/>
                 <NavigationViewItem Icon="Add" Content="Ajouter" x:Name="AddMateriel"/>
                 <NavigationViewItem Icon="View" Content="Visualiser" x:Name="ViewMateriel"/>
                 <NavigationViewItemSeparator/>
-                <ListViewHeaderItem Content="Utilisateurs"/>
+                <NavigationViewItemHeader Content="Utilisateurs"/>
                 <NavigationViewItem Icon="Add" Content="Ajouter" x:Name="AddUser"/>
                 <NavigationViewItem Icon="View" Content="Visualiser" x:Name="ViewUsers"/>
                 <NavigationViewItemSeparator/>
-                <ListViewHeaderItem Content="Prets"/>
+                <NavigationViewItemHeader Content="Prets"/>
                 <NavigationViewItem Icon="Add" Content="Ajouter" x:Name="AddPret"/>
                 <NavigationViewItem Icon="View" Content="Visualiser" x:Name="ViewPrets"/>
                 <NavigationViewItemSeparator/>
-                <ListViewHeaderItem Content="Clients"/>
+                <NavigationViewItemHeader Content="Clients"/>
                 <NavigationViewItem Icon="Add" Content="Ajouter" x:Name="AddClient"/>
                 <NavigationViewItem Icon="View" Content="Visualiser" x:Name="ViewClients"/>
             </NavigationView.MenuItems>

@@ -13,21 +13,21 @@
         <NavigationView x:ConnectionId='2' Name="nvMenue"
                         IsSettingsVisible="False"
                                                                    
-                        PaneDisplayMode="Auto">
+                        IsPaneOpen="True">
             <NavigationView.MenuItems>
-                <ListViewHeaderItem Content="Materiel"/>
+                <NavigationViewItemHeader Content="Materiel"/>
                 <NavigationViewItem x:ConnectionId='3' Icon="Add" Content="Ajouter" x:Name="AddMateriel"/>
                 <NavigationViewItem x:ConnectionId='4' Icon="View" Content="Visualiser" x:Name="ViewMateriel"/>
                 <NavigationViewItemSeparator/>
-                <ListViewHeaderItem Content="Utilisateurs"/>
+                <NavigationViewItemHeader Content="Utilisateurs"/>
                 <NavigationViewItem x:ConnectionId='5' Icon="Add" Content="Ajouter" x:Name="AddUser"/>
                 <NavigationViewItem x:ConnectionId='6' Icon="View" Content="Visualiser" x:Name="ViewUsers"/>
                 <NavigationViewItemSeparator/>
-                <ListViewHeaderItem Content="Prets"/>
+                <NavigationViewItemHeader Content="Prets"/>
                 <NavigationViewItem x:ConnectionId='7' Icon="Add" Content="Ajouter" x:Name="AddPret"/>
                 <NavigationViewItem x:ConnectionId='8' Icon="View" Content="Visualiser" x:Name="ViewPrets"/>
                 <NavigationViewItemSeparator/>
-                <ListViewHeaderItem Content="Clients"/>
+                <NavigationViewItemHeader Content="Clients"/>
                 <NavigationViewItem x:ConnectionId='9' Icon="Add" Content="Ajouter" x:Name="AddClient"/>
                 <NavigationViewItem x:ConnectionId='10' Icon="View" Content="Visualiser" x:Name="ViewClients"/>
             </NavigationView.MenuItems>
