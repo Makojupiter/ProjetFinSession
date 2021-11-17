@@ -49,6 +49,8 @@
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Padding" />
       <RootProperty Name="IsEnabled" />
       <RootEvent Name="Click" />
     </RootType>
