@@ -92,7 +92,9 @@
                     Margin="0,50,30,30"
                     CornerRadius="5"
                     HorizontalAlignment="Right"
-                    Background="Brown"/>
+                    Background="Brown"
+                Foreground="BlanchedAlmond"
+                Padding="50"/>
 
         <controls:DataGrid x:Name="grille" AutoGenerateColumns="False"
                            Grid.Row="1"
