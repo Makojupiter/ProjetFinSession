@@ -45,12 +45,14 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="FontWeight" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Padding" />
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
-      <RootProperty Name="Padding" />
       <RootProperty Name="IsEnabled" />
       <RootEvent Name="Click" />
     </RootType>
