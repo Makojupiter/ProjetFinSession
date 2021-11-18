@@ -29,13 +29,13 @@
 
             <TextBox x:Name="txtNom"
                      Header="Nom"
-                     HorizontalAlignment="Stretch"/>
+                     HorizontalAlignment="Stretch" TextChanged="txtNom_TextChanged"/>
             <TextBlock x:Name="txtNomErr"
                        Foreground="Red"/>
 
             <TextBox x:Name="txtTel"
                      Header="Telephone"
-                     HorizontalAlignment="Stretch"/>
+                     HorizontalAlignment="Stretch" TextChanged="txtTel_TextChanged"/>
             <TextBlock x:Name="txtTellErr"
                        Foreground="Red"/>
 
@@ -47,7 +47,7 @@
 
             <TextBox x:Name="txtEmail"
                      Header="Email"
-                     HorizontalAlignment="Stretch"/>
+                     HorizontalAlignment="Stretch" TextChanged="txtEmail_TextChanged"/>
             <TextBlock x:Name="txtEmailErr"
                        Foreground="Red"/>
 

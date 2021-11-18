@@ -25,6 +25,91 @@ namespace ProjetFinal
         public AjoutClient()
         {
             this.InitializeComponent();
+            btnAjouter.IsEnabled = false;
+            NomV = telV = emailV = false;
+        }
+
+        bool NomV, telV, emailV, valideMail, valideMail2;
+
+        private void txtEmail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            valideMail = txtEmail.Text.Contains("@");
+            valideMail2 = txtEmail.Text.EndsWith("cegeptr.qc.ca");
+
+            if (txtEmail.Text.Trim() == "")
+            {
+                txtEmailErr.Text = "Ne peut etre vide";
+                emailV = false;
+            }
+            else if(!valideMail || !valideMail2)
+            {
+                txtEmailErr.Text = "Email non valide";
+                emailV = false;
+            }
+            else
+            {
+                txtEmailErr.Text = "";
+                emailV = true;
+            }
+
+            if (NomV && telV && emailV)
+            {
+                btnAjouter.IsEnabled = true;
+            }
+            else
+            {
+                btnAjouter.IsEnabled = false;
+            }
+        }
+
+        private void txtTel_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            if (txtTel.Text.Trim() == "")
+            {
+                txtTellErr.Text = "Ne peut etre vide";
+                telV = false;
+            }
+            else
+            {
+                txtTellErr.Text = "";
+                telV = true;
+            }
+
+            if (NomV && telV && emailV)
+            {
+                btnAjouter.IsEnabled = true;
+            }
+            else
+            {
+                btnAjouter.IsEnabled = false;
+            }
+
+        }
+
+        private void txtNom_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtNom.Text.Trim() == "")
+            {
+                txtNomErr.Text = "Ne peut etre vide";
+                NomV = false;
+            }
+            else
+            {
+                txtNomErr.Text = "";
+                NomV = true;
+            }
+
+            if (NomV && telV && emailV )
+            {
+                btnAjouter.IsEnabled = true;
+            }
+            else
+            {
+                btnAjouter.IsEnabled = false;
+            }
+                
         }
     }
 }

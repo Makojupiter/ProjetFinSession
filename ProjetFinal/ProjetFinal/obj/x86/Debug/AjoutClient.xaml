@@ -10,10 +10,63 @@
 
     <Grid>
 
-        <TextBlock Text="PAGE AJOUT Client"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="40"/>
+        <TextBlock Text="Ajouter un client"
+                   FontSize="50"
+                   Margin="20"/>
+
+        <StackPanel HorizontalAlignment="Center"
+                    MinWidth="300"
+                    VerticalAlignment="Center">
+
+            <ComboBox HorizontalAlignment="Stretch"
+                      Header="Type de client"
+                      SelectedIndex="0"
+                      Margin="0,0,0,15">
+                <ComboBoxItem Content="Etudiant"/>
+                <ComboBoxItem Content="Professeur autre déparement"/>
+                <ComboBoxItem Content="Employé du CEGEP"/>
+            </ComboBox>
+
+            <TextBox x:ConnectionId='2' x:Name="txtNom"
+                     Header="Nom"
+                     HorizontalAlignment="Stretch"                                 />
+            <TextBlock x:ConnectionId='3' x:Name="txtNomErr"
+                       Foreground="Red"/>
+
+            <TextBox x:ConnectionId='4' x:Name="txtTel"
+                     Header="Telephone"
+                     HorizontalAlignment="Stretch"                                 />
+            <TextBlock x:ConnectionId='5' x:Name="txtTellErr"
+                       Foreground="Red"/>
+
+            <TextBox x:ConnectionId='6' x:Name="txtPoste"
+                     Header="Poste"
+                     HorizontalAlignment="Stretch"/>
+            <TextBlock x:ConnectionId='7' x:Name="txtPosteErr"
+                       Foreground="Red"/>
+
+            <TextBox x:ConnectionId='8' x:Name="txtEmail"
+                     Header="Email"
+                     HorizontalAlignment="Stretch"                                   />
+            <TextBlock x:ConnectionId='9' x:Name="txtEmailErr"
+                       Foreground="Red"/>
+
+            <TextBox x:ConnectionId='10' x:Name="txtBureau"
+                     Header="Numero de bureau (facultatif)"
+                     HorizontalAlignment="Stretch"/>
+            <TextBlock x:ConnectionId='11' x:Name="txtBureauErr"
+                       Foreground="Red"/>
+
+
+            <Button x:ConnectionId='12' x:Name="btnAjouter"
+                    Content="Ajouter"
+                    HorizontalAlignment="Stretch"
+                    Margin="0,20,0,20"
+                    CornerRadius="10"
+                    Background="DeepSkyBlue"/>
+
+
+        </StackPanel>
 
     </Grid>
 </Page>
