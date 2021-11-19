@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,7 +12,7 @@ namespace ProjetFinal
     {
                 string nomUsager, nom, prenom, password;
 
-        public utilisateur(string nomUsager, string nom, string prenom, string password)
+        public Utilisateur(string nomUsager, string nom, string prenom, string password)
         {
             this.nomUsager = nomUsager;
             this.nom = nom;
