@@ -89,7 +89,6 @@
       <RootProperty Name="Header" />
       <RootProperty Name="MinWidth" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="QueryIcon" />
     </RootType>
     <RootType FullName="Microsoft.UI.Xaml.Controls.NumberBox">
       <RootProperty Name="VerticalAlignment" />
@@ -119,7 +118,6 @@
       <RootProperty Name="IsSettingsVisible" />
       <RootProperty Name="IsPaneOpen" />
       <RootProperty Name="MenuItems" />
-      <RootProperty Name="AutoSuggestBox" />
       <RootProperty Name="PaneFooter" />
       <RootProperty Name="Content" />
       <RootEvent Name="SelectionChanged" />

@@ -15,25 +15,22 @@
                         SelectionChanged="nvMenue_SelectionChanged"
                         IsPaneOpen="True">
             <NavigationView.MenuItems>
-                <NavigationViewItemHeader Content="Materiel"/>
-                <NavigationViewItem Icon="Add" Content="Ajouter" x:Name="AddMateriel"/>
-                <NavigationViewItem Icon="View" Content="Visualiser" x:Name="ViewMateriel"/>
+                <NavigationViewItemHeader Content="Ajouter"/>
+                <NavigationViewItem Icon="Tag" Content="Materiel" x:Name="AddMateriel"/>
+                <NavigationViewItem Icon="AddFriend" Content="Utilisateur" x:Name="AddUser"/>
+                <NavigationViewItem Icon="Caption" Content="Pret" x:Name="AddPret"/>
+                <NavigationViewItem Icon="OtherUser" Content="Client" x:Name="AddClient"/>
                 <NavigationViewItemSeparator/>
-                <NavigationViewItemHeader Content="Utilisateurs"/>
-                <NavigationViewItem Icon="Add" Content="Ajouter" x:Name="AddUser"/>
-                <NavigationViewItem Icon="View" Content="Visualiser" x:Name="ViewUsers"/>
-                <NavigationViewItemSeparator/>
-                <NavigationViewItemHeader Content="Prets"/>
-                <NavigationViewItem Icon="Add" Content="Ajouter" x:Name="AddPret"/>
-                <NavigationViewItem Icon="View" Content="Visualiser" x:Name="ViewPrets"/>
-                <NavigationViewItemSeparator/>
-                <NavigationViewItemHeader Content="Clients"/>
-                <NavigationViewItem Icon="Add" Content="Ajouter" x:Name="AddClient"/>
-                <NavigationViewItem Icon="View" Content="Visualiser" x:Name="ViewClients"/>
+                <NavigationViewItemHeader Content="Visualiser"/>
+                <NavigationViewItem Icon="Tag" Content="Materiel" x:Name="ViewMateriel"/>
+                <NavigationViewItem Icon="Contact" Content="Utilisateur" x:Name="ViewUsers"/>
+                <NavigationViewItem Icon="BrowsePhotos" Content="Pret" x:Name="ViewPrets"/>
+                <NavigationViewItem Icon="People" Content="Client" x:Name="ViewClients"/>
             </NavigationView.MenuItems>
-            <NavigationView.AutoSuggestBox>
-                <AutoSuggestBox QueryIcon="Find" x:Name="SearchBar"/>
-            </NavigationView.AutoSuggestBox>
+            <!--<NavigationView.AutoSuggestBox>
+                <AutoSuggestBox QueryIcon="Find" x:Name="SearchBar"
+                                Visibility="Collapsed"/>
+            </NavigationView.AutoSuggestBox>-->
 
             <NavigationView.PaneFooter>
                 <NavigationViewItem x:Name="connexion" Icon="Contact" Content="Compte"/>
