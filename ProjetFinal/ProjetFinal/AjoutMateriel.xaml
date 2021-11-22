@@ -34,8 +34,8 @@
             <ComboBox x:Name="cbEtat"
                       HorizontalAlignment="Stretch"
                       Header="État"
-                      Margin="0,0,0,10"
-                      SelectedIndex="0">
+                      SelectionChanged="cbEtat_SelectionChanged">
+                
                 <ComboBoxItem x:Name="EDisponible"
                               Content="Disponible"/>
                 <ComboBoxItem x:Name="ELocation"
@@ -45,6 +45,9 @@
                 <ComboBoxItem x:Name="ERepair"
                               Content="En réparation"/>
             </ComboBox>
+            <TextBlock x:Name="txtEtatMaterielErr"
+                       Foreground="Red"
+                       Margin="0,0,0,10"/>
 
             <TextBox x:Name="txtNoteMateriel"
                      Header="Note"

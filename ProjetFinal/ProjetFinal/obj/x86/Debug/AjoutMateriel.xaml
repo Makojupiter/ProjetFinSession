@@ -34,27 +34,30 @@
             <ComboBox x:ConnectionId='8' x:Name="cbEtat"
                       HorizontalAlignment="Stretch"
                       Header="État"
-                      Margin="0,0,0,10"
-                      SelectedIndex="0">
-                <ComboBoxItem x:ConnectionId='12' x:Name="EDisponible"
+                                                                >
+                
+                <ComboBoxItem x:ConnectionId='13' x:Name="EDisponible"
                               Content="Disponible"/>
-                <ComboBoxItem x:ConnectionId='13' x:Name="ELocation"
+                <ComboBoxItem x:ConnectionId='14' x:Name="ELocation"
                               Content="En location"/>
-                <ComboBoxItem x:ConnectionId='14' x:Name="EDefect"
+                <ComboBoxItem x:ConnectionId='15' x:Name="EDefect"
                               Content="Defectueux"/>
-                <ComboBoxItem x:ConnectionId='15' x:Name="ERepair"
+                <ComboBoxItem x:ConnectionId='16' x:Name="ERepair"
                               Content="En réparation"/>
             </ComboBox>
+            <TextBlock x:ConnectionId='9' x:Name="txtEtatMaterielErr"
+                       Foreground="Red"
+                       Margin="0,0,0,10"/>
 
-            <TextBox x:ConnectionId='9' x:Name="txtNoteMateriel"
+            <TextBox x:ConnectionId='10' x:Name="txtNoteMateriel"
                      Header="Note"
                      Height="90"
                      TextWrapping="Wrap"
                      AcceptsReturn="True"                                          />
-            <TextBlock x:ConnectionId='10' x:Name="txtNoteMaterielErr"
+            <TextBlock x:ConnectionId='11' x:Name="txtNoteMaterielErr"
                        Foreground="Red"
                        Margin="0,0,0,10"/>
-            <Button x:ConnectionId='11' x:Name="btnAddMateriel"
+            <Button x:ConnectionId='12' x:Name="btnAddMateriel"
                     Content="Ajouter"
                     CornerRadius="10"
                     Background="DeepSkyBlue"

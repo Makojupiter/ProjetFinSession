@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="ProjetFinal.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjetFinal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <NavigationView x:ConnectionId='2' Name="nvMenue"
+                        IsSettingsVisible="False"
+                                                                   
+                        IsPaneOpen="True">
+            <NavigationView.MenuItems>
+                <NavigationViewItemHeader Content="Ajouter"/>
+                <NavigationViewItem x:ConnectionId='3' Icon="Tag" Content="Materiel" x:Name="AddMateriel"/>
+                <NavigationViewItem x:ConnectionId='4' Icon="AddFriend" Content="Utilisateur" x:Name="AddUser"/>
+                <NavigationViewItem x:ConnectionId='5' Icon="Caption" Content="Pret" x:Name="AddPret"/>
+                <NavigationViewItem x:ConnectionId='6' Icon="OtherUser" Content="Client" x:Name="AddClient"/>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItemHeader Content="Visualiser"/>
+                <NavigationViewItem x:ConnectionId='7' Icon="Tag" Content="Materiel" x:Name="ViewMateriel"/>
+                <NavigationViewItem x:ConnectionId='8' Icon="Contact" Content="Utilisateur" x:Name="ViewUsers"/>
+                <NavigationViewItem x:ConnectionId='9' Icon="BrowsePhotos" Content="Pret" x:Name="ViewPrets"/>
+                <NavigationViewItem x:ConnectionId='10' Icon="People" Content="Client" x:Name="ViewClients"/>
+            </NavigationView.MenuItems>
+            <!--<NavigationView.AutoSuggestBox>
+                <AutoSuggestBox QueryIcon="Find" x:Name="SearchBar"
+                                Visibility="Collapsed"/>
+            </NavigationView.AutoSuggestBox>-->
+
+            <NavigationView.PaneFooter>
+                <NavigationViewItem x:ConnectionId='11' x:Name="connexion" Icon="Contact" Content="Compte"/>
+            </NavigationView.PaneFooter>
+
+            <Frame x:ConnectionId='12' x:Name="mainFrame"/>
+        </NavigationView>
+
+        
+        
+
+        
+        
+    </Grid>
+</Page>
+

@@ -27,10 +27,19 @@ namespace ProjetFinal
             this.InitializeComponent();
             btnAddMateriel.IsEnabled = false;
             txtIDMateriel.MaxLength = 7;
-            verifID = verifMarque = verifNote = verifModel = false;
+            verifID = verifMarque = verifNote = verifModel = verifEtat = false;
         }
 
-        bool verifID ,verifMarque , verifNote ,verifModel;
+        bool verifID ,verifMarque , verifNote ,verifModel, verifEtat;
+        string etats;
+
+
+
+
+        private void btnAddMateriel_Click(object sender, RoutedEventArgs e)
+        {
+            Materiel m = new Materiel(txtIDMateriel.Text, txtMarqueMateriel.Text, txtModelMateriel.Text, etats, txtNoteMateriel.Text);
+        }
 
         private void txtNoteMateriel_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -45,7 +54,7 @@ namespace ProjetFinal
                 verifNote = true;
             }
 
-            if (verifID && verifMarque && verifNote && verifModel)
+            if (verifID && verifMarque && verifNote && verifModel && verifEtat)
             {
                 btnAddMateriel.IsEnabled = true;
             }
@@ -53,9 +62,29 @@ namespace ProjetFinal
                 btnAddMateriel.IsEnabled = false;
         }
 
-        private void btnAddMateriel_Click(object sender, RoutedEventArgs e)
+        private void cbEtat_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // Ajouter Materiel 
+
+            if(cbEtat.SelectedIndex != -1)
+            {
+                etats = e.AddedItems[0].ToString();
+                verifEtat = true;
+                txtEtatMaterielErr.Text = "";
+            }
+
+            if(cbEtat.SelectedIndex == -1)
+            {
+                verifEtat = false;
+                txtEtatMaterielErr.Text = "Veillez choisir un etat dans la liste.";
+            }
+
+            if (verifID && verifMarque && verifNote && verifModel && verifEtat)
+            {
+                btnAddMateriel.IsEnabled = true;
+            }
+            else
+                btnAddMateriel.IsEnabled = false;
+
         }
 
         private void txtModelMateriel_TextChanged(object sender, TextChangedEventArgs e)
@@ -72,7 +101,7 @@ namespace ProjetFinal
                 verifModel = true;
             }
 
-            if (verifID && verifMarque && verifNote && verifModel)
+            if (verifID && verifMarque && verifNote && verifModel && verifEtat)
             {
                 btnAddMateriel.IsEnabled = true;
             }
@@ -94,7 +123,7 @@ namespace ProjetFinal
                 verifMarque = true;
             }
 
-            if(verifID && verifMarque && verifNote && verifModel)
+            if(verifID && verifMarque && verifNote && verifModel && verifEtat)
             {
                 btnAddMateriel.IsEnabled = true;
             }
@@ -128,7 +157,7 @@ namespace ProjetFinal
                 verifID = true;
             }
 
-            if (verifID && verifMarque && verifNote && verifModel)
+            if (verifID && verifMarque && verifNote && verifModel && verifEtat)
             {
                 btnAddMateriel.IsEnabled = true;
             }
