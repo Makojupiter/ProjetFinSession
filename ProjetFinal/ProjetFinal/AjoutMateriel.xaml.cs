@@ -36,9 +36,17 @@ namespace ProjetFinal
 
 
 
-        private void btnAddMateriel_Click(object sender, RoutedEventArgs e)
+        private async void btnAddMateriel_Click(object sender, RoutedEventArgs e)
         {
             Materiel m = new Materiel(txtIDMateriel.Text, txtMarqueMateriel.Text, txtModelMateriel.Text, etats, txtNoteMateriel.Text);
+
+            //Ajout au singletone
+
+            ContentDialog ajout = new BoiteAjout();
+
+            var result = await ajout.ShowAsync();
+
+            Frame.Navigate(typeof(Accueil));
         }
 
         private void txtNoteMateriel_TextChanged(object sender, TextChangedEventArgs e)

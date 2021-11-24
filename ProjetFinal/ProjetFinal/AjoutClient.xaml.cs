@@ -26,10 +26,61 @@ namespace ProjetFinal
         {
             this.InitializeComponent();
             btnAjouter.IsEnabled = false;
-            NomV = telV = emailV = false;
+            NomV = telV = emailV = verifType =  false;
         }
 
-        bool NomV, telV, emailV, valideMail, valideMail2;
+        bool NomV, telV, emailV, valideMail, valideMail2, verifType;
+        string type;
+
+
+
+        private async void btnAjouter_Click(object sender, RoutedEventArgs e)
+        {
+
+            Client c = new Client(txtNom.Text, txtEmail.Text, txtTel.Text, txtPoste.Text, txtBureau.Text, type);
+
+            //Ajouter a la BD
+
+            ContentDialog ajout = new BoiteAjout();
+
+            var result = await ajout.ShowAsync();
+
+            Frame.Navigate(typeof(Accueil));
+        }
+
+        private void cbType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cbType.SelectedIndex != -1)
+            {
+                type = e.AddedItems[0].ToString();
+                verifType = true;
+                txtTypeErr.Text = "";
+            }
+
+            if (cbType.SelectedIndex == -1)
+            {
+                verifType = false;
+                txtTypeErr.Text = "Veillez choisir un type de client dans la liste.";
+            }
+
+            if (cbType.SelectedIndex == 0)
+            {
+                txtBureau.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                txtBureau.Visibility = Visibility.Visible;
+            }
+
+            if (NomV && telV && emailV && verifType)
+            {
+                btnAjouter.IsEnabled = true;
+            }
+            else
+            {
+                btnAjouter.IsEnabled = false;
+            }
+        }
 
         private void txtEmail_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -51,9 +102,10 @@ namespace ProjetFinal
             {
                 txtEmailErr.Text = "";
                 emailV = true;
+                //interoger BD pour doublons
             }
 
-            if (NomV && telV && emailV)
+            if (NomV && telV && emailV && verifType)
             {
                 btnAjouter.IsEnabled = true;
             }
@@ -77,7 +129,7 @@ namespace ProjetFinal
                 telV = true;
             }
 
-            if (NomV && telV && emailV)
+            if (NomV && telV && emailV && verifType)
             {
                 btnAjouter.IsEnabled = true;
             }
@@ -101,7 +153,7 @@ namespace ProjetFinal
                 NomV = true;
             }
 
-            if (NomV && telV && emailV )
+            if (NomV && telV && emailV && verifType)
             {
                 btnAjouter.IsEnabled = true;
             }

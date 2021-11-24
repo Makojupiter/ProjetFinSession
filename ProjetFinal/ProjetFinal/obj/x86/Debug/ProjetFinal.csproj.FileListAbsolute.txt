@@ -291,3 +291,13 @@ C:\Users\makoj\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Deb
 C:\Users\makoj\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\resources.en-us.resfiles.intermediate
 C:\Users\makoj\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\makoj\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424959200000000.json
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Accueil.xbf
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\Accueil.g.i.cs
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\Accueil.g.cs
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\Accueil.xaml
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\Accueil.xbf
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\BoiteAjout.g.i.cs
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\BoiteAjout.g.cs
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\BoiteAjout.xaml
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\BoiteAjout.xbf
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\BoiteAjout.xbf

@@ -39,6 +39,9 @@ namespace ProjetFinal
 
             switch (item.Name)
             {
+                case "Accueil":
+                    mainFrame.Navigate(typeof(Accueil));
+                    break;
                 case "AddMateriel":
                     mainFrame.Navigate(typeof(AjoutMateriel));
                     break;

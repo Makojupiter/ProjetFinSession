@@ -24,6 +24,16 @@ namespace ProjetFinal
             this.type = type;
         }
 
+        public Client(string nom, string email, string numTel, string poste, string numBureau, string type)
+        {
+            this.nom = nom;
+            this.email = email;
+            this.numTel = numTel;
+            this.poste = poste;
+            this.numBureau = numBureau;
+            this.type = type;
+        }
+
         public int Id 
         { 
             get => id;

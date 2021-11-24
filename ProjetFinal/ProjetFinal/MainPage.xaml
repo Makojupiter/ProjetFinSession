@@ -15,6 +15,7 @@
                         SelectionChanged="nvMenue_SelectionChanged"
                         IsPaneOpen="True">
             <NavigationView.MenuItems>
+                <NavigationViewItem Icon="Home" Content="Accueil" x:Name="Accueil"/>
                 <NavigationViewItemHeader Content="Ajouter"/>
                 <NavigationViewItem Icon="Tag" Content="Materiel" x:Name="AddMateriel"/>
                 <NavigationViewItem Icon="AddFriend" Content="Utilisateur" x:Name="AddUser"/>
