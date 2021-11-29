@@ -12,42 +12,42 @@ namespace ProjetFinal
     {
 
         int id, noPret;
-        string noMateriel, nomMateriel, marqueMateriel, retoune, usagerRetour;
+        string noMateriel, nomMateriel, marqueMateriel, retourne, usagerRetour;
 
-        public DetailsPret(int id, int noPret, string noMateriel, string nomMateriel, string marqueMateriel, string retoune, string usagerRetour)
+        public DetailsPret(int id, int noPret, string noMateriel, string nomMateriel, string marqueMateriel, string retourne, string usagerRetour)
         {
             this.id = id;
             this.noPret = noPret;
             this.noMateriel = noMateriel;
             this.nomMateriel = nomMateriel;
             this.marqueMateriel = marqueMateriel;
-            this.retoune = retoune;
+            this.retourne = retourne;
             this.usagerRetour = usagerRetour;
         }
 
-        public DetailsPret(int noPret, string noMateriel, string nomMateriel, string marqueMateriel, string retoune, string usagerRetour)
+        public DetailsPret(int noPret, string noMateriel, string nomMateriel, string marqueMateriel, string retourne, string usagerRetour)
         {
             this.noPret = noPret;
             this.noMateriel = noMateriel;
             this.nomMateriel = nomMateriel;
             this.marqueMateriel = marqueMateriel;
-            this.retoune = retoune;
+            this.retourne = retourne;
             this.usagerRetour = usagerRetour;
         }
 
-        public DetailsPret( string noMateriel, string nomMateriel, string marqueMateriel, string retoune, string usagerRetour)
+        public DetailsPret( string noMateriel, string nomMateriel, string marqueMateriel, string retourne, string usagerRetour)
         {
             this.noMateriel = noMateriel;
             this.nomMateriel = nomMateriel;
             this.marqueMateriel = marqueMateriel;
-            this.retoune = retoune;
+            this.retourne = retourne;
             this.usagerRetour = usagerRetour;
         }
 
-        public DetailsPret(string noMateriel, string retoune, string usagerRetour)
+        public DetailsPret(string noMateriel, string retourne, string usagerRetour)
         {
             this.noMateriel = noMateriel;
-            this.retoune = retoune;
+            this.retourne = retourne;
             this.usagerRetour = usagerRetour;
         }
 
@@ -96,12 +96,12 @@ namespace ProjetFinal
                 this.OnPropertyChanged();
             }
         }
-        public string Retoune 
+        public string Retourne 
         { 
-            get => retoune;
+            get => retourne;
             set
             {
-                retoune = value;
+                retourne = value;
                 this.OnPropertyChanged();
             }
         }
