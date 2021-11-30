@@ -25,6 +25,13 @@ namespace ProjetFinal
         public VisualiserUsager()
         {
             this.InitializeComponent();
+            gvUtilisateur.ItemsSource = GestionBD.getInstance().getUtilisateur();
+        }
+
+        private void gvUtilisateur_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           // MainPage.index = gvList.SelectedIndex;
+           //Frame.Navigate(typeof(Modifier));
         }
     }
 }

@@ -15,6 +15,7 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Margin" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRow" />
@@ -27,6 +28,7 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="TextWrapping" />
     </RootType>
     <RootType FullName="ProjetFinal.Accueil" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
@@ -145,6 +147,14 @@
     <RootType FullName="ProjetFinal.VisualiserClient" />
     <RootType FullName="ProjetFinal.VisualiserMateriel" />
     <RootType FullName="ProjetFinal.VisualiserPret" />
+    <RootType FullName="Windows.UI.Xaml.Controls.GridView">
+      <RootProperty Name="ItemTemplate" />
+      <RootEvent Name="SelectionChanged" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
     <RootType FullName="ProjetFinal.VisualiserUsager" />
   </Roots.RootTypes>
 </Roots>

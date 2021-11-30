@@ -10,22 +10,22 @@ namespace ProjetFinal
 {
     class Utilisateur : INotifyPropertyChanged
     {
-                string nomUsager, nom, prenom, password;
+                string username, nom, prenom, password;
 
-        public Utilisateur(string nomUsager, string nom, string prenom, string password)
+        public Utilisateur(string username, string nom, string prenom, string password)
         {
-            this.nomUsager = nomUsager;
+            this.username = username;
             this.nom = nom;
             this.prenom = prenom;
             this.password = password;
         }
 
-        public string NomUsager 
+        public string Username 
         { 
-            get => nomUsager;
+            get => username;
             set
             {
-                nomUsager = value;
+                username = value;
                 this.OnPropertyChanged();
             }
         }

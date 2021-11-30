@@ -14,6 +14,7 @@ namespace ProjetFinal
         ObservableCollection<Pret> listePret;
         ObservableCollection<Client> listeClient;
         ObservableCollection<Materiel> listeMateriel;
+        ObservableCollection<Utilisateur> listeUtilisateur;
         static GestionBD gestionBD = null;
 
         public GestionBD()
@@ -22,6 +23,7 @@ namespace ProjetFinal
             listePret = new ObservableCollection<Pret>();
             listeClient = new ObservableCollection<Client>();
             listeMateriel = new ObservableCollection<Materiel>();
+            listeUtilisateur = new ObservableCollection<Utilisateur>();
         }
 
         public static GestionBD getInstance()
@@ -131,6 +133,40 @@ namespace ProjetFinal
         public ObservableCollection<Materiel> getListMateriel()
         {
             return listeMateriel;
+        }
+
+        public ObservableCollection<Utilisateur> getUtilisateur()
+        {
+            try
+            {
+
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "SELECT * FROM utilisateur";
+
+                con.Open();
+                MySqlDataReader r = commande.ExecuteReader();
+
+                while (r.Read())
+                {
+
+                    listeUtilisateur.Add(new Utilisateur(r.GetString(1), r.GetString(2), r.GetString(3), r.GetString(4)));
+                }
+                r.Close();
+                con.Close();
+
+                return listeUtilisateur;
+            }
+            catch (MySqlException ex)
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                    con.Close();
+                return listeUtilisateur;
+            }
+        }
+        public ObservableCollection<Utilisateur> getListUtilisateur()
+        {
+            return listeUtilisateur;
         }
 
         public int AjouterPret(Pret c)
