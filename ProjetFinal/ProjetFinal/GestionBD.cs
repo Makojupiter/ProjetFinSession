@@ -17,6 +17,11 @@ namespace ProjetFinal
         ObservableCollection<Utilisateur> listeUtilisateur;
         static GestionBD gestionBD = null;
 
+        internal ObservableCollection<Pret> ListePret { get => listePret; set => listePret = value; }
+        internal ObservableCollection<Client> ListeClient { get => listeClient; set => listeClient = value; }
+        internal ObservableCollection<Materiel> ListeMateriel { get => listeMateriel; set => listeMateriel = value; }
+        internal ObservableCollection<Utilisateur> ListeUtilisateur { get => listeUtilisateur; set => listeUtilisateur = value; }
+
         public GestionBD()
         {
             this.con = new MySqlConnection("Server=cours.cegep3r.info;Database=a2021_420326ri_equipe_12;Uid=2029918;Pwd=Frtw6630+;");
@@ -24,6 +29,11 @@ namespace ProjetFinal
             listeClient = new ObservableCollection<Client>();
             listeMateriel = new ObservableCollection<Materiel>();
             listeUtilisateur = new ObservableCollection<Utilisateur>();
+
+            getPret();
+            getMateriel();
+            getClient();
+            getUtilisateur();
         }
 
         public static GestionBD getInstance()
@@ -260,6 +270,30 @@ namespace ProjetFinal
             return retour;
         }
 
+        public int AjouterUtilisateur(Utilisateur c)
+        {
+            int retour = 0;
+
+            MySqlCommand commande = new MySqlCommand();
+            commande.Connection = con;
+            commande.CommandText = "INSERT INTO utilisateur VALUES(@username, @prenom, @nom, @password)";
+
+            commande.Parameters.AddWithValue("@username", c.Username);
+            commande.Parameters.AddWithValue("@prenom", c.Prenom);
+            commande.Parameters.AddWithValue("@nom", c.Nom);
+            commande.Parameters.AddWithValue("@password", c.Password);
+
+            con.Open();
+            commande.Prepare();
+            retour = commande.ExecuteNonQuery();
+
+            con.Close();
+
+            listeUtilisateur.Add(c);
+
+            return retour;
+        }
+
         public void supprimerPret(Pret c)
         {
             MySqlCommand commande = new MySqlCommand();
@@ -298,6 +332,23 @@ namespace ProjetFinal
 
             listeMateriel.Remove(c);
         }
+
+        public void supprimerUtilisateur(Utilisateur c)
+        {
+            MySqlCommand commande = new MySqlCommand();
+            commande.Connection = con;
+            commande.CommandText = "DELETE FROM utilisateur WHERE username = @username";
+
+            commande.Parameters.AddWithValue("@username", c.Username);
+
+            con.Open();
+            commande.Prepare();
+            commande.ExecuteNonQuery();
+            con.Close();
+
+            listeUtilisateur.Remove(c);
+        }
+
         public int modifierPret(Pret c)
         {
             int retour = 0;
@@ -358,6 +409,28 @@ namespace ProjetFinal
             commande.Parameters.AddWithValue("@model", c.Model);
             commande.Parameters.AddWithValue("@etat", c.Etat);
             commande.Parameters.AddWithValue("@note", c.Note);
+
+            con.Open();
+            commande.Prepare();
+            retour = commande.ExecuteNonQuery();
+
+            con.Close();
+
+            return retour;
+        }
+
+        public int modifierUtilisateur(Utilisateur c)
+        {
+            int retour = 0;
+
+            MySqlCommand commande = new MySqlCommand();
+            commande.Connection = con;
+            commande.CommandText = "UPDATE utilisateur SET username = @username, prenom = @prenom, nom = @nom, password = @password where username = @username";
+
+            commande.Parameters.AddWithValue("@username", c.Username);
+            commande.Parameters.AddWithValue("@prenom", c.Prenom);
+            commande.Parameters.AddWithValue("@nom", c.Nom);
+            commande.Parameters.AddWithValue("@password", c.Password);
 
             con.Open();
             commande.Prepare();

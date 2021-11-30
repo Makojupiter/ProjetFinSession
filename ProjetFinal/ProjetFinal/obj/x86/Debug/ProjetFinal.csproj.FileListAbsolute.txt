@@ -329,3 +329,8 @@ C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Deb
 C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\FxResources.System.Configuration.ConfigurationManager.SR.resw
 C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\FxResources.System.Security.Cryptography.ProtectedData.SR.resw
 C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\FxResources.System.Security.Permissions.SR.resw
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ModifierUtilisateur.xbf
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\ModifierUtilisateur.g.i.cs
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\ModifierUtilisateur.g.cs
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\ModifierUtilisateur.xaml
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\ModifierUtilisateur.xbf

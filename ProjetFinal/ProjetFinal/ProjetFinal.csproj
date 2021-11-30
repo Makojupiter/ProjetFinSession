@@ -144,6 +144,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Materiel.cs" />
+    <Compile Include="ModifierUtilisateur.xaml.cs">
+      <DependentUpon>ModifierUtilisateur.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageConnexion.xaml.cs">
       <DependentUpon>PageConnexion.xaml</DependentUpon>
     </Compile>
@@ -210,6 +213,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModifierUtilisateur.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageConnexion.xaml">
       <SubType>Designer</SubType>

@@ -9,6 +9,12 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Margin="20">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF002CF1" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -23,19 +29,17 @@
         <GridView x:ConnectionId='2' x:Name="gvUtilisateur" Grid.Row="1"                                                  >
             <GridView.ItemTemplate>
                 <DataTemplate                               >
-                    <Grid x:ConnectionId='4'>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
+                    <Grid x:ConnectionId='4' Background="#26FFFFFF" Margin="25">
+                        <StackPanel Orientation="Horizontal" Width="500">
 
-                        <!--<Image Source="{x:Bind}" MaxHeight="250" Grid.Column="0" Stretch="Uniform"/>-->
+                            <TextBlock Text="&#xE13D;" FontFamily="Segoe UI Symbol" FontSize="200"/>
 
-                        <StackPanel Margin="5" Grid.Column="1">
-                            <TextBlock x:ConnectionId='5'                          Foreground="White" FontSize="20" TextWrapping="Wrap"/>
-                            <TextBlock x:ConnectionId='6'                     Foreground="White" FontSize="15" TextWrapping="Wrap"/>
-                            <TextBlock x:ConnectionId='7'                        Foreground="White" FontSize="10" TextWrapping="Wrap"/>
-                            <TextBlock x:ConnectionId='8'                          Foreground="White" FontSize="10" TextWrapping="Wrap"/>
+                            <StackPanel Orientation="Vertical" Margin="5">
+                                <TextBlock x:ConnectionId='5'                          Foreground="White" FontSize="20" TextWrapping="Wrap"/>
+                                <TextBlock x:ConnectionId='6'                        Foreground="White" FontSize="15" TextWrapping="Wrap"/>
+                                <TextBlock x:ConnectionId='7'                     Foreground="White" FontSize="10" TextWrapping="Wrap"/>
+                                <TextBlock x:ConnectionId='8'                          Foreground="White" FontSize="10" TextWrapping="Wrap"/>
+                            </StackPanel>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>

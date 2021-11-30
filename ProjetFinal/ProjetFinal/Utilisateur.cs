@@ -26,7 +26,7 @@ namespace ProjetFinal
             set
             {
                 username = value;
-                this.OnPropertyChanged();
+                OnPropertyChanged();
             }
         }
         public string Nom 
@@ -35,7 +35,7 @@ namespace ProjetFinal
             set
             {
                 nom = value;
-                this.OnPropertyChanged();
+                OnPropertyChanged();
             }
         }
         public string Prenom 
@@ -44,7 +44,7 @@ namespace ProjetFinal
             set
             {
                 prenom = value;
-                this.OnPropertyChanged();
+                OnPropertyChanged();
             }
         }
         public string Password 
@@ -53,13 +53,13 @@ namespace ProjetFinal
             set
             {
                 password = value;
-                this.OnPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void OnPropertyChanged([CallerMemberName] string propertyName = null) =>
-            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }

@@ -22,16 +22,19 @@ namespace ProjetFinal
     /// </summary>
     public sealed partial class VisualiserUsager : Page
     {
+
+        internal static int index = -1;
         public VisualiserUsager()
         {
             this.InitializeComponent();
-            gvUtilisateur.ItemsSource = GestionBD.getInstance().getUtilisateur();
+            gvUtilisateur.ItemsSource = GestionBD.getInstance().getListUtilisateur();
         }
 
-        private void gvUtilisateur_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void gvUtilisateur_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           // MainPage.index = gvList.SelectedIndex;
-           //Frame.Navigate(typeof(Modifier));
+            index = gvUtilisateur.SelectedIndex;
+            ModifierUtilisateur dialog = new ModifierUtilisateur();
+            await dialog.ShowAsync();
         }
     }
 }

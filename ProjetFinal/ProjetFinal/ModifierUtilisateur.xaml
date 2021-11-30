@@ -1,0 +1,31 @@
+﻿<ContentDialog
+    x:Class="ProjetFinal.ModifierUtilisateur"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjetFinal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Modifier un utilisateur"
+    PrimaryButtonText="Modifier"
+    CloseButtonText="Annuler"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.ColumnSpan="2" Margin="0">
+            <TextBox x:Name="tbUsername" Header="Username"/>
+            <TextBlock x:Name="tbErrorUsername" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
+            <TextBox x:Name="tbPrenom" Header="Prénom"/>
+            <TextBlock x:Name="tbErrorPrenom" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
+            <TextBox x:Name="tbNom" Header="Nom"/>
+            <TextBlock x:Name="tbErrorNom" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
+            <TextBox x:Name="tbPassword" Header="Password"/>
+            <TextBlock x:Name="tbErrorPassword" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</ContentDialog>
