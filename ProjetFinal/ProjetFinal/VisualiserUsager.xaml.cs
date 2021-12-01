@@ -30,11 +30,37 @@ namespace ProjetFinal
             gvUtilisateur.ItemsSource = GestionBD.getInstance().getListUtilisateur();
         }
 
-        private async void gvUtilisateur_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void addButton_Click(object sender, RoutedEventArgs e)
+        {
+            //this.OnNavigatedTo(typeof(AjouterUsager));
+        }
+
+        private async void editButton_Click(object sender, RoutedEventArgs e)
         {
             index = gvUtilisateur.SelectedIndex;
             ModifierUtilisateur dialog = new ModifierUtilisateur();
             await dialog.ShowAsync();
+        }
+
+        private async void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            ContentDialog dialog = new ContentDialog();
+            dialog.Title = "Confirmation de Suppression";
+            dialog.Content = "Voulez-vous vraiment supprimer cet utilisateur?";
+            dialog.PrimaryButtonText = "Oui";
+            dialog.CloseButtonText = "Annuler";
+            dialog.DefaultButton = ContentDialogButton.Primary;
+            ContentDialogResult resultat = await dialog.ShowAsync();
+
+            if (resultat == ContentDialogResult.None)
+            {
+
+            }
+            else
+            {
+                Utilisateur c = (Utilisateur)gvUtilisateur.SelectedItem;
+                GestionBD.getInstance().supprimerUtilisateur(c);
+            }
         }
     }
 }

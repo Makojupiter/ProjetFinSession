@@ -22,9 +22,44 @@ namespace ProjetFinal
     /// </summary>
     public sealed partial class VisualiserMateriel : Page
     {
+        internal static int index = -1;
         public VisualiserMateriel()
         {
             this.InitializeComponent();
+            gvMateriel.ItemsSource = GestionBD.getInstance().getListMateriel();
+        }
+
+        private void addButton_Click(object sender, RoutedEventArgs e)
+        {
+            //this.mainFrame.Navigate(typeof(AjouterUsager));
+        }
+
+        private async void editButton_Click(object sender, RoutedEventArgs e)
+        {
+            index = gvMateriel.SelectedIndex;
+            ModifierMateriel dialog = new ModifierMateriel();
+            await dialog.ShowAsync();
+        }
+
+        private async void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            ContentDialog dialog = new ContentDialog();
+            dialog.Title = "Confirmation de Suppression";
+            dialog.Content = "Voulez-vous vraiment supprimer ce matériel?";
+            dialog.PrimaryButtonText = "Oui";
+            dialog.CloseButtonText = "Annuler";
+            dialog.DefaultButton = ContentDialogButton.Primary;
+            ContentDialogResult resultat = await dialog.ShowAsync();
+
+            if (resultat == ContentDialogResult.None)
+            {
+
+            }
+            else
+            {
+                Materiel c = (Materiel)gvMateriel.SelectedItem;
+                GestionBD.getInstance().supprimerMateriel(c);
+            }
         }
     }
 }

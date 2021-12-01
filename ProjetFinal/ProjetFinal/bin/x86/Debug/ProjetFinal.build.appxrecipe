@@ -133,6 +133,12 @@
     <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ModifierClient.xbf">
+      <PackagePath>ModifierClient.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ModifierMateriel.xbf">
+      <PackagePath>ModifierMateriel.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ModifierUtilisateur.xbf">
       <PackagePath>ModifierUtilisateur.xbf</PackagePath>
     </AppxPackagedFile>

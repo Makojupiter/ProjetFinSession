@@ -334,3 +334,13 @@ C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Deb
 C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\ModifierUtilisateur.g.cs
 C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\ModifierUtilisateur.xaml
 C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\ModifierUtilisateur.xbf
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ModifierClient.xbf
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\ModifierClient.g.i.cs
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\ModifierClient.g.cs
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\ModifierClient.xaml
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\ModifierClient.xbf
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ModifierMateriel.xbf
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\ModifierMateriel.g.i.cs
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\ModifierMateriel.g.cs
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\ModifierMateriel.xaml
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\ModifierMateriel.xbf

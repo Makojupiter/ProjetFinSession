@@ -14,6 +14,8 @@ AjoutMateriel.xbf
 App.xbf
 BoiteAjout.xbf
 MainPage.xbf
+ModifierClient.xbf
+ModifierMateriel.xbf
 ModifierUtilisateur.xbf
 PageConnexion.xbf
 ProjetFinal.xr.xml

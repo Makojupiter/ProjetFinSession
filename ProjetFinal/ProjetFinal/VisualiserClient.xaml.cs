@@ -22,9 +22,45 @@ namespace ProjetFinal
     /// </summary>
     public sealed partial class VisualiserClient : Page
     {
+        internal static int index = -1;
         public VisualiserClient()
         {
             this.InitializeComponent();
+            gvClient.ItemsSource = GestionBD.getInstance().getListClient();
         }
+
+        private void addButton_Click(object sender, RoutedEventArgs e)
+        {
+           //this.mainFrame.Navigate(typeof(AjouterUsager));
+        }
+
+        private async void editButton_Click(object sender, RoutedEventArgs e)
+        {
+            index = gvClient.SelectedIndex;
+            ModifierClient dialog = new ModifierClient();
+            await dialog.ShowAsync();
+        }
+
+        private async void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            ContentDialog dialog = new ContentDialog();
+            dialog.Title = "Confirmation de Suppression";
+            dialog.Content = "Voulez-vous vraiment supprimer ce client?";
+            dialog.PrimaryButtonText = "Oui";
+            dialog.CloseButtonText = "Annuler";
+            dialog.DefaultButton = ContentDialogButton.Primary;
+            ContentDialogResult resultat = await dialog.ShowAsync();
+
+            if (resultat == ContentDialogResult.None)
+            {
+
+            }
+            else
+            {
+                Client c = (Client)gvClient.SelectedItem;
+                GestionBD.getInstance().supprimerClient(c);
+            }
+        }
+
     }
 }

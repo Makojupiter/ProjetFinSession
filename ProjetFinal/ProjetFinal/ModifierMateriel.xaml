@@ -1,0 +1,33 @@
+﻿<ContentDialog
+    x:Class="ProjetFinal.ModifierMateriel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjetFinal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Modifier un matériel"
+    PrimaryButtonText="Modifier"
+    CloseButtonText="Annuler"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.ColumnSpan="2" Margin="0">
+            <TextBox x:Name="tbIdentifiant" Header="Identifiant"/>
+            <TextBlock x:Name="tbErrorIdentifiant" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
+            <TextBox x:Name="tbMarque" Header="Marque"/>
+            <TextBlock x:Name="tbErrorMarque" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
+            <TextBox x:Name="tbModel" Header="Modèle"/>
+            <TextBlock x:Name="tbErrorModel" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
+            <TextBox x:Name="tbEtat" Header="Etat"/>
+            <TextBlock x:Name="tbErrorEtat" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
+            <TextBox x:Name="tbNote" Header="Note"/>
+            <TextBlock x:Name="tbErrorNote" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</ContentDialog>

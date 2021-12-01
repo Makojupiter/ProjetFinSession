@@ -14,8 +14,8 @@
       <RootProperty Name="Children" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
-      <RootProperty Name="Background" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Background" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRow" />
@@ -149,11 +149,10 @@
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationViewItemSeparator" />
     <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
     <RootType FullName="ProjetFinal.MainPage" />
+    <RootType FullName="ProjetFinal.ModifierClient" />
+    <RootType FullName="ProjetFinal.ModifierMateriel" />
     <RootType FullName="ProjetFinal.ModifierUtilisateur" />
     <RootType FullName="ProjetFinal.PageConnexion" />
-    <RootType FullName="ProjetFinal.VisualiserClient" />
-    <RootType FullName="ProjetFinal.VisualiserMateriel" />
-    <RootType FullName="ProjetFinal.VisualiserPret" />
     <RootType FullName="Windows.UI.Xaml.Media.LinearGradientBrush">
       <RootProperty Name="EndPoint" />
       <RootProperty Name="StartPoint" />
@@ -165,12 +164,25 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="ItemTemplate" />
-      <RootEvent Name="SelectionChanged" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
+      <RootProperty Name="Background" />
+      <RootProperty Name="IsOpen" />
+      <RootProperty Name="DefaultLabelPosition" />
+      <RootProperty Name="PrimaryCommands" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="Icon" />
+      <RootProperty Name="Label" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
+    <RootType FullName="ProjetFinal.VisualiserClient" />
+    <RootType FullName="ProjetFinal.VisualiserMateriel" />
+    <RootType FullName="ProjetFinal.VisualiserPret" />
     <RootType FullName="ProjetFinal.VisualiserUsager" />
   </Roots.RootTypes>
 </Roots>

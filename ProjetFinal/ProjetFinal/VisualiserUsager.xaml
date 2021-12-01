@@ -18,6 +18,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
         <TextBlock Text="Utilisateurs" 
@@ -26,7 +27,7 @@
                    HorizontalAlignment="Center"
                    Grid.Row="0"/>
 
-        <GridView x:Name="gvUtilisateur" Grid.Row="1" SelectionChanged="gvUtilisateur_SelectionChanged">
+        <GridView x:Name="gvUtilisateur" Grid.Row="1">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="local:Utilisateur">
                     <Grid Background="#26FFFFFF" Margin="25">
@@ -45,5 +46,12 @@
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
+
+        <CommandBar Grid.Row="2" Background="Transparent" IsOpen="False" DefaultLabelPosition="Right">
+            <AppBarButton x:Name="addButton" Icon="Add" Label="Ajouter" Click="addButton_Click"/>
+            <AppBarButton x:Name="editButton" Icon="Edit" Label="Modifier" Click="editButton_Click"/>
+            <AppBarButton x:Name="deleteButton" Icon="Delete" Label="Supprimer" Click="deleteButton_Click"/>
+        </CommandBar>
+        
     </Grid>
 </Page>
