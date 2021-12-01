@@ -36,11 +36,11 @@
                             <TextBlock Text="&#x1f4fa;" FontFamily="Segoe UI Symbol" FontSize="200"/>
 
                             <StackPanel Orientation="Vertical" Margin="5">
-                                <TextBlock Text="{x:Bind Identifiant}" Foreground="White" FontSize="20" TextWrapping="Wrap"/>
-                                <TextBlock Text="{x:Bind Marque}" Foreground="White" FontSize="15" TextWrapping="Wrap"/>
-                                <TextBlock Text="{x:Bind Model}" Foreground="White" FontSize="10" TextWrapping="Wrap"/>
-                                <TextBlock Text="{x:Bind Etat}" Foreground="White" FontSize="10" TextWrapping="Wrap"/>
-                                <TextBlock Text="{x:Bind Note}" Foreground="White" FontSize="10" TextWrapping="Wrap"/>
+                                <TextBlock Text="{x:Bind Identifiant, Mode=OneWay}" Foreground="White" FontSize="20" TextWrapping="Wrap"/>
+                                <TextBlock Text="{x:Bind Marque, Mode=OneWay}" Foreground="White" FontSize="15" TextWrapping="Wrap"/>
+                                <TextBlock Text="{x:Bind Model, Mode=OneWay}" Foreground="White" FontSize="10" TextWrapping="Wrap"/>
+                                <TextBlock Text="{x:Bind Etat, Mode=OneWay}" Foreground="White" FontSize="10" TextWrapping="Wrap"/>
+                                <TextBlock Text="{x:Bind Note, Mode=OneWay}" Foreground="White" FontSize="10" TextWrapping="Wrap"/>
                             </StackPanel>
                         </StackPanel>
                     </Grid>

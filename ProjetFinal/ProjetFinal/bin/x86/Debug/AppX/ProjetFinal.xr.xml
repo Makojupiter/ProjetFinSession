@@ -179,7 +179,9 @@
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
+      <RootProperty Name="Mode" />
+    </RootType>
     <RootType FullName="ProjetFinal.VisualiserClient" />
     <RootType FullName="ProjetFinal.VisualiserMateriel" />
     <RootType FullName="ProjetFinal.VisualiserPret" />
