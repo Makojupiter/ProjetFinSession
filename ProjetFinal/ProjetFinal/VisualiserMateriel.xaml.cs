@@ -29,9 +29,10 @@ namespace ProjetFinal
             gvMateriel.ItemsSource = GestionBD.getInstance().getListMateriel();
         }
 
-        private void addButton_Click(object sender, RoutedEventArgs e)
+        private async void addButton_Click(object sender, RoutedEventArgs e)
         {
-            //this.mainFrame.Navigate(typeof(AjouterUsager));
+            AjouterMateriel dialog = new AjouterMateriel();
+            await dialog.ShowAsync();
         }
 
         private async void editButton_Click(object sender, RoutedEventArgs e)

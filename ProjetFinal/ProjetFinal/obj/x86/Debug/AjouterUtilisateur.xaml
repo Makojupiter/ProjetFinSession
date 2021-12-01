@@ -1,0 +1,32 @@
+﻿<ContentDialog x:ConnectionId='1'
+    x:Class="ProjetFinal.AjouterUtilisateur"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjetFinal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Ajouter un utilisateur"
+    PrimaryButtonText="Ajouter"
+    CloseButtonText="Annuler"
+                                                         >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.ColumnSpan="2" Margin="0">
+            <TextBox x:ConnectionId='2' x:Name="txtUserName" Header="Nom d'utilisateur" HorizontalAlignment="Stretch"                                      />
+            <TextBlock x:ConnectionId='3' x:Name="txtUserNameErr" Foreground="red"/>
+            <TextBox x:ConnectionId='4' x:Name="txtPrenom" Header="Prénom" HorizontalAlignment="Stretch"                                    />
+            <TextBlock x:ConnectionId='5' x:Name="txtPrenomErr" Foreground="red"/>
+            <TextBox x:ConnectionId='6' x:Name="txtNom" Header="Nom" HorizontalAlignment="Stretch"                                 />
+            <TextBlock x:ConnectionId='7' x:Name="txtNomErr" Foreground="red"/>
+            <PasswordBox x:ConnectionId='8' x:Name="pwdPassword" Header="Mot de passe"                                              />
+            <TextBlock x:ConnectionId='9' x:Name="txtPasswordErr" Foreground="red"/>
+        </StackPanel>
+    </Grid>
+</ContentDialog>
+

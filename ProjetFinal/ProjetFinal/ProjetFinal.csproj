@@ -119,17 +119,17 @@
     <Compile Include="Accueil.xaml.cs">
       <DependentUpon>Accueil.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AjoutClient.xaml.cs">
-      <DependentUpon>AjoutClient.xaml</DependentUpon>
+    <Compile Include="AjouterClient.xaml.cs">
+      <DependentUpon>AjouterClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AjouterMateriel.xaml.cs">
+      <DependentUpon>AjouterMateriel.xaml</DependentUpon>
     </Compile>
     <Compile Include="AjouterPret.xaml.cs">
       <DependentUpon>AjouterPret.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AjouterUsager.xaml.cs">
-      <DependentUpon>AjouterUsager.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="AjoutMateriel.xaml.cs">
-      <DependentUpon>AjoutMateriel.xaml</DependentUpon>
+    <Compile Include="AjouterUtilisateur.xaml.cs">
+      <DependentUpon>AjouterUtilisateur.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -168,8 +168,8 @@
     <Compile Include="VisualiserPret.xaml.cs">
       <DependentUpon>VisualiserPret.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VisualiserUsager.xaml.cs">
-      <DependentUpon>VisualiserUsager.xaml</DependentUpon>
+    <Compile Include="VisualiserUtilisateur.xaml.cs">
+      <DependentUpon>VisualiserUtilisateur.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -196,7 +196,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AjoutClient.xaml">
+    <Page Include="AjouterClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AjouterMateriel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -204,11 +208,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AjouterUsager.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="AjoutMateriel.xaml">
+    <Page Include="AjouterUtilisateur.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -248,7 +248,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VisualiserUsager.xaml">
+    <Page Include="VisualiserUtilisateur.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

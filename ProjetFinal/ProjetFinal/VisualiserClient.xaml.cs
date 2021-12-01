@@ -29,9 +29,10 @@ namespace ProjetFinal
             gvClient.ItemsSource = GestionBD.getInstance().getListClient();
         }
 
-        private void addButton_Click(object sender, RoutedEventArgs e)
+        private async void addButton_Click(object sender, RoutedEventArgs e)
         {
-           //this.mainFrame.Navigate(typeof(AjouterUsager));
+            AjouterClient dialog = new AjouterClient();
+            await dialog.ShowAsync();
         }
 
         private async void editButton_Click(object sender, RoutedEventArgs e)

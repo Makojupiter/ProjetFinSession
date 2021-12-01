@@ -1,0 +1,40 @@
+﻿<ContentDialog x:ConnectionId='1'
+    x:Class="ProjetFinal.AjouterClient"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjetFinal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Ajouter un client"
+    PrimaryButtonText="Ajouter"
+    CloseButtonText="Annuler"
+                                                         >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.ColumnSpan="2" Margin="0">
+            <ComboBox x:ConnectionId='2' x:Name="cbType" HorizontalAlignment="Stretch" Header="Type de client"                                           >
+                <x:String>Étudiant</x:String>
+                <x:String>Professeur</x:String>
+                <x:String>Employé du CÉGEP</x:String>
+            </ComboBox>
+            <TextBlock x:ConnectionId='3' x:Name="txtTypeErr" Foreground="Red"/>
+            <TextBox x:ConnectionId='4' x:Name="txtNom" Header="Nom" HorizontalAlignment="Stretch"                                 />
+            <TextBlock x:ConnectionId='5' x:Name="txtNomErr" Foreground="Red"/>
+            <TextBox x:ConnectionId='6' x:Name="txtTel" Header="Telephone" HorizontalAlignment="Stretch"                                 />
+            <TextBlock x:ConnectionId='7' x:Name="txtTellErr" Foreground="Red"/>
+            <TextBox x:ConnectionId='8' x:Name="txtPoste" Header="Poste" HorizontalAlignment="Stretch"/>
+            <TextBlock x:ConnectionId='9' x:Name="txtPosteErr" Foreground="Red"/>
+            <TextBox x:ConnectionId='10' x:Name="txtEmail" Header="Email" HorizontalAlignment="Stretch"                                   />
+            <TextBlock x:ConnectionId='11' x:Name="txtEmailErr" Foreground="Red"/>
+            <TextBox x:ConnectionId='12' x:Name="txtBureau" Header="Numero de bureau (facultatif)" HorizontalAlignment="Stretch"/>
+            <TextBlock x:ConnectionId='13' x:Name="txtBureauErr" Foreground="Red"/>
+        </StackPanel>
+    </Grid>
+</ContentDialog>
+

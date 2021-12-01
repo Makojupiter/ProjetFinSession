@@ -115,17 +115,17 @@
     <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Accueil.xbf">
       <PackagePath>Accueil.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjoutClient.xbf">
-      <PackagePath>AjoutClient.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjouterClient.xbf">
+      <PackagePath>AjouterClient.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjouterMateriel.xbf">
+      <PackagePath>AjouterMateriel.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjouterPret.xbf">
       <PackagePath>AjouterPret.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjouterUsager.xbf">
-      <PackagePath>AjouterUsager.xbf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjoutMateriel.xbf">
-      <PackagePath>AjoutMateriel.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjouterUtilisateur.xbf">
+      <PackagePath>AjouterUtilisateur.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\BoiteAjout.xbf">
       <PackagePath>BoiteAjout.xbf</PackagePath>
@@ -154,8 +154,8 @@
     <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserPret.xbf">
       <PackagePath>VisualiserPret.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserUsager.xbf">
-      <PackagePath>VisualiserUsager.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserUtilisateur.xbf">
+      <PackagePath>VisualiserUtilisateur.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>

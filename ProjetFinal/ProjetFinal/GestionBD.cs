@@ -216,9 +216,9 @@ namespace ProjetFinal
         {
             int retour = 0;
 
-            MySqlCommand commande = new MySqlCommand();
+            MySqlCommand commande = new MySqlCommand("p_ajout_client");
             commande.Connection = con;
-            commande.CommandText = "INSERT INTO client VALUES(null, @nom, @email, @numTel, @poste, @numBureau, @type)";
+            commande.CommandType = System.Data.CommandType.StoredProcedure;
 
             commande.Parameters.AddWithValue("@nom", c.Nom);
             commande.Parameters.AddWithValue("@email", c.Email);
@@ -230,13 +230,6 @@ namespace ProjetFinal
             con.Open();
             commande.Prepare();
             retour = commande.ExecuteNonQuery();
-
-            //Pour obtenir le dernier ID inseré pour permettre à la liste de s'actualiser
-            commande.CommandText = "SELECT MAX(id) FROM client";
-            MySqlDataReader r = commande.ExecuteReader();
-            r.Read();
-            int id = r.GetInt32(0);
-            c.Id = id;
 
             con.Close();
 
@@ -274,9 +267,9 @@ namespace ProjetFinal
         {
             int retour = 0;
 
-            MySqlCommand commande = new MySqlCommand();
+            MySqlCommand commande = new MySqlCommand("p_ajout_utilisateur");
             commande.Connection = con;
-            commande.CommandText = "INSERT INTO utilisateur VALUES(@username, @prenom, @nom, @password)";
+            commande.CommandType = System.Data.CommandType.StoredProcedure;
 
             commande.Parameters.AddWithValue("@username", c.Username);
             commande.Parameters.AddWithValue("@prenom", c.Prenom);
@@ -311,7 +304,7 @@ namespace ProjetFinal
         {
             MySqlCommand commande = new MySqlCommand();
             commande.Connection = con;
-            commande.CommandText = "DELETE FROM client WHERE id = " + c.Id;
+            commande.CommandText = "DELETE FROM client WHERE idClient = " + c.Id;
 
             con.Open();
             commande.ExecuteNonQuery();
@@ -324,7 +317,7 @@ namespace ProjetFinal
         {
             MySqlCommand commande = new MySqlCommand();
             commande.Connection = con;
-            commande.CommandText = "DELETE FROM materiel WHERE id = " + c.Identifiant;
+            commande.CommandText = "DELETE FROM materiel WHERE idMateriel = " + c.Identifiant;
 
             con.Open();
             commande.ExecuteNonQuery();

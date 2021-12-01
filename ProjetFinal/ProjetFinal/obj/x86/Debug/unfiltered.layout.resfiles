@@ -7,10 +7,10 @@ Assets\Square44x44Logo.targetsize-24_altform-unplated.png
 Assets\StoreLogo.png
 Assets\Wide310x150Logo.scale-200.png
 Accueil.xbf
-AjoutClient.xbf
+AjouterClient.xbf
+AjouterMateriel.xbf
 AjouterPret.xbf
-AjouterUsager.xbf
-AjoutMateriel.xbf
+AjouterUtilisateur.xbf
 App.xbf
 BoiteAjout.xbf
 MainPage.xbf
@@ -22,5 +22,5 @@ ProjetFinal.xr.xml
 VisualiserClient.xbf
 VisualiserMateriel.xbf
 VisualiserPret.xbf
-VisualiserUsager.xbf
+VisualiserUtilisateur.xbf
 Properties\Default.rd.xml

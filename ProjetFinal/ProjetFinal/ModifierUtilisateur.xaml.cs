@@ -24,7 +24,7 @@ namespace ProjetFinal
         {
             this.InitializeComponent();
 
-            c = GestionBD.getInstance().getListUtilisateur()[VisualiserUsager.index];
+            c = GestionBD.getInstance().getListUtilisateur()[VisualiserUtilisateur.index];
 
             tbUsername.Text = c.Username;
             tbPrenom.Text = c.Prenom;

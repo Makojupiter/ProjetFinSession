@@ -11,22 +11,23 @@
     <Grid>
 
         <NavigationView x:ConnectionId='2' Name="nvMenue"
+                        Grid.Column="0"
                         IsSettingsVisible="False"
                                                                    
+                        IsBackEnabled="True"
+                                                             
                         IsPaneOpen="True">
+            
             <NavigationView.MenuItems>
                 <NavigationViewItem x:ConnectionId='3' Icon="Home" Content="Accueil" x:Name="Accueil"/>
                 <NavigationViewItemHeader Content="Ajouter"/>
-                <NavigationViewItem x:ConnectionId='4' Icon="Tag" Content="Materiel" x:Name="AddMateriel"/>
-                <NavigationViewItem x:ConnectionId='5' Icon="AddFriend" Content="Utilisateur" x:Name="AddUser"/>
-                <NavigationViewItem x:ConnectionId='6' Icon="Caption" Content="Pret" x:Name="AddPret"/>
-                <NavigationViewItem x:ConnectionId='7' Icon="OtherUser" Content="Client" x:Name="AddClient"/>
+                <NavigationViewItem x:ConnectionId='4' Icon="Caption" Content="Pret" x:Name="AddPret"/>
                 <NavigationViewItemSeparator/>
                 <NavigationViewItemHeader Content="Visualiser"/>
-                <NavigationViewItem x:ConnectionId='8' Icon="Tag" Content="Materiel" x:Name="ViewMateriel"/>
-                <NavigationViewItem x:ConnectionId='9' Icon="Contact" Content="Utilisateur" x:Name="ViewUsers"/>
-                <NavigationViewItem x:ConnectionId='10' Icon="BrowsePhotos" Content="Pret" x:Name="ViewPrets"/>
-                <NavigationViewItem x:ConnectionId='11' Icon="People" Content="Client" x:Name="ViewClients"/>
+                <NavigationViewItem x:ConnectionId='5' Icon="Tag" Content="Materiel" x:Name="ViewMateriel"/>
+                <NavigationViewItem x:ConnectionId='6' Icon="Contact" Content="Utilisateur" x:Name="ViewUsers"/>
+                <NavigationViewItem x:ConnectionId='7' Icon="BrowsePhotos" Content="Pret" x:Name="ViewPrets"/>
+                <NavigationViewItem x:ConnectionId='8' Icon="People" Content="Client" x:Name="ViewClients"/>
             </NavigationView.MenuItems>
             <!--<NavigationView.AutoSuggestBox>
                 <AutoSuggestBox QueryIcon="Find" x:Name="SearchBar"
@@ -34,17 +35,12 @@
             </NavigationView.AutoSuggestBox>-->
 
             <NavigationView.PaneFooter>
-                <NavigationViewItem x:ConnectionId='12' x:Name="connexion" Icon="Contact" Content="Compte"/>
+                <NavigationViewItem x:ConnectionId='9' x:Name="connexion" Icon="Contact" Content="Compte"/>
             </NavigationView.PaneFooter>
 
-            <Frame x:ConnectionId='13' x:Name="mainFrame"/>
+            <Frame x:ConnectionId='10' x:Name="mainFrame"/>
+
         </NavigationView>
-
-        
-        
-
-        
-        
     </Grid>
 </Page>
 

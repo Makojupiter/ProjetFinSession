@@ -42,26 +42,17 @@ namespace ProjetFinal
                 case "Accueil":
                     mainFrame.Navigate(typeof(Accueil));
                     break;
-                case "AddMateriel":
-                    mainFrame.Navigate(typeof(AjoutMateriel));
-                    break;
                 case "ViewMateriel":
                     mainFrame.Navigate(typeof(VisualiserMateriel));
                     break;
-                case "AddUser":
-                    mainFrame.Navigate(typeof(AjouterUsager));
-                    break;
                 case "ViewUsers":
-                    mainFrame.Navigate(typeof(VisualiserUsager));
+                    mainFrame.Navigate(typeof(VisualiserUtilisateur));
                     break;
                 case "AddPret":
                     mainFrame.Navigate(typeof(AjouterPret));
                     break;
                 case "ViewPrets":
                     mainFrame.Navigate(typeof(VisualiserPret));
-                    break;
-                case "AddClient":
-                    mainFrame.Navigate(typeof(AjoutClient));
                     break;
                 case "ViewClients":
                     mainFrame.Navigate(typeof(VisualiserClient));
@@ -70,6 +61,12 @@ namespace ProjetFinal
                     break;
             }
 
+        }
+
+        private void nvMenue_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
+        {
+            if (mainFrame.CanGoBack)
+                mainFrame.GoBack();
         }
     }
 }

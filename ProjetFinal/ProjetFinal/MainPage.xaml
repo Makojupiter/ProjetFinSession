@@ -11,16 +11,17 @@
     <Grid>
 
         <NavigationView Name="nvMenue"
+                        Grid.Column="0"
                         IsSettingsVisible="False"
                         SelectionChanged="nvMenue_SelectionChanged"
+                        IsBackEnabled="True"
+                        BackRequested="nvMenue_BackRequested"
                         IsPaneOpen="True">
+            
             <NavigationView.MenuItems>
                 <NavigationViewItem Icon="Home" Content="Accueil" x:Name="Accueil"/>
                 <NavigationViewItemHeader Content="Ajouter"/>
-                <NavigationViewItem Icon="Tag" Content="Materiel" x:Name="AddMateriel"/>
-                <NavigationViewItem Icon="AddFriend" Content="Utilisateur" x:Name="AddUser"/>
                 <NavigationViewItem Icon="Caption" Content="Pret" x:Name="AddPret"/>
-                <NavigationViewItem Icon="OtherUser" Content="Client" x:Name="AddClient"/>
                 <NavigationViewItemSeparator/>
                 <NavigationViewItemHeader Content="Visualiser"/>
                 <NavigationViewItem Icon="Tag" Content="Materiel" x:Name="ViewMateriel"/>
@@ -38,12 +39,7 @@
             </NavigationView.PaneFooter>
 
             <Frame x:Name="mainFrame"/>
+
         </NavigationView>
-
-        
-        
-
-        
-        
     </Grid>
 </Page>
