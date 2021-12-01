@@ -48,9 +48,6 @@ namespace ProjetFinal
                 case "ViewUsers":
                     mainFrame.Navigate(typeof(VisualiserUtilisateur));
                     break;
-                case "AddPret":
-                    mainFrame.Navigate(typeof(AjouterPret));
-                    break;
                 case "ViewPrets":
                     mainFrame.Navigate(typeof(VisualiserPret));
                     break;

@@ -11,6 +11,12 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF002CF1" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -21,8 +27,6 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-
-
 
         <StackPanel HorizontalAlignment="Stretch"
                     Margin="0,30,0,0">
@@ -109,10 +113,6 @@
             </controls:DataGrid.Columns>
 
         </controls:DataGrid>
-
-
-
-
 
     </Grid>
 </Page>

@@ -22,9 +22,44 @@ namespace ProjetFinal
     /// </summary>
     public sealed partial class VisualiserPret : Page
     {
+        internal static int index = -1;
         public VisualiserPret()
         {
             this.InitializeComponent();
+            gvPret.ItemsSource = GestionBD.getInstance().getListPret();
+        }
+
+        private async void addButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AjouterPret));
+        }
+
+        private async void editButton_Click(object sender, RoutedEventArgs e)
+        {
+            index = gvPret.SelectedIndex;
+            //ModifierPret dialog = new ModifierPret();
+            //await dialog.ShowAsync();
+        }
+
+        private async void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            ContentDialog dialog = new ContentDialog();
+            dialog.Title = "Confirmation de Suppression";
+            dialog.Content = "Voulez-vous vraiment supprimer ce matériel?";
+            dialog.PrimaryButtonText = "Oui";
+            dialog.CloseButtonText = "Annuler";
+            dialog.DefaultButton = ContentDialogButton.Primary;
+            ContentDialogResult resultat = await dialog.ShowAsync();
+
+            if (resultat == ContentDialogResult.None)
+            {
+
+            }
+            else
+            {
+                Pret c = (Pret)gvPret.SelectedItem;
+                GestionBD.getInstance().supprimerPret(c);
+            }
         }
     }
 }

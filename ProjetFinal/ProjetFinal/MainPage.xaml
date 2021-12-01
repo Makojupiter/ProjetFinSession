@@ -20,10 +20,7 @@
             
             <NavigationView.MenuItems>
                 <NavigationViewItem Icon="Home" Content="Accueil" x:Name="Accueil"/>
-                <NavigationViewItemHeader Content="Ajouter"/>
-                <NavigationViewItem Icon="Caption" Content="Pret" x:Name="AddPret"/>
                 <NavigationViewItemSeparator/>
-                <NavigationViewItemHeader Content="Visualiser"/>
                 <NavigationViewItem Icon="Tag" Content="Materiel" x:Name="ViewMateriel"/>
                 <NavigationViewItem Icon="Contact" Content="Utilisateur" x:Name="ViewUsers"/>
                 <NavigationViewItem Icon="BrowsePhotos" Content="Pret" x:Name="ViewPrets"/>
