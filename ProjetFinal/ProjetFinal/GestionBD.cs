@@ -106,6 +106,73 @@ namespace ProjetFinal
                 return listeClient;
             }
         }
+
+        public List<Client> RechercherClient(String client)
+        {
+
+            List<Client> resultats = new List<Client>();
+
+            try
+            {
+
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "SELECT * FROM client WHERE numTel like '%" + client + "%'";
+
+                con.Open();
+                MySqlDataReader r = commande.ExecuteReader();
+
+                while (r.Read())
+                {
+                    resultats.Add(new Client(r.GetInt32(0), r.GetString(1), r.GetString(2), r.GetString(3), r.GetString(4), r.GetString(5), r.GetString(6)));
+
+                }
+                r.Close();
+                con.Close();
+
+                return resultats;
+            }
+            catch (MySqlException ex)
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                    con.Close();
+                return resultats;
+            }
+        }
+
+        public Client RechercherClient2(String client)
+        {
+
+             Client c = new Client("","","","","","");
+
+            try
+            {
+
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "SELECT * FROM client WHERE numTel = " + client ;
+
+                con.Open();
+                MySqlDataReader r = commande.ExecuteReader();
+
+                while (r.Read())
+                {
+                    c = new Client(r.GetInt32(0), r.GetString(1), r.GetString(2), r.GetString(3), r.GetString(4), r.GetString(5), r.GetString(6));
+
+                }
+                r.Close();
+                con.Close();
+
+                return c;
+            }
+            catch (MySqlException ex)
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                    con.Close();
+                return c;
+            }
+        }
+
         public ObservableCollection<Client> getListClient()
         {
             return listeClient;
@@ -140,6 +207,73 @@ namespace ProjetFinal
                 return listeMateriel;
             }
         }
+
+        public List<Materiel> RechercherMateriel(String materiel)
+        {
+
+            List<Materiel> resultats = new List<Materiel>();
+
+            try
+            {
+
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "SELECT * FROM materiel WHERE marque like '%" + materiel + "%'";
+
+                con.Open();
+                MySqlDataReader r = commande.ExecuteReader();
+
+                while (r.Read())
+                {
+                    resultats.Add(new Materiel(r.GetString(0), r.GetString(1), r.GetString(2), r.GetString(3), r.GetString(4)));
+
+                }
+                r.Close();
+                con.Close();
+
+                return resultats;
+            }
+            catch (MySqlException ex)
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                    con.Close();
+                return resultats;
+            }
+        }
+
+        public Materiel RechercherMateriel2(String materiel)
+        {
+
+            Materiel m = new Materiel("BAD", "BAD", "BAD", "BAD", "BAD");
+
+            try
+            {
+
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "SELECT * FROM materiel WHERE idMateriel = " + materiel;
+
+                con.Open();
+                MySqlDataReader r = commande.ExecuteReader();
+
+                while (r.Read())
+                {
+                    m = new Materiel(r.GetString(0), r.GetString(1), r.GetString(2), r.GetString(3), r.GetString(4));
+
+                }
+                r.Close();
+                con.Close();
+
+                return m;
+            }
+            catch (MySqlException ex)
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                    con.Close();
+                return m;
+            }
+        }
+
         public ObservableCollection<Materiel> getListMateriel()
         {
             return listeMateriel;

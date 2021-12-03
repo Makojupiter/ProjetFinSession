@@ -21,6 +21,15 @@ namespace ProjetFinal
             this.note = note;
         }
 
+        public Materiel(Materiel m)
+        {
+            this.identifiant = m.identifiant;
+            this.marque = m.marque;
+            this.model = m.model;
+            this.etat = m.etat;
+            this.note = m.note;
+        }
+
         public string Identifiant 
         { 
             get => identifiant;
@@ -65,6 +74,11 @@ namespace ProjetFinal
                 note = value;
                 this.OnPropertyChanged();
             }
+        }
+
+        public override string ToString()
+        {
+            return identifiant + "," +  marque + "," + model;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

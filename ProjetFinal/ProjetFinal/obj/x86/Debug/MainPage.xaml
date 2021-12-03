@@ -15,8 +15,7 @@
                         IsSettingsVisible="False"
                                                                    
                         IsBackEnabled="True"
-                                                             
-                        IsPaneOpen="True">
+                                                             >
             
             <NavigationView.MenuItems>
                 <NavigationViewItem x:ConnectionId='3' Icon="Home" Content="Accueil" x:Name="Accueil"/>

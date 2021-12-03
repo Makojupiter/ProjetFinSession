@@ -28,27 +28,18 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel HorizontalAlignment="Stretch"
-                    Margin="0,30,0,0">
-            
-            <TextBlock  Text="Ajouter un Pret"
-                        FontSize="30"
-                        Margin="10,0,50,0"/>
-            
-            <AutoSuggestBox Name="boxUser" Header="Usager"
+        <StackPanel HorizontalAlignment="center"
+                    Margin="0,30,0,0" Orientation="Horizontal">
+            <StackPanel>
+                <TextBlock  Text="Ajouter un Pret"
+                            FontSize="30"
+                            Margin="10,0,50,0"/>
+
+                <AutoSuggestBox Name="boxUser" Header="Usager"
                             MinWidth="300"
-                            HorizontalAlignment="Center">
-            </AutoSuggestBox>
-        </StackPanel>
-
-        <StackPanel HorizontalAlignment="Center"
-                    Grid.Column="1"
-                    Margin="0,30,0,0">
-            <AutoSuggestBox Name="boxMateriel" Header="Materiel"
-                            MinWidth="300">
-            </AutoSuggestBox>
-
-            <muxc:NumberBox x:Name="nbrDuree"
+                            HorizontalAlignment="Center" TextChanged="boxUser_TextChanged" SuggestionChosen="boxUser_SuggestionChosen">
+                </AutoSuggestBox>
+                <muxc:NumberBox x:Name="nbrDuree"
                               VerticalAlignment="Top"
                               Header="Nombre de jours" 
                               Value="0" 
@@ -58,18 +49,33 @@
                               Minimum="0"
                               Maximum="30"
                             Margin="0,20,0,0">
-            </muxc:NumberBox>
-            <ToggleSwitch   x:Name="toggleSwitch" 
+                </muxc:NumberBox>
+                <ToggleSwitch   x:Name="toggleSwitch" 
                             OffContent="Jour" OnContent="Heure"
                             Toggled="toggleSwitch_Toggled">
-            </ToggleSwitch>
+                </ToggleSwitch>
+            </StackPanel>
+            <Button x:Name="btnValider" Content="Valider"
+                    Margin="20"
+                    MinHeight="50"
+                    CornerRadius="50" Click="btnValider_Click"/>
+        </StackPanel>
 
-            <Button x:Name="btnAjouterPret"
+        <StackPanel HorizontalAlignment="Center"
+                    Grid.Column="1"
+                    Margin="0,30,0,0">
+            <AutoSuggestBox Name="boxMateriel" Header="Materiel"
+                            MinWidth="300" TextChanged="boxMateriel_TextChanged" SuggestionChosen="boxMateriel_SuggestionChosen">
+            </AutoSuggestBox>
+
+
+
+            <Button x:Name="btnAjouterMateriel"
                     Content="Ajouter"
                     Margin="0,15,0,0"
                     CornerRadius="15"
                     HorizontalAlignment="Stretch"
-                    Background="DeepSkyBlue"/>
+                    Background="DeepSkyBlue" Click="btnAjouterMateriel_Click"/>
         </StackPanel>
         
         <StackPanel HorizontalAlignment="Center"
@@ -77,6 +83,8 @@
                     Grid.Column="1"
                     Grid.Row="1"
                     MinWidth="300">
+
+            <TextBlock x:Name="test"/>
 
             <Button x:Name="btnSupprimer"
                     Content="Supprimer"
@@ -92,6 +100,7 @@
                 Grid.Row="1"
                 Grid.Column="1"
                 Content="Ajouter Pret"
+                IsEnabled="False"
                 VerticalAlignment="Bottom"
                 FontSize="25"
                 FontWeight="Bold"
@@ -108,6 +117,7 @@
             <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn 
                     Header="Article"
+                    Binding="{Binding Marque,Mode=TwoWay }"
                     Width="*"/>
 
             </controls:DataGrid.Columns>

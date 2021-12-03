@@ -15,8 +15,7 @@
                         IsSettingsVisible="False"
                         SelectionChanged="nvMenue_SelectionChanged"
                         IsBackEnabled="True"
-                        BackRequested="nvMenue_BackRequested"
-                        IsPaneOpen="True">
+                        BackRequested="nvMenue_BackRequested">
             
             <NavigationView.MenuItems>
                 <NavigationViewItem Icon="Home" Content="Accueil" x:Name="Accueil"/>

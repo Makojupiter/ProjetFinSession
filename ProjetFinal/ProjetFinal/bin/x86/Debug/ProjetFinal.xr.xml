@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Marque" />
+  </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
       <RootProperty Name="RequestedTheme" />
@@ -51,9 +54,9 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Orientation" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="MinWidth" />
-      <RootProperty Name="Orientation" />
       <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
@@ -88,6 +91,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
+      <RootProperty Name="IsEnabled" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontWeight" />
@@ -97,7 +101,8 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
-      <RootProperty Name="IsEnabled" />
+      <RootProperty Name="MinHeight" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGrid">
       <RootProperty Name="AutoGenerateColumns" />
@@ -106,13 +111,19 @@
     </RootType>
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn">
       <RootProperty Name="Header" />
+      <RootProperty Name="Binding" />
       <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AutoSuggestBox">
       <RootProperty Name="Name" />
       <RootProperty Name="Header" />
       <RootProperty Name="MinWidth" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootEvent Name="TextChanged" />
+      <RootEvent Name="SuggestionChosen" />
     </RootType>
     <RootType FullName="Microsoft.UI.Xaml.Controls.NumberBox">
       <RootProperty Name="VerticalAlignment" />
@@ -141,7 +152,6 @@
       <RootProperty Name="Name" />
       <RootProperty Name="IsSettingsVisible" />
       <RootProperty Name="IsBackEnabled" />
-      <RootProperty Name="IsPaneOpen" />
       <RootProperty Name="MenuItems" />
       <RootProperty Name="PaneFooter" />
       <RootProperty Name="Content" />

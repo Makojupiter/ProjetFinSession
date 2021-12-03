@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.RegularExpressions;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,7 +27,21 @@ namespace ProjetFinal
         public AjouterPret()
         {
             this.InitializeComponent();
+            btnValider.IsEnabled = false;
+            btnAjouterMateriel.IsEnabled = false;
+            boxMateriel.IsEnabled = false;
+
+            grille.ItemsSource = listeMaterielTEMPO;
         }
+        int jourHeure = 1;
+        string userActif, numTel, materiel;
+        Client rClient;
+        Materiel rMateriel;
+        ObservableCollection<Materiel> listeMaterielTEMPO;
+
+
+
+
 
         private void toggleSwitch_Toggled(object sender, RoutedEventArgs e)
         {
@@ -33,14 +49,96 @@ namespace ProjetFinal
             {
                 nbrDuree.Header = "Nombre d'heures";
                 nbrDuree.Maximum = 24;
+                jourHeure = 0;
             }
             else
             {
 
                 nbrDuree.Header = "Nombre de jours";
                 nbrDuree.Maximum = 31;
+                jourHeure = 1;
             }
 
+        }
+
+        private void boxUser_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            boxUser.ItemsSource = GestionBD.getInstance().RechercherClient(boxUser.Text);
+
+        }
+
+        private void boxUser_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
+        {
+
+            string expression = ",";
+            string[] tableau = Regex.Split(args.SelectedItem.ToString(), expression);
+
+            numTel = tableau[1];
+
+            rClient = new Client(GestionBD.getInstance().RechercherClient2("numTel"));
+
+            btnValider.IsEnabled = true;
+        }
+
+        private void btnValider_Click(object sender, RoutedEventArgs e)
+        {
+            string retour="";
+
+            DateTime testdate;
+
+           if(jourHeure == 0)
+            {
+                testdate =   DateTime.Now.AddHours(Convert.ToInt32( nbrDuree.Text));
+
+                retour = testdate.ToString("dd/MM/yyyy");
+
+            }
+            if (jourHeure == 1)
+            {
+                testdate = DateTime.Now.AddDays(Convert.ToInt32(nbrDuree.Text));
+                retour = testdate.ToString("dd/MM/yyyy");
+            }
+
+
+            Pret p = new Pret(rClient.Id, DateTime.Now.ToString("yyyy MM dd"), DateTime.Now.ToString("h:mm"), retour, "Prof connecter", "En cours");
+
+            // GestionBD.getInstance().AjouterPret(p);
+
+            
+            boxMateriel.IsEnabled = true;
+
+
+        }
+
+        private void boxMateriel_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            // DOIT etre changer par une procedure qui verifie si le materiel est DISPONIBLE
+            boxMateriel.ItemsSource = GestionBD.getInstance().RechercherMateriel(boxMateriel.Text);
+        }
+
+        private void boxMateriel_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
+        {
+
+            string expression = ",";
+            string[] tableau = Regex.Split(args.SelectedItem.ToString(), expression);
+
+            materiel = tableau[0];
+
+            //test.Text = materiel;
+
+            rMateriel = new Materiel(GestionBD.getInstance().RechercherMateriel2("materiel"));
+
+           // listeMaterielTEMPO.Add(rMateriel);
+
+            test.Text = rMateriel.Marque;
+
+            btnAjouterMateriel.IsEnabled = true;
+
+        }
+
+        private void btnAjouterMateriel_Click(object sender, RoutedEventArgs e)
+        {
+           
         }
 
 

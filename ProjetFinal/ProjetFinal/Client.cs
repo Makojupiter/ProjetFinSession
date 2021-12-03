@@ -24,6 +24,17 @@ namespace ProjetFinal
             this.type = type;
         }
 
+        public Client(Client c)
+        {
+            this.id = c.id;
+            this.nom = c.nom;
+            this.email = c.email;
+            this.numTel = c.numTel;
+            this.poste = c.poste;
+            this.numBureau = c.numBureau;
+            this.type = c.type;
+        }
+
         public Client(string nom, string email, string numTel, string poste, string numBureau, string type)
         {
             this.nom = nom;
@@ -96,6 +107,11 @@ namespace ProjetFinal
                 type = value;
                 this.OnPropertyChanged();
             }
+        }
+
+        public override string ToString()
+        {
+            return nom + "," + numTel;
         }
 
 
