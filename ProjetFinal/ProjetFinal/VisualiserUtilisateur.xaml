@@ -27,7 +27,7 @@
                    HorizontalAlignment="Center"
                    Grid.Row="0"/>
 
-        <GridView x:Name="gvUtilisateur" Grid.Row="1">
+        <GridView x:Name="gvUtilisateur" Grid.Row="1" SelectionChanged="gvUtilisateur_SelectionChanged">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="local:Utilisateur">
                     <Grid Background="#26FFFFFF" Margin="25">

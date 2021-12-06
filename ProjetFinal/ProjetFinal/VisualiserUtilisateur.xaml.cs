@@ -27,6 +27,8 @@ namespace ProjetFinal
         public VisualiserUtilisateur()
         {
             this.InitializeComponent();
+            deleteButton.IsEnabled = false;
+            editButton.IsEnabled = false;
             gvUtilisateur.ItemsSource = GestionBD.getInstance().getListUtilisateur();
         }
 
@@ -62,6 +64,12 @@ namespace ProjetFinal
                 Utilisateur c = (Utilisateur)gvUtilisateur.SelectedItem;
                 GestionBD.getInstance().supprimerUtilisateur(c);
             }
+        }
+
+        private void gvUtilisateur_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            deleteButton.IsEnabled = true;
+            editButton.IsEnabled = true;
         }
     }
 }

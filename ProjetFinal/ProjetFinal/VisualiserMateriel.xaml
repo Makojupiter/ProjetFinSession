@@ -27,7 +27,7 @@
                    HorizontalAlignment="Center"
                    Grid.Row="0"/>
 
-        <GridView x:Name="gvMateriel" Grid.Row="1">
+        <GridView x:Name="gvMateriel" Grid.Row="1" SelectionChanged="gvMateriel_SelectionChanged">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="local:Materiel">
                     <Grid Background="#26FFFFFF" Margin="25">

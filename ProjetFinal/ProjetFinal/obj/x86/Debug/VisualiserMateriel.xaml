@@ -27,7 +27,7 @@
                    HorizontalAlignment="Center"
                    Grid.Row="0"/>
 
-        <GridView x:ConnectionId='2' x:Name="gvMateriel" Grid.Row="1">
+        <GridView x:ConnectionId='2' x:Name="gvMateriel" Grid.Row="1"                                               >
             <GridView.ItemTemplate>
                 <DataTemplate                            >
                     <Grid x:ConnectionId='7' Background="#26FFFFFF" Margin="25">

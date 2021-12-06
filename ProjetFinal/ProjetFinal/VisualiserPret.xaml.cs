@@ -26,6 +26,8 @@ namespace ProjetFinal
         public VisualiserPret()
         {
             this.InitializeComponent();
+            deleteButton.IsEnabled = false;
+            editButton.IsEnabled = false;
             gvPret.ItemsSource = GestionBD.getInstance().getListPret();
         }
 
@@ -60,6 +62,17 @@ namespace ProjetFinal
                 Pret c = (Pret)gvPret.SelectedItem;
                 GestionBD.getInstance().supprimerPret(c);
             }
+        }
+
+        private void gvPret_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            deleteButton.IsEnabled = true;
+            editButton.IsEnabled = true;
+        }
+
+        private void detailButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

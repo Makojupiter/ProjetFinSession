@@ -26,6 +26,8 @@ namespace ProjetFinal
         public VisualiserMateriel()
         {
             this.InitializeComponent();
+            deleteButton.IsEnabled = false;
+            editButton.IsEnabled = false;
             gvMateriel.ItemsSource = GestionBD.getInstance().getListMateriel();
         }
 
@@ -61,6 +63,12 @@ namespace ProjetFinal
                 Materiel c = (Materiel)gvMateriel.SelectedItem;
                 GestionBD.getInstance().supprimerMateriel(c);
             }
+        }
+
+        private void gvMateriel_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            deleteButton.IsEnabled = true;
+            editButton.IsEnabled = true;
         }
     }
 }

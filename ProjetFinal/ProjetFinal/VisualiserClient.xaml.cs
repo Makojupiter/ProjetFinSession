@@ -26,6 +26,8 @@ namespace ProjetFinal
         public VisualiserClient()
         {
             this.InitializeComponent();
+            deleteButton.IsEnabled = false;
+            editButton.IsEnabled = false;
             gvClient.ItemsSource = GestionBD.getInstance().getListClient();
         }
 
@@ -63,5 +65,10 @@ namespace ProjetFinal
             }
         }
 
+        private void gvClient_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            deleteButton.IsEnabled = true;
+            editButton.IsEnabled = true;
+        }
     }
 }

@@ -47,7 +47,6 @@ namespace ProjetFinal
         {
             try
             {
-
                 MySqlCommand commande = new MySqlCommand();
                 commande.Connection = con;
                 commande.CommandText = "SELECT * FROM pret";
@@ -319,13 +318,13 @@ namespace ProjetFinal
 
             MySqlCommand commande = new MySqlCommand();
             commande.Connection = con;
-            commande.CommandText = "INSERT INTO pret VALUES(null, @client, @date, @heure, @dateRetour, @usager, @etat)";
+            commande.CommandText = "INSERT INTO pret VALUES(null, @client, @date, @heure, @dateRetour, @utilisateur, @etat)";
 
             commande.Parameters.AddWithValue("@client", c.Client);
             commande.Parameters.AddWithValue("@date", c.Date);
             commande.Parameters.AddWithValue("@heure", c.Heure);
             commande.Parameters.AddWithValue("@dateRetour", c.DateRetour);
-            commande.Parameters.AddWithValue("@usager", c.Usager);
+            commande.Parameters.AddWithValue("@utilisateur", c.Utilisateur);
             commande.Parameters.AddWithValue("@etat", c.Etat);
 
             con.Open();
@@ -420,7 +419,6 @@ namespace ProjetFinal
 
             return retour;
         }
-
         public void supprimerPret(Pret c)
         {
             MySqlCommand commande = new MySqlCommand();
@@ -433,7 +431,6 @@ namespace ProjetFinal
 
             listePret.Remove(c);
         }
-
         public void supprimerClient(Client c)
         {
             MySqlCommand commande = new MySqlCommand();
@@ -446,7 +443,6 @@ namespace ProjetFinal
 
             listeClient.Remove(c);
         }
-
         public void supprimerMateriel(Materiel c)
         {
             MySqlCommand commande = new MySqlCommand();
@@ -459,7 +455,6 @@ namespace ProjetFinal
 
             listeMateriel.Remove(c);
         }
-
         public void supprimerUtilisateur(Utilisateur c)
         {
             MySqlCommand commande = new MySqlCommand();
@@ -475,20 +470,20 @@ namespace ProjetFinal
 
             listeUtilisateur.Remove(c);
         }
-
         public int modifierPret(Pret c)
         {
             int retour = 0;
 
             MySqlCommand commande = new MySqlCommand();
             commande.Connection = con;
-            commande.CommandText = "UPDATE pret SET client = @client, date = @date, heure = @heure, dateRetour = @dateRetour, usager = @usager, etat = @etat where id = @id";
+            commande.CommandText = "UPDATE pret SET idClient = @client, date = @date, heure = @heure, dateRetour = @dateRetour, idUtilisateur = @utilisateur, etat = @etat where idPret = @idPret";
 
+            commande.Parameters.AddWithValue("@idPret", c.Id);
             commande.Parameters.AddWithValue("@client", c.Client);
             commande.Parameters.AddWithValue("@date", c.Date);
             commande.Parameters.AddWithValue("@heure", c.Heure);
             commande.Parameters.AddWithValue("@dateRetour", c.DateRetour);
-            commande.Parameters.AddWithValue("@usager", c.Usager);
+            commande.Parameters.AddWithValue("@usager", c.Utilisateur);
             commande.Parameters.AddWithValue("@etat", c.Etat);
 
             con.Open();
@@ -499,7 +494,6 @@ namespace ProjetFinal
 
             return retour;
         }
-
         public int modifierClient(Client c)
         {
             int retour = 0;
@@ -529,9 +523,9 @@ namespace ProjetFinal
 
             MySqlCommand commande = new MySqlCommand();
             commande.Connection = con;
-            commande.CommandText = "UPDATE materiel SET identifiant = @identifiant, marque = @marque, model = @model, etat = @etat, note = @note where identifiant = @identifiant";
+            commande.CommandText = "UPDATE materiel SET idMateriel = @idMateriel, marque = @marque, model = @model, etat = @etat, note = @note where idMateriel = @idMateriel";
 
-            commande.Parameters.AddWithValue("@identifiant", c.Identifiant);
+            commande.Parameters.AddWithValue("@idMateriel", c.Identifiant);
             commande.Parameters.AddWithValue("@marque", c.Marque);
             commande.Parameters.AddWithValue("@model", c.Model);
             commande.Parameters.AddWithValue("@etat", c.Etat);
@@ -545,7 +539,6 @@ namespace ProjetFinal
 
             return retour;
         }
-
         public int modifierUtilisateur(Utilisateur c)
         {
             int retour = 0;

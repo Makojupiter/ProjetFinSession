@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>LAPTOP-HHA0TR9O</Machine>
-    <WindowsUser>Utilisateur</WindowsUser>
+    <Machine>LAPTOP-POFPCAPV</Machine>
+    <WindowsUser>makoj</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>c922caf2-2e60-4c5b-9cf4-e6cb59682088</PackageIdentityName>
     <PackageIdentityPublisher>CN=Utilisateur</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>549151CDB2817D09CC5E7F3CD9F1D1C5A57D233FFADB0FD43ADC0A84B708FFE5</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>5E16BB5F09285CB684DD5275B0D0D146516F822EB108C53F4843B593CD25B6B4</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>c922caf2-2e60-4c5b-9cf4-e6cb59682088_1.0.0.0_x86__9tmd3bzya7s40</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c922caf2-2e60-4c5b-9cf4-e6cb59682088_9tmd3bzya7s40!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c922caf2-2e60-4c5b-9cf4-e6cb59682088</RegisteredPackageID>
@@ -27,50 +27,50 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-03T21:27:36.425</Modified>
+      <Modified>2021-12-06T05:09:44.365</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ProjetFinal.exe">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ProjetFinal.exe">
       <PackagePath>entrypoint\ProjetFinal.exe</PackagePath>
-      <Modified>2021-12-03T21:27:35.783</Modified>
+      <Modified>2021-12-06T05:09:43.739</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\.nuget\packages\bouncycastle.netcore\1.8.5\lib\netstandard2.0\BouncyCastle.Crypto.dll">
+    <AppxPackagedFile Include="C:\Users\makoj\.nuget\packages\bouncycastle.netcore\1.8.5\lib\netstandard2.0\BouncyCastle.Crypto.dll">
       <PackagePath>BouncyCastle.Crypto.dll</PackagePath>
       <Modified>2019-03-18T11:53:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\.nuget\packages\google.protobuf\3.14.0\lib\netstandard2.0\Google.Protobuf.dll">
+    <AppxPackagedFile Include="C:\Users\makoj\.nuget\packages\google.protobuf\3.14.0\lib\netstandard2.0\Google.Protobuf.dll">
       <PackagePath>Google.Protobuf.dll</PackagePath>
       <Modified>2020-11-13T15:09:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\.nuget\packages\k4os.compression.lz4\1.2.6\lib\netstandard2.0\K4os.Compression.LZ4.dll">
+    <AppxPackagedFile Include="C:\Users\makoj\.nuget\packages\k4os.compression.lz4\1.2.6\lib\netstandard2.0\K4os.Compression.LZ4.dll">
       <PackagePath>K4os.Compression.LZ4.dll</PackagePath>
       <Modified>2020-09-12T01:11:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\.nuget\packages\k4os.compression.lz4.streams\1.2.6\lib\netstandard2.0\K4os.Compression.LZ4.Streams.dll">
+    <AppxPackagedFile Include="C:\Users\makoj\.nuget\packages\k4os.compression.lz4.streams\1.2.6\lib\netstandard2.0\K4os.Compression.LZ4.Streams.dll">
       <PackagePath>K4os.Compression.LZ4.Streams.dll</PackagePath>
       <Modified>2020-09-12T01:11:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\.nuget\packages\k4os.hash.xxhash\1.0.6\lib\netstandard2.0\K4os.Hash.xxHash.dll">
+    <AppxPackagedFile Include="C:\Users\makoj\.nuget\packages\k4os.hash.xxhash\1.0.6\lib\netstandard2.0\K4os.Hash.xxHash.dll">
       <PackagePath>K4os.Hash.xxHash.dll</PackagePath>
       <Modified>2019-07-03T20:39:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\7.1.1\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
+    <AppxPackagedFile Include="C:\Users\makoj\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\7.1.1\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll</PackagePath>
       <Modified>2021-10-18T23:43:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\.nuget\packages\mysql.data\8.0.27\lib\netstandard2.0\MySql.Data.dll">
+    <AppxPackagedFile Include="C:\Users\makoj\.nuget\packages\mysql.data\8.0.27\lib\netstandard2.0\MySql.Data.dll">
       <PackagePath>MySql.Data.dll</PackagePath>
       <Modified>2021-09-28T05:29:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\.nuget\packages\mysql.data\8.0.27\lib\netstandard2.0\Ubiety.Dns.Core.dll">
+    <AppxPackagedFile Include="C:\Users\makoj\.nuget\packages\mysql.data\8.0.27\lib\netstandard2.0\Ubiety.Dns.Core.dll">
       <PackagePath>Ubiety.Dns.Core.dll</PackagePath>
       <Modified>2021-09-28T05:28:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\.nuget\packages\mysql.data\8.0.27\lib\netstandard2.0\ZstdNet.dll">
+    <AppxPackagedFile Include="C:\Users\makoj\.nuget\packages\mysql.data\8.0.27\lib\netstandard2.0\ZstdNet.dll">
       <PackagePath>ZstdNet.dll</PackagePath>
       <Modified>2021-09-28T05:28:28.000</Modified>
     </AppxPackagedFile>
@@ -78,19 +78,19 @@
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-02-05T05:15:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\.nuget\packages\system.configuration.configurationmanager\4.4.1\lib\netstandard2.0\System.Configuration.ConfigurationManager.dll">
+    <AppxPackagedFile Include="C:\Users\makoj\.nuget\packages\system.configuration.configurationmanager\4.4.1\lib\netstandard2.0\System.Configuration.ConfigurationManager.dll">
       <PackagePath>System.Configuration.ConfigurationManager.dll</PackagePath>
       <Modified>2017-11-20T18:09:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\.nuget\packages\system.runtime.compilerservices.unsafe\5.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+    <AppxPackagedFile Include="C:\Users\makoj\.nuget\packages\system.runtime.compilerservices.unsafe\5.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
       <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
       <Modified>2020-10-19T18:46:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\.nuget\packages\system.security.cryptography.protecteddata\4.4.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll">
+    <AppxPackagedFile Include="C:\Users\makoj\.nuget\packages\system.security.cryptography.protecteddata\4.4.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll">
       <PackagePath>System.Security.Cryptography.ProtectedData.dll</PackagePath>
       <Modified>2017-07-19T10:01:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\.nuget\packages\system.security.permissions\4.7.0\lib\netstandard2.0\System.Security.Permissions.dll">
+    <AppxPackagedFile Include="C:\Users\makoj\.nuget\packages\system.security.permissions\4.7.0\lib\netstandard2.0\System.Security.Permissions.dll">
       <PackagePath>System.Security.Permissions.dll</PackagePath>
       <Modified>2019-11-15T08:37:44.000</Modified>
     </AppxPackagedFile>
@@ -98,115 +98,115 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T08:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\7.1.1\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml">
+    <AppxPackagedFile Include="C:\Users\makoj\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\7.1.1\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml</PackagePath>
       <Modified>2021-10-18T23:13:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2021-11-24T19:01:26.117</Modified>
+      <Modified>2021-11-17T17:45:27.104</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2021-11-24T19:01:26.111</Modified>
+      <Modified>2021-11-17T17:45:27.100</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-24T19:01:26.112</Modified>
+      <Modified>2021-11-17T17:45:27.100</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-24T19:01:26.112</Modified>
+      <Modified>2021-11-17T17:45:27.100</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-24T19:01:26.112</Modified>
+      <Modified>2021-11-17T17:45:27.101</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-24T19:01:26.113</Modified>
+      <Modified>2021-11-17T17:45:27.101</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-24T19:01:26.113</Modified>
+      <Modified>2021-11-17T17:45:27.101</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-24T19:01:26.113</Modified>
+      <Modified>2021-11-17T17:45:27.101</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ProjetFinal.xr.xml">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ProjetFinal.xr.xml">
       <PackagePath>ProjetFinal.xr.xml</PackagePath>
-      <Modified>2021-12-03T21:11:02.865</Modified>
+      <Modified>2021-12-06T05:09:43.631</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-12-03T21:26:30.668</Modified>
+      <Modified>2021-12-06T05:09:43.660</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Accueil.xbf">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Accueil.xbf">
       <PackagePath>Accueil.xbf</PackagePath>
-      <Modified>2021-12-03T21:26:30.668</Modified>
+      <Modified>2021-12-06T05:09:43.660</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjouterClient.xbf">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjouterClient.xbf">
       <PackagePath>AjouterClient.xbf</PackagePath>
-      <Modified>2021-12-03T21:26:30.668</Modified>
+      <Modified>2021-12-06T05:09:43.660</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjouterMateriel.xbf">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjouterMateriel.xbf">
       <PackagePath>AjouterMateriel.xbf</PackagePath>
-      <Modified>2021-12-03T21:26:30.668</Modified>
+      <Modified>2021-12-06T05:09:43.660</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjouterPret.xbf">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjouterPret.xbf">
       <PackagePath>AjouterPret.xbf</PackagePath>
-      <Modified>2021-12-03T21:26:30.668</Modified>
+      <Modified>2021-12-06T05:09:43.660</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjouterUtilisateur.xbf">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\AjouterUtilisateur.xbf">
       <PackagePath>AjouterUtilisateur.xbf</PackagePath>
-      <Modified>2021-12-03T21:26:30.669</Modified>
+      <Modified>2021-12-06T05:09:43.660</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\BoiteAjout.xbf">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\BoiteAjout.xbf">
       <PackagePath>BoiteAjout.xbf</PackagePath>
-      <Modified>2021-12-03T21:26:30.669</Modified>
+      <Modified>2021-12-06T05:09:43.660</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-12-03T21:26:30.669</Modified>
+      <Modified>2021-12-06T05:09:43.661</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ModifierClient.xbf">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ModifierClient.xbf">
       <PackagePath>ModifierClient.xbf</PackagePath>
-      <Modified>2021-12-03T21:26:30.669</Modified>
+      <Modified>2021-12-06T05:09:43.661</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ModifierMateriel.xbf">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ModifierMateriel.xbf">
       <PackagePath>ModifierMateriel.xbf</PackagePath>
-      <Modified>2021-12-03T21:26:30.669</Modified>
+      <Modified>2021-12-06T05:09:43.661</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ModifierUtilisateur.xbf">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\ModifierUtilisateur.xbf">
       <PackagePath>ModifierUtilisateur.xbf</PackagePath>
-      <Modified>2021-12-03T21:26:30.669</Modified>
+      <Modified>2021-12-06T05:09:43.661</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\PageConnexion.xbf">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\PageConnexion.xbf">
       <PackagePath>PageConnexion.xbf</PackagePath>
-      <Modified>2021-12-03T21:26:30.669</Modified>
+      <Modified>2021-12-06T05:09:43.661</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserClient.xbf">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserClient.xbf">
       <PackagePath>VisualiserClient.xbf</PackagePath>
-      <Modified>2021-12-03T21:26:30.669</Modified>
+      <Modified>2021-12-06T05:09:43.661</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserMateriel.xbf">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserMateriel.xbf">
       <PackagePath>VisualiserMateriel.xbf</PackagePath>
-      <Modified>2021-12-03T21:26:30.670</Modified>
+      <Modified>2021-12-06T05:09:43.661</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserPret.xbf">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserPret.xbf">
       <PackagePath>VisualiserPret.xbf</PackagePath>
-      <Modified>2021-12-03T21:26:30.670</Modified>
+      <Modified>2021-12-06T05:09:43.661</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserUtilisateur.xbf">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserUtilisateur.xbf">
       <PackagePath>VisualiserUtilisateur.xbf</PackagePath>
-      <Modified>2021-12-03T21:26:30.670</Modified>
+      <Modified>2021-12-06T05:09:43.661</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -216,62 +216,62 @@
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2020-12-02T06:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-12-03T14:45:28.411</Modified>
+      <Modified>2021-12-05T00:13:32.236</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Core\ProjetFinal.exe">
+    <AppxPackagedFile Include="C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Core\ProjetFinal.exe">
       <PackagePath>ProjetFinal.exe</PackagePath>
-      <Modified>2021-12-03T21:27:36.421</Modified>
+      <Modified>2021-12-06T05:09:44.362</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Utilisateur\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
+    <AppxPackagedFile Include="C:\Users\makoj\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>
       <Modified>2021-09-14T09:06:08.000</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Users\Utilisateur\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx">
+    <ResolvedSDKReference Include="C:\Users\makoj\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx">
       <Name>Microsoft.UI.Xaml.2.7</Name>
       <Version>7.2109.13004.0</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.7, MinVersion = 7.2109.13004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\Utilisateur\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
+      <AppxLocation>C:\Users\makoj\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\Utilisateur\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx">
+    <ResolvedSDKReference Include="C:\Users\makoj\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx">
       <Name>Microsoft.UI.Xaml.2.7</Name>
       <Version>7.2109.13004.0</Version>
       <Architecture>Win32</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.7, MinVersion = 7.2109.13004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\Utilisateur\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
+      <AppxLocation>C:\Users\makoj\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\Utilisateur\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.appx">
+    <ResolvedSDKReference Include="C:\Users\makoj\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.appx">
       <Name>Microsoft.UI.Xaml.2.7</Name>
       <Version>7.2109.13004.0</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.7, MinVersion = 7.2109.13004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\Utilisateur\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
+      <AppxLocation>C:\Users\makoj\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\Utilisateur\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.7.appx">
+    <ResolvedSDKReference Include="C:\Users\makoj\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.7.appx">
       <Name>Microsoft.UI.Xaml.2.7</Name>
       <Version>7.2109.13004.0</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.7, MinVersion = 7.2109.13004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\Utilisateur\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
+      <AppxLocation>C:\Users\makoj\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\Utilisateur\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.7.appx">
+    <ResolvedSDKReference Include="C:\Users\makoj\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.7.appx">
       <Name>Microsoft.UI.Xaml.2.7</Name>
       <Version>7.2109.13004.0</Version>
       <Architecture>arm64</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.7, MinVersion = 7.2109.13004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\Utilisateur\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
+      <AppxLocation>C:\Users\makoj\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.7.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>

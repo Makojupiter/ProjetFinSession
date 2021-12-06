@@ -27,7 +27,7 @@
                    HorizontalAlignment="Center"
                    Grid.Row="0"/>
 
-        <GridView x:Name="gvPret" Grid.Row="1">
+        <GridView x:Name="gvPret" Grid.Row="1" SelectionChanged="gvPret_SelectionChanged">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="local:Pret">
                     <Grid Background="#26FFFFFF" Margin="25">
@@ -36,11 +36,12 @@
                             <TextBlock Text="&#x1f4fa;" FontFamily="Segoe UI Symbol" Margin="25" FontSize="200"/>
 
                             <StackPanel Orientation="Vertical" Margin="5">
-                                <!-- <TextBlock Text="{x:Bind Identifiant, Mode=OneWay}" Foreground="White" FontSize="20" TextWrapping="Wrap"/>
-                                <TextBlock Text="{x:Bind Marque, Mode=OneWay}" Foreground="White" FontSize="15" TextWrapping="Wrap"/>
-                                <TextBlock Text="{x:Bind Model, Mode=OneWay}" Foreground="White" FontSize="10" TextWrapping="Wrap"/>
+                                <TextBlock Text="{x:Bind Client, Mode=OneWay}" Foreground="White" FontSize="20" TextWrapping="Wrap"/>
+                                <TextBlock Text="{x:Bind Date, Mode=OneWay}" Foreground="White" FontSize="15" TextWrapping="Wrap"/>
+                                <TextBlock Text="{x:Bind Heure, Mode=OneWay}" Foreground="White" FontSize="10" TextWrapping="Wrap"/>
+                                <TextBlock Text="{x:Bind DateRetour, Mode=OneWay}" Foreground="White" FontSize="10" TextWrapping="Wrap"/>
+                                <TextBlock Text="{x:Bind Utilisateur, Mode=OneWay}" Foreground="White" FontSize="10" TextWrapping="Wrap"/>
                                 <TextBlock Text="{x:Bind Etat, Mode=OneWay}" Foreground="White" FontSize="10" TextWrapping="Wrap"/>
-                                <TextBlock Text="{x:Bind Note, Mode=OneWay}" Foreground="White" FontSize="10" TextWrapping="Wrap"/> -->
                             </StackPanel>
                         </StackPanel>
                     </Grid>
@@ -49,6 +50,8 @@
         </GridView>
 
         <CommandBar Grid.Row="2" Background="Transparent" IsOpen="False" DefaultLabelPosition="Right">
+            <AppBarButton x:Name="detailButton" Icon="List" Label="Détails du prêt" Click="detailButton_Click"/>
+            <AppBarSeparator/>
             <AppBarButton x:Name="addButton" Icon="Add" Label="Ajouter" Click="addButton_Click"/>
             <AppBarButton x:Name="editButton" Icon="Edit" Label="Modifier" Click="editButton_Click"/>
             <AppBarButton x:Name="deleteButton" Icon="Delete" Label="Supprimer" Click="deleteButton_Click"/>

@@ -12,26 +12,26 @@ namespace ProjetFinal
     {
 
         int id, client;
-        string date, heure, dateRetour, usager, etat;
+        string date, heure, dateRetour, utilisateur, etat;
 
-        public Pret(int id, int client, string date, string heure, string dateRetour, string usager, string etat)
+        public Pret(int id, int client, string date, string heure, string dateRetour, string utilisateur, string etat)
         {
             this.id = id;
             this.client = client;
             this.date = date;
             this.heure = heure;
             this.dateRetour = dateRetour;
-            this.usager = usager;
+            this.utilisateur = utilisateur;
             this.etat = etat;
         }
 
-        public Pret(int client, string date, string heure, string dateRetour, string usager, string etat)
+        public Pret(int client, string date, string heure, string dateRetour, string utilisateur, string etat)
         {
             this.client = client;
             this.date = date;
             this.heure = heure;
             this.dateRetour = dateRetour;
-            this.usager = usager;
+            this.utilisateur = utilisateur;
             this.etat = etat;
         }
 
@@ -78,12 +78,12 @@ namespace ProjetFinal
                 this.OnPropertyChanged();
             }
         }
-        public string Usager 
+        public string Utilisateur 
         { 
-            get => usager;
+            get => utilisateur;
             set
             {
-                usager = value;
+                utilisateur = value;
                 this.OnPropertyChanged();
             }
         }
