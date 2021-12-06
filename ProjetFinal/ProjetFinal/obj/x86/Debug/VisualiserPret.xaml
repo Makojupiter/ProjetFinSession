@@ -30,18 +30,18 @@
         <GridView x:ConnectionId='2' x:Name="gvPret" Grid.Row="1"                                           >
             <GridView.ItemTemplate>
                 <DataTemplate                        >
-                    <Grid x:ConnectionId='7' Background="#26FFFFFF" Margin="25">
+                    <Grid x:ConnectionId='8' Background="#26FFFFFF" Margin="25">
                         <StackPanel Orientation="Horizontal" Width="500">
 
                             <TextBlock Text="&#x1f4fa;" FontFamily="Segoe UI Symbol" Margin="25" FontSize="200"/>
 
                             <StackPanel Orientation="Vertical" Margin="5">
-                                <TextBlock x:ConnectionId='8'                                     Foreground="White" FontSize="20" TextWrapping="Wrap"/>
-                                <TextBlock x:ConnectionId='9'                                   Foreground="White" FontSize="15" TextWrapping="Wrap"/>
-                                <TextBlock x:ConnectionId='10'                                    Foreground="White" FontSize="10" TextWrapping="Wrap"/>
-                                <TextBlock x:ConnectionId='11'                                         Foreground="White" FontSize="10" TextWrapping="Wrap"/>
-                                <TextBlock x:ConnectionId='12'                                          Foreground="White" FontSize="10" TextWrapping="Wrap"/>
-                                <TextBlock x:ConnectionId='13'                                   Foreground="White" FontSize="10" TextWrapping="Wrap"/>
+                                <TextBlock x:ConnectionId='9'                                     Foreground="White" FontSize="20" TextWrapping="Wrap"/>
+                                <TextBlock x:ConnectionId='10'                                   Foreground="White" FontSize="15" TextWrapping="Wrap"/>
+                                <TextBlock x:ConnectionId='11'                                    Foreground="White" FontSize="10" TextWrapping="Wrap"/>
+                                <TextBlock x:ConnectionId='12'                                         Foreground="White" FontSize="10" TextWrapping="Wrap"/>
+                                <TextBlock x:ConnectionId='13'                                          Foreground="White" FontSize="10" TextWrapping="Wrap"/>
+                                <TextBlock x:ConnectionId='14'                                   Foreground="White" FontSize="10" TextWrapping="Wrap"/>
                             </StackPanel>
                         </StackPanel>
                     </Grid>
@@ -50,9 +50,11 @@
         </GridView>
 
         <CommandBar Grid.Row="2" Background="Transparent" IsOpen="False" DefaultLabelPosition="Right">
-            <AppBarButton x:ConnectionId='3' x:Name="addButton" Icon="Add" Label="Ajouter"                        />
-            <AppBarButton x:ConnectionId='4' x:Name="editButton" Icon="Edit" Label="Modifier"                         />
-            <AppBarButton x:ConnectionId='5' x:Name="deleteButton" Icon="Delete" Label="Supprimer"                           />
+            <AppBarButton x:ConnectionId='3' x:Name="detailButton" Icon="List" Label="Détails du prêt"                           />
+            <AppBarSeparator/>
+            <AppBarButton x:ConnectionId='4' x:Name="addButton" Icon="Add" Label="Ajouter"                        />
+            <AppBarButton x:ConnectionId='5' x:Name="editButton" Icon="Edit" Label="Modifier"                         />
+            <AppBarButton x:ConnectionId='6' x:Name="deleteButton" Icon="Delete" Label="Supprimer"                           />
         </CommandBar>
 
     </Grid>

@@ -500,8 +500,9 @@ namespace ProjetFinal
 
             MySqlCommand commande = new MySqlCommand();
             commande.Connection = con;
-            commande.CommandText = "UPDATE client SET nom = @nom, email = @email, numTel = @numTel, poste = @poste, numBureau = @numBureau, type = @type where id = @id";
+            commande.CommandText = "UPDATE client SET nom = @nom, email = @email, numTel = @numTel, poste = @poste, numBureau = @numBureau, type = @type where idClient = @id";
 
+            commande.Parameters.AddWithValue("@id", c.Id);
             commande.Parameters.AddWithValue("@nom", c.Nom);
             commande.Parameters.AddWithValue("@email", c.Email);
             commande.Parameters.AddWithValue("@numTel", c.NumTel);

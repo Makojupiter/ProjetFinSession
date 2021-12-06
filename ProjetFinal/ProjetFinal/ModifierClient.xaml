@@ -5,6 +5,7 @@
     xmlns:local="using:ProjetFinal"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="using:Microsoft.Toolkit.Uwp.UI"
     mc:Ignorable="d"
     Title="Modifier un client"
     PrimaryButtonText="Modifier"
@@ -18,18 +19,29 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.ColumnSpan="2" Margin="0">
-            <TextBox x:Name="tbNom" Header="Nom"/>
+            <TextBox x:Name="tbNom" Header="Nom" TextChanged="tbNom_TextChanged"/>
             <TextBlock x:Name="tbErrorNom" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:Name="tbEmail" Header="Email"/>
+            
+            <TextBox x:Name="tbEmail" Header="Email" TextChanged="tbEmail_TextChanged"/>
             <TextBlock x:Name="tbErrorEmail" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:Name="tbNumTel" Header="Numéro de téléphone"/>
+            
+            <TextBox x:Name="tbNumTel" 
+                     Header="Numéro de téléphone" 
+                     TextChanged="tbNumTel_TextChanged"
+                     ui:TextBoxExtensions.Mask="(999) 999-9999"/>
             <TextBlock x:Name="tbErrorNumTel" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:Name="tbPoste" Header="Poste"/>
+            
+            <TextBox x:Name="tbPoste" Header="Poste" TextChanged="tbPoste_TextChanged"/>
             <TextBlock x:Name="tbErrorPoste" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:Name="tbNumBureau" Header="Numéro de bureau"/>
+            
+            <TextBox x:Name="tbNumBureau" Header="Numéro de bureau" TextChanged="tbNumBureau_TextChanged"/>
             <TextBlock x:Name="tbErrorNumBureau" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:Name="tbType" Header="Type"/>
-            <TextBlock x:Name="tbErrorType" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
+
+            <ComboBox x:Name="cbType" HorizontalAlignment="Stretch" Header="Type de client" SelectionChanged="cbType_SelectionChanged">
+                <x:String>Étudiant</x:String>
+                <x:String>Professeur</x:String>
+                <x:String>Employé du CÉGEP</x:String>
+            </ComboBox>
         </StackPanel>
     </Grid>
 </ContentDialog>

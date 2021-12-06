@@ -25,6 +25,11 @@ namespace ProjetFinal
         public Accueil()
         {
             this.InitializeComponent();
+
+            dateHeure.Text = DateTime.Now.ToString("dddd dd MMMM yyyy");
+
         }
+
+
     }
 }

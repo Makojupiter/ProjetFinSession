@@ -377,3 +377,11 @@ C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x
 C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\FxResources.System.Configuration.ConfigurationManager.SR.resw
 C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\FxResources.System.Security.Cryptography.ProtectedData.SR.resw
 C:\Users\Utilisateur\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\FxResources.System.Security.Permissions.SR.resw
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Microsoft.Toolkit.dll
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Microsoft.Toolkit.pdb
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Microsoft.Toolkit.Uwp.dll
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Microsoft.Toolkit.Uwp.pdb
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Microsoft.Toolkit.Uwp.UI.dll
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Microsoft.Toolkit.Uwp.UI.pdb
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\Microsoft.Toolkit.Uwp.pri.xml
+C:\Users\Utilisateur\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\Microsoft.Toolkit.Uwp.UI.pri.xml

@@ -168,6 +168,10 @@
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationViewItemSeparator" />
     <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
     <RootType FullName="ProjetFinal.MainPage" />
+    <RootType FullName="Microsoft.Toolkit.Uwp.UI.TextBoxExtensions">
+      <RootMethod Name="GetMask" />
+      <RootMethod Name="SetMask" />
+    </RootType>
     <RootType FullName="ProjetFinal.ModifierClient" />
     <RootType FullName="ProjetFinal.ModifierMateriel" />
     <RootType FullName="ProjetFinal.ModifierUtilisateur" />
@@ -195,6 +199,7 @@
     </RootType>
     <RootType FullName="ProjetFinal.VisualiserClient" />
     <RootType FullName="ProjetFinal.VisualiserMateriel" />
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarSeparator" />
     <RootType FullName="ProjetFinal.VisualiserPret" />
     <RootType FullName="ProjetFinal.VisualiserUtilisateur" />
   </Roots.RootTypes>

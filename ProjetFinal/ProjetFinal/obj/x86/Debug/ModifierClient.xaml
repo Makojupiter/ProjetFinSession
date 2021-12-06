@@ -5,6 +5,7 @@
     xmlns:local="using:ProjetFinal"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="using:Microsoft.Toolkit.Uwp.UI"
     mc:Ignorable="d"
     Title="Modifier un client"
     PrimaryButtonText="Modifier"
@@ -18,18 +19,29 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.ColumnSpan="2" Margin="0">
-            <TextBox x:ConnectionId='2' x:Name="tbNom" Header="Nom"/>
+            <TextBox x:ConnectionId='2' x:Name="tbNom" Header="Nom"                                />
             <TextBlock x:ConnectionId='3' x:Name="tbErrorNom" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:ConnectionId='4' x:Name="tbEmail" Header="Email"/>
+            
+            <TextBox x:ConnectionId='4' x:Name="tbEmail" Header="Email"                                  />
             <TextBlock x:ConnectionId='5' x:Name="tbErrorEmail" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:ConnectionId='6' x:Name="tbNumTel" Header="Numéro de téléphone"/>
+            
+            <TextBox x:ConnectionId='6' x:Name="tbNumTel" 
+                     Header="Numéro de téléphone" 
+                                                       
+                     ui:TextBoxExtensions.Mask="(999) 999-9999"/>
             <TextBlock x:ConnectionId='7' x:Name="tbErrorNumTel" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:ConnectionId='8' x:Name="tbPoste" Header="Poste"/>
+            
+            <TextBox x:ConnectionId='8' x:Name="tbPoste" Header="Poste"                                  />
             <TextBlock x:ConnectionId='9' x:Name="tbErrorPoste" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:ConnectionId='10' x:Name="tbNumBureau" Header="Numéro de bureau"/>
+            
+            <TextBox x:ConnectionId='10' x:Name="tbNumBureau" Header="Numéro de bureau"                                      />
             <TextBlock x:ConnectionId='11' x:Name="tbErrorNumBureau" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:ConnectionId='12' x:Name="tbType" Header="Type"/>
-            <TextBlock x:ConnectionId='13' x:Name="tbErrorType" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
+
+            <ComboBox x:ConnectionId='12' x:Name="cbType" HorizontalAlignment="Stretch" Header="Type de client"                                           >
+                <x:String>Étudiant</x:String>
+                <x:String>Professeur</x:String>
+                <x:String>Employé du CÉGEP</x:String>
+            </ComboBox>
         </StackPanel>
     </Grid>
 </ContentDialog>

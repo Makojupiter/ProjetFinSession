@@ -47,6 +47,7 @@ namespace ProjetFinal
             if (cbType.SelectedIndex == 0)
             {
                 txtBureau.Visibility = Visibility.Collapsed;
+                txtBureau.Text = "0";
             }
             else
             {
