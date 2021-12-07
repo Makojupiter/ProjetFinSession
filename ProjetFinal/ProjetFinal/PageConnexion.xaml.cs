@@ -25,6 +25,19 @@ namespace ProjetFinal
         public PageConnexion()
         {
             this.InitializeComponent();
+            
+        }
+        
+        private void btnConnexion_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if(GestionBD.getInstance().conneter("Stephane"))
+            {
+                Frame.Navigate(typeof(Accueil));
+
+                
+                
+            }
         }
     }
 }

@@ -27,7 +27,7 @@
                     HorizontalAlignment="Center"
                     CornerRadius="10"
                     Background="DeepSkyBlue"
-                    Margin="20"/>
+                    Margin="20"                           />
         </StackPanel>
 
     </Grid>

@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace ProjetFinal
 {
+
+    
     class GestionBD
     {
         MySqlConnection con;
@@ -16,6 +18,8 @@ namespace ProjetFinal
         ObservableCollection<Materiel> listeMateriel;
         ObservableCollection<Utilisateur> listeUtilisateur;
         static GestionBD gestionBD = null;
+
+        public bool connexion;
 
         internal ObservableCollection<Pret> ListePret { get => listePret; set => listePret = value; }
         internal ObservableCollection<Client> ListeClient { get => listeClient; set => listeClient = value; }
@@ -560,6 +564,22 @@ namespace ProjetFinal
             con.Close();
 
             return retour;
+        }
+
+        public bool conneter(string connect)
+        {
+            if(connect == "Stephane")
+            {
+                return true;
+                connexion = true;
+            }
+            else
+            {
+                return false;
+                connexion = false;
+            }
+            
+            
         }
     }
 }

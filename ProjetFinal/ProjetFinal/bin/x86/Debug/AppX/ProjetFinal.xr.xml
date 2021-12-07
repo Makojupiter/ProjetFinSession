@@ -152,7 +152,6 @@
     <RootType FullName="ProjetFinal.AjouterUtilisateur" />
     <RootType FullName="ProjetFinal.BoiteAjout" />
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationView">
-      <RootProperty Name="Name" />
       <RootProperty Name="IsSettingsVisible" />
       <RootProperty Name="IsBackEnabled" />
       <RootProperty Name="MenuItems" />

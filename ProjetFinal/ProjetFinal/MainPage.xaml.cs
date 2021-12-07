@@ -17,9 +17,10 @@ using Windows.UI.Xaml.Navigation;
 
 namespace ProjetFinal
 {
-    /// <summary>
-    /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
-    /// </summary>
+
+        
+    
+
     public sealed partial class MainPage : Page
     {
         public MainPage()
@@ -29,8 +30,21 @@ namespace ProjetFinal
             //connexion.Content = "test";
             //connexion.Foreground = new SolidColorBrush(Color."red")
 
+
+
+            if(GestionBD.getInstance().connexion)
+            {
+                Compte.Content = "VRAI";
+            }
+            else
+            {
+                Compte.Content = "FAUX";
+            }
+
             mainFrame.Navigate(typeof(PageConnexion));
         }
+
+        public int vConnexion;
 
         private void nvMenue_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {

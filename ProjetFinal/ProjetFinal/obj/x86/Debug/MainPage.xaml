@@ -10,7 +10,7 @@
 
     <Grid>
 
-        <NavigationView x:ConnectionId='2' Name="nvMenue"
+        <NavigationView x:ConnectionId='2' x:Name="nvMenue"
                         Grid.Column="0"
                         IsSettingsVisible="False"
                                                                    
@@ -31,7 +31,7 @@
             </NavigationView.AutoSuggestBox>-->
 
             <NavigationView.PaneFooter>
-                <NavigationViewItem x:ConnectionId='8' x:Name="connexion" Icon="Contact" Content="Compte"/>
+                <NavigationViewItem x:ConnectionId='8' x:Name="Compte" Icon="Contact" Content="Compte"/>
             </NavigationView.PaneFooter>
 
             <Frame x:ConnectionId='9' x:Name="mainFrame"/>
