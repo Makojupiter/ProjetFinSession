@@ -18,16 +18,20 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.ColumnSpan="2" Margin="0">
-            <TextBox x:ConnectionId='2' x:Name="tbIdentifiant" Header="Identifiant"/>
+            <TextBlock x:ConnectionId='2' x:Name="tbIdentifiant"/>
             <TextBlock x:ConnectionId='3' x:Name="tbErrorIdentifiant" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:ConnectionId='4' x:Name="tbMarque" Header="Marque"/>
+            <TextBox x:ConnectionId='4' x:Name="tbMarque" Header="Marque"                                   />
             <TextBlock x:ConnectionId='5' x:Name="tbErrorMarque" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:ConnectionId='6' x:Name="tbModel" Header="Modèle"/>
+            <TextBox x:ConnectionId='6' x:Name="tbModel" Header="Modèle"                                  />
             <TextBlock x:ConnectionId='7' x:Name="tbErrorModel" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:ConnectionId='8' x:Name="tbEtat" Header="Etat"/>
-            <TextBlock x:ConnectionId='9' x:Name="tbErrorEtat" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:ConnectionId='10' x:Name="tbNote" Header="Note"/>
-            <TextBlock x:ConnectionId='11' x:Name="tbErrorNote" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
+            <ComboBox x:ConnectionId='8' x:Name="cbEtat" HorizontalAlignment="Stretch" Header="État"                                           >
+                <x:String>Disponible</x:String>
+                <x:String>En location</x:String>
+                <x:String>Défectueux</x:String>
+                <x:String>En Réparation</x:String>
+            </ComboBox>
+            <TextBox x:ConnectionId='9' x:Name="tbNote" Header="Note"                                 />
+            <TextBlock x:ConnectionId='10' x:Name="tbErrorNote" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
         </StackPanel>
     </Grid>
 </ContentDialog>

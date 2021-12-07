@@ -27,6 +27,9 @@ namespace ProjetFinal
         }
 
         bool usernameV, nomV, prenomV, passWordV;
+        Utilisateur u;
+
+        
 
         private void pwdPassword_PasswordChanged(object sender, RoutedEventArgs e)
         {
@@ -39,16 +42,11 @@ namespace ProjetFinal
             {
                 txtPasswordErr.Text = "";
                 passWordV = true;
+                u.Password = pwdPassword.Password;
             }
 
-            if (usernameV && nomV && prenomV && passWordV)
-            {
-                IsPrimaryButtonEnabled = true;
-            }
-            else
-            {
-                IsPrimaryButtonEnabled = false;
-            }
+            validation();
+
         }
 
         private void txtNom_TextChanged(object sender, TextChangedEventArgs e)
@@ -62,16 +60,11 @@ namespace ProjetFinal
             {
                 txtNomErr.Text = "";
                 nomV = true;
+                u.Nom = txtNom.Text;
             }
 
-            if (usernameV && nomV && prenomV && passWordV)
-            {
-                IsPrimaryButtonEnabled = true;
-            }
-            else
-            {
-                IsPrimaryButtonEnabled = false;
-            }
+            validation();
+
         }
 
         private void txtPrenom_TextChanged(object sender, TextChangedEventArgs e)
@@ -85,16 +78,11 @@ namespace ProjetFinal
             {
                 txtPrenomErr.Text = "";
                 prenomV = true;
+                u.Prenom = txtPrenom.Text;
             }
 
-            if (usernameV && nomV && prenomV && passWordV)
-            {
-                IsPrimaryButtonEnabled = true;
-            }
-            else
-            {
-                IsPrimaryButtonEnabled = false;
-            }
+            validation();
+
         }
 
         private void txtUserName_TextChanged(object sender, TextChangedEventArgs e)
@@ -108,8 +96,19 @@ namespace ProjetFinal
             {
                 txtUserNameErr.Text = "";
                 usernameV = true;
+                u.Username = txtUserName.Text;
             }
 
+            validation();
+        }
+
+        private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        {
+            GestionBD.getInstance().AjouterUtilisateur(u);
+        }
+
+        private void validation()
+        {
             if (usernameV && nomV && prenomV && passWordV)
             {
                 IsPrimaryButtonEnabled = true;
@@ -118,20 +117,7 @@ namespace ProjetFinal
             {
                 IsPrimaryButtonEnabled = false;
             }
-        }
 
-        private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
-        {
-            Utilisateur c;
-
-            string strUsername = txtUserName.Text;
-            string strNom = txtNom.Text;
-            string strPrenom = txtPrenom.Text;
-            string strPassword = pwdPassword.Password;
-
-            c = new Utilisateur(strUsername, strNom, strPrenom, strPassword);
-
-            GestionBD.getInstance().AjouterUtilisateur(c);
         }
 
     }

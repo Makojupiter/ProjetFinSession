@@ -20,58 +20,117 @@ namespace ProjetFinal
     public sealed partial class ModifierMateriel : ContentDialog
     {
         Materiel c;
-    public ModifierMateriel()
-    {
-        this.InitializeComponent();
+        public ModifierMateriel()
+        {
+            this.InitializeComponent();
 
-        c = GestionBD.getInstance().getListMateriel()[VisualiserMateriel.index];
+            c = GestionBD.getInstance().getListMateriel()[VisualiserMateriel.index];
 
-        tbIdentifiant.Text = c.Identifiant;
-        tbMarque.Text = c.Marque;
-        tbModel.Text = c.Model;
-        tbEtat.Text = c.Etat;
-        tbNote.Text = c.Note;
+            tbIdentifiant.Text = c.Identifiant;
+            tbMarque.Text = c.Marque;
+            tbModel.Text = c.Model;
+            tbNote.Text = c.Note;
 
-    }
+            if (c.Etat == "Disponible")
+            {
+                cbEtat.SelectedIndex = 0;
+            }
 
-    private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
-    {
-        if (tbIdentifiant.Text.Trim().Equals(""))
-        {
-            tbErrorIdentifiant.Text = "Veuillez entrer un identifiant!";
-            args.Cancel = true;
-        }
-        if (tbMarque.Text.Trim().Equals(""))
-        {
-            tbErrorMarque.Text = "Veuillez entrer une marque!";
-            args.Cancel = true;
-        }
-        if (tbModel.Text.Trim().Equals(""))
-        {
-            tbErrorModel.Text = "Veuillez indiquer un modèle!";
-            args.Cancel = true;
-        }
-        if (tbEtat.Text.Trim().Equals(""))
-        {
-            tbErrorEtat.Text = "Veuillez entrer un état!";
-            args.Cancel = true;
-        }
-        if (tbNote.Text.Trim().Equals(""))
-        {
-            tbErrorNote.Text = "Veuillez entrer une note!";
-            args.Cancel = true;
+            if (c.Etat == "En location")
+            {
+                cbEtat.SelectedIndex = 1;
+            }
+
+            if (c.Etat == "Défectueux")
+            {
+                cbEtat.SelectedIndex = 2;
+            }
+
+            if (c.Etat == "En Réparation")
+            {
+                cbEtat.SelectedIndex = 3;
+            }
+
+            vMarque = vModel = vNote = true;
+
         }
 
-        else
-        {
-            c.Identifiant = tbIdentifiant.Text;
-            c.Marque = tbMarque.Text;
-            c.Model = tbModel.Text;
-            c.Etat = tbEtat.Text;
-            c.Note = tbNote.Text;
+        bool vMarque, vModel, vNote;
 
+        private void tbMarque_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (tbMarque.Text.Trim().Equals(""))
+            {
+                tbErrorMarque.Text = "Ne peut etre vide";
+                vMarque = false;
+            }
+            else
+            {
+                tbErrorMarque.Text = "";
+                c.Marque = tbMarque.Text;
+                vMarque = true;
+            }
+
+            validation();
+        }
+
+        private void tbModel_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (tbModel.Text.Trim().Equals(""))
+            {
+                tbErrorModel.Text = "Ne peut etre vide";
+                vModel = false;
+            }
+            else
+            {
+                tbErrorModel.Text = "";
+                c.Model = tbModel.Text;
+                vModel = true;
+            }
+
+            validation();
+        }
+
+        private void tbNote_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (tbNote.Text.Trim().Equals(""))
+            {
+                tbErrorNote.Text = "Ne peut etre vide";
+                vNote = false;
+            }
+            else
+            {
+                tbErrorNote.Text = "";
+                c.Note = tbNote.Text;
+                vNote = true;
+            }
+
+            validation();
+        }
+
+        private void cbEtat_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            c.Etat = e.AddedItems[0].ToString();
+        }
+
+        private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        {
             GestionBD.getInstance().modifierMateriel(c);
+
         }
-    }
+
+        private void validation()
+        {
+            if(vMarque && vModel && vNote)
+            {
+                IsPrimaryButtonEnabled = true;
+            }
+            else
+            {
+                IsPrimaryButtonEnabled = false;
+            }
+
+
+        }
 }
 }

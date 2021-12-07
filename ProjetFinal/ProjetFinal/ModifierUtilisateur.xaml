@@ -12,20 +12,16 @@
     PrimaryButtonClick="ContentDialog_PrimaryButtonClick">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="auto"/>
-        </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.ColumnSpan="2" Margin="0">
-            <TextBox x:Name="tbUsername" Header="Username"/>
-            <TextBlock x:Name="tbErrorUsername" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:Name="tbPrenom" Header="Prénom"/>
+        <StackPanel >
+            <TextBlock x:Name="txtUsername"/>
+            <TextBox x:Name="tbPrenom" Header="Prénom" TextChanged="tbPrenom_TextChanged"/>
             <TextBlock x:Name="tbErrorPrenom" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:Name="tbNom" Header="Nom"/>
+            <TextBox x:Name="tbNom" Header="Nom" TextChanged="tbNom_TextChanged"/>
             <TextBlock x:Name="tbErrorNom" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:Name="tbPassword" Header="Password"/>
+            <TextBox x:Name="tbPassword" Header="Password" TextChanged="tbPassword_TextChanged"/>
             <TextBlock x:Name="tbErrorPassword" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
         </StackPanel>
+        
     </Grid>
 </ContentDialog>

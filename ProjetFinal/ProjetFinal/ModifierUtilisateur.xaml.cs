@@ -19,51 +19,90 @@ namespace ProjetFinal
 {
     public sealed partial class ModifierUtilisateur : ContentDialog
     {
-        Utilisateur c;
+        
         public ModifierUtilisateur()
         {
             this.InitializeComponent();
-
+            
             c = GestionBD.getInstance().getListUtilisateur()[VisualiserUtilisateur.index];
 
-            tbUsername.Text = c.Username;
+            txtUsername.Text = c.Username;
             tbPrenom.Text = c.Prenom;
             tbNom.Text = c.Nom;
             tbPassword.Text = c.Password;
+            vPrenom = vNom = vPassword = true;
+        }
+        Utilisateur c;
+        bool vPrenom, vNom, vPassword;
+
+        private void tbPrenom_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (tbPrenom.Text.Trim().Equals(""))
+            {
+                tbErrorPrenom.Text = "Ne peut etre vide";
+                vPrenom = false;
+            }
+            else
+            {
+                tbErrorPrenom.Text = "";
+                c.Prenom = tbPrenom.Text;
+                vPrenom = true;
+            }
+
+            validation();
+        }
+
+        private void tbNom_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (tbNom.Text.Trim().Equals(""))
+            {
+                tbErrorNom.Text = "Ne peut etre vide";
+                
+                vNom = false;
+            }
+            else
+            {
+                tbErrorNom.Text = "";
+                c.Nom = tbNom.Text;
+                vNom = true;
+            }
+
+            validation();
+        }
+
+        private void tbPassword_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (tbPassword.Text.Trim().Equals(""))
+            {
+                tbErrorPassword.Text = "Ne peut etre vide";
+                vPassword = false;
+            }
+            else
+            {
+                tbErrorPassword.Text = "";
+                c.Password = tbPassword.Text;
+                vPassword = true;
+            }
+
+            validation();
         }
 
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
-            if (tbUsername.Text.Trim().Equals(""))
+            GestionBD.getInstance().modifierUtilisateur(c);
+
+        }
+
+        private void validation()
+        {
+            if(vPrenom && vNom && vPassword)
             {
-                tbErrorUsername.Text = "Veuillez entrer un titre!";
-                args.Cancel = true;
-            }
-            if (tbPrenom.Text.Trim().Equals(""))
-            {
-                tbErrorPrenom.Text = "Veuillez indiquer un réalisateur!";
-                args.Cancel = true;
-            }
-            if (tbNom.Text.Trim().Equals(""))
-            {
-                tbErrorNom.Text = "Veuillez indiquer un genre!";
-                args.Cancel = true;
-            }
-            if (tbPassword.Text.Trim().Equals(""))
-            {
-                tbErrorPassword.Text = "Veuillez entrer l'url de l'affiche!";
-                args.Cancel = true;
+                IsPrimaryButtonEnabled = true;
             }
             else
             {
-                c.Username = tbUsername.Text;
-                c.Prenom = tbPrenom.Text;
-                c.Nom = tbNom.Text;
-                c.Password = tbPassword.Text;
-
-                GestionBD.getInstance().modifierUtilisateur(c);
+                IsPrimaryButtonEnabled = false;
             }
         }
-
     }
 }

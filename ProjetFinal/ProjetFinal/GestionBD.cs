@@ -524,7 +524,7 @@ namespace ProjetFinal
 
             MySqlCommand commande = new MySqlCommand();
             commande.Connection = con;
-            commande.CommandText = "UPDATE materiel SET idMateriel = @idMateriel, marque = @marque, model = @model, etat = @etat, note = @note where idMateriel = @idMateriel";
+            commande.CommandText = "UPDATE materiel SET marque = @marque, model = @model, etat = @etat, note = @note where idMateriel = @idMateriel";
 
             commande.Parameters.AddWithValue("@idMateriel", c.Identifiant);
             commande.Parameters.AddWithValue("@marque", c.Marque);
@@ -546,7 +546,7 @@ namespace ProjetFinal
 
             MySqlCommand commande = new MySqlCommand();
             commande.Connection = con;
-            commande.CommandText = "UPDATE utilisateur SET username = @username, prenom = @prenom, nom = @nom, password = @password where username = @username";
+            commande.CommandText = "UPDATE utilisateur SET prenom = @prenom, nom = @nom, password = @password where username = @username";
 
             commande.Parameters.AddWithValue("@username", c.Username);
             commande.Parameters.AddWithValue("@prenom", c.Prenom);

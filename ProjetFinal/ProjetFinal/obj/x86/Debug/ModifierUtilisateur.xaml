@@ -12,21 +12,17 @@
                                                          >
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="auto"/>
-        </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.ColumnSpan="2" Margin="0">
-            <TextBox x:ConnectionId='2' x:Name="tbUsername" Header="Username"/>
-            <TextBlock x:ConnectionId='3' x:Name="tbErrorUsername" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:ConnectionId='4' x:Name="tbPrenom" Header="Prénom"/>
-            <TextBlock x:ConnectionId='5' x:Name="tbErrorPrenom" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:ConnectionId='6' x:Name="tbNom" Header="Nom"/>
-            <TextBlock x:ConnectionId='7' x:Name="tbErrorNom" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
-            <TextBox x:ConnectionId='8' x:Name="tbPassword" Header="Password"/>
-            <TextBlock x:ConnectionId='9' x:Name="tbErrorPassword" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
+        <StackPanel >
+            <TextBlock x:ConnectionId='2' x:Name="txtUsername"/>
+            <TextBox x:ConnectionId='3' x:Name="tbPrenom" Header="Prénom"                                   />
+            <TextBlock x:ConnectionId='4' x:Name="tbErrorPrenom" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
+            <TextBox x:ConnectionId='5' x:Name="tbNom" Header="Nom"                                />
+            <TextBlock x:ConnectionId='6' x:Name="tbErrorNom" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
+            <TextBox x:ConnectionId='7' x:Name="tbPassword" Header="Password"                                     />
+            <TextBlock x:ConnectionId='8' x:Name="tbErrorPassword" Text="" FontSize="12" Foreground="Red" FontWeight="Bold"/>
         </StackPanel>
+        
     </Grid>
 </ContentDialog>
 
