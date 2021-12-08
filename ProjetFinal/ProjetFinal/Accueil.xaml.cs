@@ -28,19 +28,7 @@ namespace ProjetFinal
         {
             this.InitializeComponent();
 
-            MainPage objclass1 = new MainPage();
-
-            if (GestionBD.getInstance().verifConnexion() == 0)
-            {
-                txtNomUsager.Text = "Bonjour " + "Stephane";
-                objclass1.fonctionTEST("ALLO");
-            }
-            else
-            {
-                txtNomUsager.Text = "WTF";
-                objclass1.fonctionTEST("TESTTEST");
-            }
-
+            txtNomUsager.Text = "Bonjour " + GestionBD.getInstance().getUsername();
             dateHeure.Text = DateTime.Now.ToString("dddd dd MMMM yyyy");
 
         }

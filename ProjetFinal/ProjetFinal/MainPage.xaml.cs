@@ -26,19 +26,9 @@ namespace ProjetFinal
         public MainPage()
         {
             this.InitializeComponent();
-            //connexion.Icon = new SymbolIcon(Symbol.LeaveChat);
-            //connexion.Content = "test";
-            //connexion.Foreground = new SolidColorBrush(Color."red")
 
-            mainFrame.Navigate(typeof(PageConnexion));
+            mainFrame.Navigate(typeof(Accueil));
         }
-
-        public void fonctionTEST(string nom)
-        {
-            Compte.Content = "Stephane";
-        }
-
-        public int vConnexion;
 
         private void nvMenue_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
@@ -72,6 +62,12 @@ namespace ProjetFinal
         {
             if (mainFrame.CanGoBack)
                 mainFrame.GoBack();
+        }
+
+        private void Compte_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            GestionBD.getInstance().logout();
+            Frame.Navigate(typeof(PageConnexion));
         }
     }
 }

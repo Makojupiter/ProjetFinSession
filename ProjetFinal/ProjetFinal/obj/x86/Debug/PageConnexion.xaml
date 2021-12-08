@@ -19,9 +19,11 @@
                        Margin="15"/>
             <TextBox x:ConnectionId='2' x:Name="txtUserName"
                      Header="Nom d'usager"
-                     Margin="0,0,0,10"/>
+                     Margin="0,0,0,10"
+                     Text="Stef124"/>
             <PasswordBox x:ConnectionId='3' x:Name="pwdPassword"
-                         Header="Mot de passe"/>
+                         Header="Mot de passe"
+                         Password="123455"/>
             <Button x:ConnectionId='4' x:Name="btnConnexion"
                     Content="Connexion"
                     HorizontalAlignment="Center"

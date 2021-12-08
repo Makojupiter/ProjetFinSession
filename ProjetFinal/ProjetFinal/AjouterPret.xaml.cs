@@ -24,23 +24,27 @@ namespace ProjetFinal
     /// </summary>
     public sealed partial class AjouterPret : Page
     {
-        public AjouterPret()
-        {
-            this.InitializeComponent();
-            btnValider.IsEnabled = false;
-            btnAjouterMateriel.IsEnabled = false;
-            boxMateriel.IsEnabled = false;
-
-            grille.ItemsSource = listeMaterielTEMPO;
-        }
+        
         int jourHeure = 1;
         string userActif, numTel, materiel;
         Client rClient;
         Materiel rMateriel;
         ObservableCollection<Materiel> listeMaterielTEMPO;
+        Pret p;
+        int index = 0;
 
 
+        public AjouterPret()
+        {
+            this.InitializeComponent();
+            btnValider.IsEnabled = false;
+            boxMateriel.IsEnabled = false;
 
+            listeMaterielTEMPO = new ObservableCollection<Materiel>();
+
+            grille.ItemsSource = listeMaterielTEMPO;
+        }
+        
 
 
         private void toggleSwitch_Toggled(object sender, RoutedEventArgs e)
@@ -100,7 +104,7 @@ namespace ProjetFinal
             }
 
 
-            Pret p = new Pret(rClient.Id, DateTime.Now.ToString("yyyy MM dd"), DateTime.Now.ToString("h:mm"), retour, "Prof connecter", "En cours");
+            p = new Pret(rClient.Id, DateTime.Now.ToString("yyyy MM dd"), DateTime.Now.ToString("h:mm"), retour, GestionBD.getInstance().getId(), "En cours");
 
             // GestionBD.getInstance().AjouterPret(p);
 
@@ -108,6 +112,26 @@ namespace ProjetFinal
             boxMateriel.IsEnabled = true;
 
 
+        }
+
+        private void grille_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            btnSupprimer.IsEnabled = true;
+            //Materiel m2 = (Materiel)grille.SelectedItem;
+
+            index = grille.SelectedIndex;
+
+        }
+
+        private void btnSupprimer_Click(object sender, RoutedEventArgs e)
+        {
+            listeMaterielTEMPO.RemoveAt(index);
+
+        }
+
+        private void btnAddPret_Click(object sender, RoutedEventArgs e)
+        {
+            GestionBD.getInstance().AjouterPret(p, listeMaterielTEMPO);
         }
 
         private void boxMateriel_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
@@ -119,27 +143,16 @@ namespace ProjetFinal
         private void boxMateriel_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
         {
 
-            string expression = ",";
-            string[] tableau = Regex.Split(args.SelectedItem.ToString(), expression);
-
-            materiel = tableau[0];
-
-            //test.Text = materiel;
-
-            rMateriel = new Materiel(GestionBD.getInstance().RechercherMateriel2("materiel"));
-
-           // listeMaterielTEMPO.Add(rMateriel);
-
-            test.Text = rMateriel.Marque;
-
-            btnAjouterMateriel.IsEnabled = true;
-
-        }
-
-        private void btnAjouterMateriel_Click(object sender, RoutedEventArgs e)
-        {
            
+
+            rMateriel = (Materiel)args.SelectedItem;
+            listeMaterielTEMPO.Add(rMateriel);
+
+            btnAddPret.IsEnabled = true;
+
+
         }
+
 
 
     }

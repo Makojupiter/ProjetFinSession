@@ -33,13 +33,13 @@ namespace ProjetFinal
         private void btnConnexion_Click(object sender, RoutedEventArgs e)
         {
             
-            if(GestionBD.getInstance().conneter("Stephane"))
+            if(GestionBD.getInstance().login(txtUserName.Text,pwdPassword.Password) == 1)
             {
-                Frame.Navigate(typeof(Accueil));
-
-                //objclass1.fonctionTEST("Patate");
-
-
+                Frame.Navigate(typeof(MainPage));
+            }
+            else
+            {
+                Frame.Navigate(typeof(PageConnexion));
             }
         }
     }

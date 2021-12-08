@@ -35,11 +35,11 @@
                             FontSize="30"
                             Margin="10,0,50,0"/>
 
-                <AutoSuggestBox x:ConnectionId='9' Name="boxUser" Header="Usager"
+                <AutoSuggestBox x:ConnectionId='7' Name="boxUser" Header="Usager"
                             MinWidth="300"
                             HorizontalAlignment="Center"                                                                              >
                 </AutoSuggestBox>
-                <muxc:NumberBox x:ConnectionId='10' x:Name="nbrDuree"
+                <muxc:NumberBox x:ConnectionId='8' x:Name="nbrDuree"
                               VerticalAlignment="Top"
                               Header="Nombre de jours" 
                               Value="0" 
@@ -50,12 +50,12 @@
                               Maximum="30"
                             Margin="0,20,0,0">
                 </muxc:NumberBox>
-                <ToggleSwitch x:ConnectionId='11'   x:Name="toggleSwitch" 
+                <ToggleSwitch x:ConnectionId='9'   x:Name="toggleSwitch" 
                             OffContent="Jour" OnContent="Heure"
                                                           >
                 </ToggleSwitch>
             </StackPanel>
-            <Button x:ConnectionId='8' x:Name="btnValider" Content="Valider"
+            <Button x:ConnectionId='6' x:Name="btnValider" Content="Valider"
                     Margin="20"
                     MinHeight="50"
                     CornerRadius="50"                         />
@@ -64,18 +64,10 @@
         <StackPanel HorizontalAlignment="Center"
                     Grid.Column="1"
                     Margin="0,30,0,0">
-            <AutoSuggestBox x:ConnectionId='6' Name="boxMateriel" Header="Materiel"
+            <AutoSuggestBox x:ConnectionId='5' Name="boxMateriel" Header="Materiel"
                             MinWidth="300"                                                                                      >
             </AutoSuggestBox>
 
-
-
-            <Button x:ConnectionId='7' x:Name="btnAjouterMateriel"
-                    Content="Ajouter"
-                    Margin="0,15,0,0"
-                    CornerRadius="15"
-                    HorizontalAlignment="Stretch"
-                    Background="DeepSkyBlue"                                 />
         </StackPanel>
         
         <StackPanel HorizontalAlignment="Center"
@@ -84,15 +76,14 @@
                     Grid.Row="1"
                     MinWidth="300">
 
-            <TextBlock x:ConnectionId='4' x:Name="test"/>
 
-            <Button x:ConnectionId='5' x:Name="btnSupprimer"
+            <Button x:ConnectionId='4' x:Name="btnSupprimer"
                     Content="Supprimer"
                     Margin="0,15,0,0"
                     CornerRadius="15"
                     HorizontalAlignment="Stretch"
                     Background="Red"
-                    IsEnabled="False"/>
+                    IsEnabled="False"                           />
 
 
         </StackPanel>
@@ -109,11 +100,12 @@
                 CornerRadius="5"
                 HorizontalAlignment="Right"
                 Background="Brown"
-                Foreground="BlanchedAlmond"/>
+                Foreground="BlanchedAlmond"                         />
 
         <controls:DataGrid x:ConnectionId='3' x:Name="grille" AutoGenerateColumns="False"
                            Grid.Row="1"
-                           Margin="15">
+                           Margin="15"                                           
+                           SelectionMode="Single">
             <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn 
                     Header="Article"

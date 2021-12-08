@@ -20,6 +20,9 @@ namespace ProjetFinal
         static GestionBD gestionBD = null;
 
         internal int connexion;
+        string usernameLogged;
+        int logged;
+        int idUser;
 
         internal ObservableCollection<Pret> ListePret { get => listePret; set => listePret = value; }
         internal ObservableCollection<Client> ListeClient { get => listeClient; set => listeClient = value; }
@@ -244,7 +247,7 @@ namespace ProjetFinal
             }
         }
 
-        public Materiel RechercherMateriel2(String materiel)
+        public Materiel RechercherMateriel2(Materiel materiel)
         {
 
             Materiel m = new Materiel("BAD", "BAD", "BAD", "BAD", "BAD");
@@ -254,7 +257,9 @@ namespace ProjetFinal
 
                 MySqlCommand commande = new MySqlCommand();
                 commande.Connection = con;
-                commande.CommandText = "SELECT * FROM materiel WHERE idMateriel = " + materiel;
+                commande.CommandText = "SELECT * FROM materiel WHERE idMateriel = @idMateriel";
+
+                commande.Parameters.AddWithValue("@idMateriel", materiel);
 
                 con.Open();
                 MySqlDataReader r = commande.ExecuteReader();
@@ -316,37 +321,50 @@ namespace ProjetFinal
             return listeUtilisateur;
         }
 
-        public int AjouterPret(Pret c)
+        public int AjouterPret(Pret c, ObservableCollection<Materiel> m)
         {
             int retour = 0;
 
-            MySqlCommand commande = new MySqlCommand();
+            MySqlCommand commande = new MySqlCommand("p_ajout_pret");
             commande.Connection = con;
-            commande.CommandText = "INSERT INTO pret VALUES(null, @client, @date, @heure, @dateRetour, @utilisateur, @etat)";
+            commande.CommandType = System.Data.CommandType.StoredProcedure;
 
-            commande.Parameters.AddWithValue("@client", c.Client);
-            commande.Parameters.AddWithValue("@date", c.Date);
-            commande.Parameters.AddWithValue("@heure", c.Heure);
-            commande.Parameters.AddWithValue("@dateRetour", c.DateRetour);
-            commande.Parameters.AddWithValue("@utilisateur", c.Utilisateur);
-            commande.Parameters.AddWithValue("@etat", c.Etat);
+            commande.Parameters.AddWithValue("idClient", c.Client);
+            commande.Parameters.AddWithValue("date", c.Date);
+            commande.Parameters.AddWithValue("heure", c.Heure);
+            commande.Parameters.AddWithValue("dateRetour", c.DateRetour);
+            commande.Parameters.AddWithValue("idUtilisateur", c.Utilisateur);
+            commande.Parameters.AddWithValue("etat", c.Etat);
 
             con.Open();
             commande.Prepare();
-            retour = commande.ExecuteNonQuery();
-
-            //Pour obtenir le dernier ID inseré pour permettre à la liste de s'actualiser
-            commande.CommandText = "SELECT MAX(id) FROM pret";
+            
             MySqlDataReader r = commande.ExecuteReader();
             r.Read();
             int id = r.GetInt32(0);
-            c.Id = id;
+
+            foreach(Materiel item in m)
+            {
+                MySqlCommand commande2 = new MySqlCommand("p_ajout_detailspret");
+                commande2.Connection = con;
+                commande2.CommandType = System.Data.CommandType.StoredProcedure;
+
+                commande.Parameters.AddWithValue("idPret", id);
+                commande.Parameters.AddWithValue("idMateriel", item.Identifiant);
+                commande.Parameters.AddWithValue("etatLoation", item.Etat);
+                commande.Parameters.AddWithValue("idUtilisateur", idUser);
+            }
 
             con.Close();
 
             listePret.Add(c);
 
             return retour;
+        }
+
+        public int getId()
+        {
+            return idUser;
         }
 
         public int AjouterClient(Client c)
@@ -566,28 +584,53 @@ namespace ProjetFinal
             return retour;
         }
 
-        public bool conneter(string connect)
+        public int login(string username, string password)
         {
-            if(connect == "Stephane")
+            int check = 0;
+            string nom = "";
+            MySqlCommand commande = new MySqlCommand();
+            commande.Connection = con;
+            commande.CommandText = "Select * from utilisateur WHERE username = @username AND password = @password";
+            commande.Parameters.AddWithValue("@username", username);
+            commande.Parameters.AddWithValue("@password", password);
+            con.Open();
+            commande.Prepare();
+
+            MySqlDataReader r = commande.ExecuteReader();
+            while (r.Read())
             {
-                return true;
-                connexion = 0;
+                check = 1;
+                nom = r.GetString(3);
+                idUser = r.GetInt32(0);
+            }
+            r.Close();
+            con.Close();
+            if (check == 1)
+            {
+                logged = 1;
+                usernameLogged = nom;
+                return check;
             }
             else
             {
-                return false;
-                connexion = 1;
-                
+                logged = 0;
+                usernameLogged = "";
+                return check;
             }
-            
-            
+
         }
 
-        
-
-        public int verifConnexion()
+        public int logout() 
         {
-            return connexion;
+            logged = 0;
+            usernameLogged = "";
+            idUser = 0;
+            return logged;
+        }
+
+        public string getUsername()
+        {
+            return usernameLogged;
         }
     }
 }

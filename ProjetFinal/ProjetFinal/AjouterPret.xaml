@@ -68,14 +68,6 @@
                             MinWidth="300" TextChanged="boxMateriel_TextChanged" SuggestionChosen="boxMateriel_SuggestionChosen">
             </AutoSuggestBox>
 
-
-
-            <Button x:Name="btnAjouterMateriel"
-                    Content="Ajouter"
-                    Margin="0,15,0,0"
-                    CornerRadius="15"
-                    HorizontalAlignment="Stretch"
-                    Background="DeepSkyBlue" Click="btnAjouterMateriel_Click"/>
         </StackPanel>
         
         <StackPanel HorizontalAlignment="Center"
@@ -84,7 +76,6 @@
                     Grid.Row="1"
                     MinWidth="300">
 
-            <TextBlock x:Name="test"/>
 
             <Button x:Name="btnSupprimer"
                     Content="Supprimer"
@@ -92,7 +83,7 @@
                     CornerRadius="15"
                     HorizontalAlignment="Stretch"
                     Background="Red"
-                    IsEnabled="False"/>
+                    IsEnabled="False" Click="btnSupprimer_Click"/>
 
 
         </StackPanel>
@@ -109,11 +100,12 @@
                 CornerRadius="5"
                 HorizontalAlignment="Right"
                 Background="Brown"
-                Foreground="BlanchedAlmond"/>
+                Foreground="BlanchedAlmond" Click="btnAddPret_Click"/>
 
         <controls:DataGrid x:Name="grille" AutoGenerateColumns="False"
                            Grid.Row="1"
-                           Margin="15">
+                           Margin="15" SelectionChanged="grille_SelectionChanged"
+                           SelectionMode="Single">
             <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn 
                     Header="Article"

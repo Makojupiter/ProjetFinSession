@@ -102,6 +102,7 @@
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="AcceptsReturn" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Text" />
       <RootEvent Name="TextChanged" />
     </RootType>
     <RootType FullName="System.String" />
@@ -110,7 +111,9 @@
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGrid">
       <RootProperty Name="AutoGenerateColumns" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="SelectionMode" />
       <RootProperty Name="Columns" />
+      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn">
       <RootProperty Name="Header" />
@@ -147,6 +150,7 @@
     <RootType FullName="ProjetFinal.AjouterPret" />
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="Header" />
+      <RootProperty Name="Password" />
       <RootEvent Name="PasswordChanged" />
     </RootType>
     <RootType FullName="ProjetFinal.AjouterUtilisateur" />
@@ -163,6 +167,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationViewItem">
       <RootProperty Name="Icon" />
       <RootProperty Name="Content" />
+      <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationViewItemSeparator" />
     <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
