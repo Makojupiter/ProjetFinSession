@@ -23,6 +23,7 @@
 
         <StackPanel Orientation="Vertical" Grid.Row="1">
             <TextBlock Text="Bonjour {nom de l'utilisateur}"
+                       x:Name="txtNomUsager"
                    Foreground="White"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"

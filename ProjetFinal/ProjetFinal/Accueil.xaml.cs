@@ -17,6 +17,8 @@ using Windows.UI.Xaml.Navigation;
 
 namespace ProjetFinal
 {
+
+    
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
@@ -25,6 +27,19 @@ namespace ProjetFinal
         public Accueil()
         {
             this.InitializeComponent();
+
+            MainPage objclass1 = new MainPage();
+
+            if (GestionBD.getInstance().verifConnexion() == 0)
+            {
+                txtNomUsager.Text = "Bonjour " + "Stephane";
+                objclass1.fonctionTEST("ALLO");
+            }
+            else
+            {
+                txtNomUsager.Text = "WTF";
+                objclass1.fonctionTEST("TESTTEST");
+            }
 
             dateHeure.Text = DateTime.Now.ToString("dddd dd MMMM yyyy");
 

@@ -22,6 +22,8 @@ namespace ProjetFinal
     /// </summary>
     public sealed partial class PageConnexion : Page
     {
+
+        //MainPage objclass1 = new MainPage();
         public PageConnexion()
         {
             this.InitializeComponent();
@@ -35,8 +37,9 @@ namespace ProjetFinal
             {
                 Frame.Navigate(typeof(Accueil));
 
-                
-                
+                //objclass1.fonctionTEST("Patate");
+
+
             }
         }
     }

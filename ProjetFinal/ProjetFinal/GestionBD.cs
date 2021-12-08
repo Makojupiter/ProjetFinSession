@@ -19,7 +19,7 @@ namespace ProjetFinal
         ObservableCollection<Utilisateur> listeUtilisateur;
         static GestionBD gestionBD = null;
 
-        public bool connexion;
+        internal int connexion;
 
         internal ObservableCollection<Pret> ListePret { get => listePret; set => listePret = value; }
         internal ObservableCollection<Client> ListeClient { get => listeClient; set => listeClient = value; }
@@ -571,15 +571,23 @@ namespace ProjetFinal
             if(connect == "Stephane")
             {
                 return true;
-                connexion = true;
+                connexion = 0;
             }
             else
             {
                 return false;
-                connexion = false;
+                connexion = 1;
+                
             }
             
             
+        }
+
+        
+
+        public int verifConnexion()
+        {
+            return connexion;
         }
     }
 }

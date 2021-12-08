@@ -30,18 +30,12 @@ namespace ProjetFinal
             //connexion.Content = "test";
             //connexion.Foreground = new SolidColorBrush(Color."red")
 
-
-
-            if(GestionBD.getInstance().connexion)
-            {
-                Compte.Content = "VRAI";
-            }
-            else
-            {
-                Compte.Content = "FAUX";
-            }
-
             mainFrame.Navigate(typeof(PageConnexion));
+        }
+
+        public void fonctionTEST(string nom)
+        {
+            Compte.Content = "Stephane";
         }
 
         public int vConnexion;
