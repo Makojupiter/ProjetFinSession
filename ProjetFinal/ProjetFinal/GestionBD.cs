@@ -37,7 +37,7 @@ namespace ProjetFinal
             listeMateriel = new ObservableCollection<Materiel>();
             listeUtilisateur = new ObservableCollection<Utilisateur>();
 
-            getPret();
+            //getPret();
             getMateriel();
             getClient();
             getUtilisateur();
@@ -50,6 +50,7 @@ namespace ProjetFinal
 
             return gestionBD;
         }
+
         public ObservableCollection<Pret> getPret()
         {
             try
@@ -63,8 +64,8 @@ namespace ProjetFinal
 
                 while (r.Read())
                 {
-
-                    listePret.Add(new Pret(r.GetInt32(0), r.GetInt32(1), r.GetString(2), r.GetString(3), r.GetString(4), r.GetString(5), r.GetString(6)));
+                    // VERIFIER L'ORDRE DE LA BD ET DU CONSTRUCTEUR 
+                    //listePret.Add(new Pret(r.GetInt32(0), r.GetInt32(1), r.GetString(2), r.GetString(3), r.GetString(4), r.GetString(5), r.GetString(6)));
                 }
                 r.Close();
                 con.Close();
@@ -77,7 +78,7 @@ namespace ProjetFinal
                     con.Close();
                 return listePret;
             }
-        }
+        } 
         public ObservableCollection<Pret> getListPret()
         {
             return listePret;
@@ -321,20 +322,20 @@ namespace ProjetFinal
             return listeUtilisateur;
         }
 
-        public int AjouterPret(Pret c, ObservableCollection<Materiel> m)
+        public int AjouterPret(Pret p, ObservableCollection<Materiel> m)
         {
             int retour = 0;
 
-            MySqlCommand commande = new MySqlCommand("p_ajout_pret");
-            commande.Connection = con;
-            commande.CommandType = System.Data.CommandType.StoredProcedure;
-
-            commande.Parameters.AddWithValue("idClient", c.Client);
-            commande.Parameters.AddWithValue("date", c.Date);
-            commande.Parameters.AddWithValue("heure", c.Heure);
-            commande.Parameters.AddWithValue("dateRetour", c.DateRetour);
-            commande.Parameters.AddWithValue("idUtilisateur", c.Utilisateur);
-            commande.Parameters.AddWithValue("etat", c.Etat);
+            MySqlCommand commande = new MySqlCommand("p_ajout_pret"); // <-- Il faut probablement changer la procedure
+            commande.Connection = con;                                          //      
+            commande.CommandType = System.Data.CommandType.StoredProcedure;     //      |
+                                                                                //      |
+            commande.Parameters.AddWithValue("idClient", p.Id_Client);          //      |
+            commande.Parameters.AddWithValue("date", p.DatePret);               //     \|/
+            commande.Parameters.AddWithValue("heure", p.HeurePret);             //      V
+            commande.Parameters.AddWithValue("dateRetour", p.DateRetour); //CALCULER EN BEFORE INSERT DANS LA BD
+            commande.Parameters.AddWithValue("idUtilisateur", idUser);  
+            commande.Parameters.AddWithValue("etat", p.Etat);
 
             con.Open();
             commande.Prepare();
@@ -351,13 +352,13 @@ namespace ProjetFinal
 
                 commande.Parameters.AddWithValue("idPret", id);
                 commande.Parameters.AddWithValue("idMateriel", item.Identifiant);
-                commande.Parameters.AddWithValue("etatLoation", item.Etat);
+                commande.Parameters.AddWithValue("etatLoation", 1);
                 commande.Parameters.AddWithValue("idUtilisateur", idUser);
             }
 
             con.Close();
 
-            listePret.Add(c);
+            listePret.Add(p);
 
             return retour;
         }
@@ -445,7 +446,7 @@ namespace ProjetFinal
         {
             MySqlCommand commande = new MySqlCommand();
             commande.Connection = con;
-            commande.CommandText = "DELETE FROM pret WHERE id = " + c.Id;
+            commande.CommandText = "DELETE FROM pret WHERE id = " + c.Id_Pret;
 
             con.Open();
             commande.ExecuteNonQuery();
@@ -500,12 +501,12 @@ namespace ProjetFinal
             commande.Connection = con;
             commande.CommandText = "UPDATE pret SET idClient = @client, date = @date, heure = @heure, dateRetour = @dateRetour, idUtilisateur = @utilisateur, etat = @etat where idPret = @idPret";
 
-            commande.Parameters.AddWithValue("@idPret", c.Id);
-            commande.Parameters.AddWithValue("@client", c.Client);
-            commande.Parameters.AddWithValue("@date", c.Date);
-            commande.Parameters.AddWithValue("@heure", c.Heure);
+            commande.Parameters.AddWithValue("@idPret", c.Id_Pret);
+            commande.Parameters.AddWithValue("@client", c.Id_Client);
+            commande.Parameters.AddWithValue("@date", c.DatePret);
+            commande.Parameters.AddWithValue("@heure", c.HeurePret);
             commande.Parameters.AddWithValue("@dateRetour", c.DateRetour);
-            commande.Parameters.AddWithValue("@usager", c.Utilisateur);
+            commande.Parameters.AddWithValue("@usager", c.Id_Utilisateur);
             commande.Parameters.AddWithValue("@etat", c.Etat);
 
             con.Open();

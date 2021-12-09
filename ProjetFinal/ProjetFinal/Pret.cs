@@ -11,61 +11,83 @@ namespace ProjetFinal
     class Pret : INotifyPropertyChanged
     {
 
-        int id, client;
-        string date, heure, dateRetour, utilisateur, etat;
+        int id_Pret, id_Client, id_Utilisateur, etat;
 
-        public Pret(int id, int client, string date, string heure, string dateRetour, string utilisateur, string etat)
+        string datePret, heurePret, dateRetour;
+
+        public Pret(int id_Client, int id_Utilisateur, int etat, string datePret, string heurePret, string dateRetour)
         {
-            this.id = id;
-            this.client = client;
-            this.date = date;
-            this.heure = heure;
-            this.dateRetour = dateRetour;
-            this.utilisateur = utilisateur;
+            this.id_Client = id_Client;
+            this.id_Utilisateur = id_Utilisateur;
             this.etat = etat;
+            this.datePret = datePret;
+            this.heurePret = heurePret;
+            this.dateRetour = dateRetour;
         }
 
-        public Pret(int client, string date, string heure, string dateRetour, string utilisateur, string etat)
+        public Pret(int id_Pret, int id_Client, int id_Utilisateur, int etat, string datePret, string heurePret, string dateRetour)
         {
-            this.client = client;
-            this.date = date;
-            this.heure = heure;
-            this.dateRetour = dateRetour;
-            this.utilisateur = utilisateur;
+            this.id_Pret = id_Pret;
+            this.id_Client = id_Client;
+            this.id_Utilisateur = id_Utilisateur;
             this.etat = etat;
+            this.datePret = datePret;
+            this.heurePret = heurePret;
+            this.dateRetour = dateRetour;
         }
 
-        public int Id 
+        public int Id_Client 
         { 
-            get => id;
+            get => id_Client;
             set
             {
-                id = value;
+                id_Client = value;
                 this.OnPropertyChanged();
             }
         }
-        public int Client 
-        { get => client;
+
+        public int Id_Pret
+        {
+            get => id_Pret;
             set
             {
-                client = value;
+                id_Pret = value;
                 this.OnPropertyChanged();
             }
         }
-        public string Date 
-        { get => date;
-            set
-            {
-                date = value;
-                this.OnPropertyChanged();
-            }
-        }
-        public string Heure 
+        public int Id_Utilisateur 
         { 
-            get => heure;
+            get => id_Utilisateur;
             set
             {
-                heure = value;
+                id_Utilisateur = value;
+                this.OnPropertyChanged();
+            }
+        }
+        public int Etat 
+        { 
+            get => etat;
+            set
+            {
+                etat = value;
+                this.OnPropertyChanged();
+            }
+        }
+        public string DatePret 
+        { 
+            get => datePret;
+            set
+            {
+                datePret = value;
+                this.OnPropertyChanged();
+            }
+        }
+        public string HeurePret 
+        { 
+            get => heurePret;
+            set
+            {
+                heurePret = value;
                 this.OnPropertyChanged();
             }
         }
@@ -78,25 +100,6 @@ namespace ProjetFinal
                 this.OnPropertyChanged();
             }
         }
-        public string Utilisateur 
-        { 
-            get => utilisateur;
-            set
-            {
-                utilisateur = value;
-                this.OnPropertyChanged();
-            }
-        }
-        public string Etat 
-        { 
-            get => etat;
-            set
-            {
-                etat = value;
-                this.OnPropertyChanged();
-            }
-        }
-
 
         public event PropertyChangedEventHandler PropertyChanged;
 

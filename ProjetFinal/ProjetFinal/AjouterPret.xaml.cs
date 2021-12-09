@@ -103,10 +103,8 @@ namespace ProjetFinal
                 retour = testdate.ToString("dd/MM/yyyy");
             }
 
-
-            p = new Pret(rClient.Id, DateTime.Now.ToString("yyyy MM dd"), DateTime.Now.ToString("h:mm"), retour, GestionBD.getInstance().getId(), "En cours");
-
-            // GestionBD.getInstance().AjouterPret(p);
+            
+            p = new Pret(rClient.Id,rClient.Id, GestionBD.getInstance().getId(),1, DateTime.Now.ToString("yyyy MM dd"), DateTime.Now.ToString("h:mm"), retour);
 
             
             boxMateriel.IsEnabled = true;
@@ -117,7 +115,6 @@ namespace ProjetFinal
         private void grille_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             btnSupprimer.IsEnabled = true;
-            //Materiel m2 = (Materiel)grille.SelectedItem;
 
             index = grille.SelectedIndex;
 
@@ -126,7 +123,7 @@ namespace ProjetFinal
         private void btnSupprimer_Click(object sender, RoutedEventArgs e)
         {
             listeMaterielTEMPO.RemoveAt(index);
-
+            btnSupprimer.IsEnabled = false;
         }
 
         private void btnAddPret_Click(object sender, RoutedEventArgs e)
@@ -136,7 +133,7 @@ namespace ProjetFinal
 
         private void boxMateriel_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
-            // DOIT etre changer par une procedure qui verifie si le materiel est DISPONIBLE
+            // DOIT inclure seulement le materiel disponible  -------
             boxMateriel.ItemsSource = GestionBD.getInstance().RechercherMateriel(boxMateriel.Text);
         }
 

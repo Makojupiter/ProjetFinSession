@@ -11,110 +11,54 @@ namespace ProjetFinal
     class DetailsPret  : INotifyPropertyChanged
     {
 
-        int id, noPret;
-        string noMateriel, nomMateriel, marqueMateriel, retourne, usagerRetour;
+        int ID_Pret, Etats, ID_Utilisateur, id_Detail;
+        string ID_Materiel;
 
-        public DetailsPret(int id, int noPret, string noMateriel, string nomMateriel, string marqueMateriel, string retourne, string usagerRetour)
+        public DetailsPret(int iD_Pret, int etats, int iD_Utilisateur, string iD_Materiel)
         {
-            this.id = id;
-            this.noPret = noPret;
-            this.noMateriel = noMateriel;
-            this.nomMateriel = nomMateriel;
-            this.marqueMateriel = marqueMateriel;
-            this.retourne = retourne;
-            this.usagerRetour = usagerRetour;
+            ID_Pret = iD_Pret;
+            Etats = etats;
+            ID_Utilisateur = iD_Utilisateur;
+            ID_Materiel = iD_Materiel;
         }
 
-        public DetailsPret(int noPret, string noMateriel, string nomMateriel, string marqueMateriel, string retourne, string usagerRetour)
-        {
-            this.noPret = noPret;
-            this.noMateriel = noMateriel;
-            this.nomMateriel = nomMateriel;
-            this.marqueMateriel = marqueMateriel;
-            this.retourne = retourne;
-            this.usagerRetour = usagerRetour;
-        }
 
-        public DetailsPret( string noMateriel, string nomMateriel, string marqueMateriel, string retourne, string usagerRetour)
-        {
-            this.noMateriel = noMateriel;
-            this.nomMateriel = nomMateriel;
-            this.marqueMateriel = marqueMateriel;
-            this.retourne = retourne;
-            this.usagerRetour = usagerRetour;
-        }
-
-        public DetailsPret(string noMateriel, string retourne, string usagerRetour)
-        {
-            this.noMateriel = noMateriel;
-            this.retourne = retourne;
-            this.usagerRetour = usagerRetour;
-        }
-
-        public int Id 
+        public int ID_Pret1 
         { 
-            get => id;
+            get => ID_Pret;
             set
             {
-                id = value;
+                ID_Pret = value;
                 this.OnPropertyChanged();
             }
         }
-        public int NoPret 
+        public int Etats1 
         { 
-            get => noPret;
+            get => Etats;
             set
             {
-                noPret = value;
+                Etats = value;
                 this.OnPropertyChanged();
             }
         }
-        public string NoMateriel 
+        public int ID_Utilisateur1 
         { 
-            get => noMateriel;
+            get => ID_Utilisateur;
             set
             {
-                noMateriel = value;
+                ID_Utilisateur = value;
                 this.OnPropertyChanged();
             }
         }
-        public string NomMateriel 
+        public string ID_Materiel1 
         { 
-            get => nomMateriel;
+            get => ID_Materiel;
             set
             {
-                nomMateriel = value;
+                ID_Materiel = value;
                 this.OnPropertyChanged();
             }
         }
-        public string MarqueMateriel 
-        { 
-            get => marqueMateriel;
-            set
-            {
-                marqueMateriel = value;
-                this.OnPropertyChanged();
-            }
-        }
-        public string Retourne 
-        { 
-            get => retourne;
-            set
-            {
-                retourne = value;
-                this.OnPropertyChanged();
-            }
-        }
-        public string UsagerRetour 
-        { 
-            get => usagerRetour;
-            set
-            {
-                usagerRetour = value;
-                this.OnPropertyChanged();
-            }
-        }
-
 
         public event PropertyChangedEventHandler PropertyChanged;
 
