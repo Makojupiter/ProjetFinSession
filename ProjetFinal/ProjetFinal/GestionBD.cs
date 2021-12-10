@@ -326,7 +326,7 @@ namespace ProjetFinal
         {
             int retour = 0;
 
-            MySqlCommand commande = new MySqlCommand("p_ajout_pret"); // <-- Il faut probablement changer la procedure
+            MySqlCommand commande = new MySqlCommand("p_ajout_pret");           //   PAAAAAAAAAAAAAAATTTTT
             commande.Connection = con;                                          //      
             commande.CommandType = System.Data.CommandType.StoredProcedure;     //      |
                                                                                 //      |
@@ -334,8 +334,8 @@ namespace ProjetFinal
             commande.Parameters.AddWithValue("date", p.DatePret);               //     \|/
             commande.Parameters.AddWithValue("heure", p.HeurePret);             //      V
             commande.Parameters.AddWithValue("dateRetour", p.DateRetour); //CALCULER EN BEFORE INSERT DANS LA BD
-            commande.Parameters.AddWithValue("idUtilisateur", p.Id_Utilisateur);  
-            commande.Parameters.AddWithValue("etat", p.Etat);
+            commande.Parameters.AddWithValue("idUtilisateur", idUser);  
+            commande.Parameters.AddWithValue("etatPret", 1);
 
             con.Open();
             commande.Prepare();
@@ -344,16 +344,20 @@ namespace ProjetFinal
             r.Read();
             int id = r.GetInt32(0);
 
+            r.Close();
+
             foreach(Materiel item in m)
             {
                 MySqlCommand commande2 = new MySqlCommand("p_ajout_detailspret");
                 commande2.Connection = con;
                 commande2.CommandType = System.Data.CommandType.StoredProcedure;
 
-                commande.Parameters.AddWithValue("idPret", id);
-                commande.Parameters.AddWithValue("idMateriel", item.Identifiant);
-                commande.Parameters.AddWithValue("etatLoation", true);
-                commande.Parameters.AddWithValue("idUtilisateur", idUser);
+                commande2.Parameters.AddWithValue("idPret", id);
+                commande2.Parameters.AddWithValue("idMateriel", item.Identifiant);
+                commande2.Parameters.AddWithValue("etatLocation", 1);
+                commande2.Parameters.AddWithValue("idUtilisateur", idUser);
+
+                commande2.ExecuteNonQuery();
             }
 
             con.Close();

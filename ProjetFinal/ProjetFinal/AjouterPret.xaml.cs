@@ -94,17 +94,17 @@ namespace ProjetFinal
             {
                 testdate =   DateTime.Now.AddHours(Convert.ToInt32( nbrDuree.Text));
 
-                retour = testdate.ToString("dd/MM/yyyy");
+                retour = testdate.ToString("yyyy-MM-dd");
 
             }
             if (jourHeure == 1)
             {
                 testdate = DateTime.Now.AddDays(Convert.ToInt32(nbrDuree.Text));
-                retour = testdate.ToString("dd/MM/yyyy");
+                retour = testdate.ToString("yyyy-MM-dd");
             }
 
             
-            p = new Pret(rClient.Id, rClient.Id, DateTime.Now.ToString("yyyy MM dd"), DateTime.Now.ToString("h:mm"), retour, GestionBD.getInstance().getId(), true);
+            p = new Pret(rClient.Id, rClient.Id, DateTime.Now.ToString("yyyy-MM-dd"), DateTime.Now.ToString("hh:mm"), retour, GestionBD.getInstance().getId(), true);
 
             
             boxMateriel.IsEnabled = true;
@@ -129,6 +129,7 @@ namespace ProjetFinal
         private void btnAddPret_Click(object sender, RoutedEventArgs e)
         {
             GestionBD.getInstance().AjouterPret(p, listeMaterielTEMPO);
+            this.Frame.Navigate(typeof(VisualiserPret));
         }
 
         private void boxMateriel_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
@@ -146,6 +147,8 @@ namespace ProjetFinal
             listeMaterielTEMPO.Add(rMateriel);
 
             btnAddPret.IsEnabled = true;
+
+            boxMateriel.Text = "";
 
 
         }
