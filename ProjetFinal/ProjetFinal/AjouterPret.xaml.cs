@@ -104,7 +104,7 @@ namespace ProjetFinal
             }
 
             
-            p = new Pret(rClient.Id, rClient.Id, DateTime.Now.ToString("yyyy-MM-dd"), DateTime.Now.ToString("hh:mm"), retour, GestionBD.getInstance().getId(), true);
+            p = new Pret(rClient.Id, rClient.Id, DateTime.Now.ToString("yyyy-MM-dd"), DateTime.Now.ToString("hh:mm"), retour, GestionBD.getInstance().getId(), 1);
 
             
             boxMateriel.IsEnabled = true;

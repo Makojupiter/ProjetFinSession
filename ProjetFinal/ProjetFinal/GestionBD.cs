@@ -65,7 +65,7 @@ namespace ProjetFinal
                 while (r.Read())
                 {
                     // VERIFIER L'ORDRE DE LA BD ET DU CONSTRUCTEUR -- FAIT
-                    listePret.Add(new Pret(r.GetInt32(0), r.GetInt32(1), r.GetString(2), r.GetString(3), r.GetString(4), r.GetInt32(5), r.GetBoolean(6)));
+                    listePret.Add(new Pret(r.GetInt32(0), r.GetInt32(1), r.GetString(2), r.GetString(3), r.GetString(4), r.GetInt32(5), r.GetInt32(6)));
                 }
                 r.Close();
                 con.Close();

@@ -11,13 +11,13 @@ namespace ProjetFinal
     class Pret : INotifyPropertyChanged
     {
 
-        int id_Pret, id_Client, id_Utilisateur;
+        int id_Pret, id_Client, id_Utilisateur, etat;
 
-        bool etat;
+        
 
         string datePret, heurePret, dateRetour;
 
-        public Pret(int id_Client, string datePret, string heurePret, string dateRetour, int id_Utilisateur, bool etat)
+        public Pret(int id_Client, string datePret, string heurePret, string dateRetour, int id_Utilisateur, int etat)
         {
             this.id_Client = id_Client;
             this.datePret = datePret;
@@ -27,7 +27,7 @@ namespace ProjetFinal
             this.etat = etat;
         }
 
-        public Pret(int id_Pret, int id_Client, string datePret, string heurePret, string dateRetour, int id_Utilisateur, bool etat)
+        public Pret(int id_Pret, int id_Client, string datePret, string heurePret, string dateRetour, int id_Utilisateur, int etat)
         {
             this.id_Pret = id_Pret;
             this.id_Client = id_Client;
@@ -93,7 +93,7 @@ namespace ProjetFinal
                 this.OnPropertyChanged();
             }
         }
-        public bool Etat
+        public int Etat
         {
             get => etat;
             set

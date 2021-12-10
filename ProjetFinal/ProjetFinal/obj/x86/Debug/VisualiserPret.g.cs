@@ -312,7 +312,7 @@ namespace ProjetFinal
                     }
                 }
             }
-            private void Update_Etat(global::System.Boolean obj, int phase)
+            private void Update_Etat(global::System.Int32 obj, int phase)
             {
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
