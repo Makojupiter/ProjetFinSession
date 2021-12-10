@@ -31,12 +31,12 @@ namespace ProjetFinal
             gvPret.ItemsSource = GestionBD.getInstance().getListPret();
         }
 
-        private async void addButton_Click(object sender, RoutedEventArgs e)
+        private void addButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(AjouterPret));
         }
 
-        private async void editButton_Click(object sender, RoutedEventArgs e)
+        private void editButton_Click(object sender, RoutedEventArgs e)
         {
             index = gvPret.SelectedIndex;
             //ModifierPret dialog = new ModifierPret();

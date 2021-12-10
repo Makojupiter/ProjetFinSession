@@ -33,7 +33,7 @@
                     <Grid Background="#26FFFFFF" Margin="25">
                         <StackPanel Orientation="Horizontal" Width="500">
 
-                            <TextBlock Text="&#xE13D;" FontFamily="Segoe UI Symbol" FontSize="200"/>
+                            <TextBlock Text="&#xE125;" FontFamily="Segoe UI Symbol" FontSize="200"/>
 
                             <StackPanel Orientation="Vertical" Margin="5">
                                 <TextBlock Text="{x:Bind Nom, Mode=OneWay}" Foreground="White" FontSize="20" TextWrapping="Wrap"/>

@@ -64,10 +64,15 @@ namespace ProjetFinal
                 mainFrame.GoBack();
         }
 
-        private void Compte_Tapped(object sender, TappedRoutedEventArgs e)
+        private void Deconnexion_Tapped(object sender, TappedRoutedEventArgs e)
         {
             GestionBD.getInstance().logout();
             Frame.Navigate(typeof(PageConnexion));
+        }
+
+        private void Compte_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
         }
     }
 }

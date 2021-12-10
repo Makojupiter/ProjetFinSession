@@ -29,10 +29,34 @@ namespace ProjetFinal
             this.InitializeComponent();
 
             txtNomUsager.Text = "Bonjour " + GestionBD.getInstance().getUsername();
-            dateHeure.Text = DateTime.Now.ToString("dddd dd MMMM yyyy");
+            dateHeure.Text = DateTime.Now.ToString("dddd dd MMMM yyyy") + "\n" + DateTime.Now.ToString("H:m");
 
         }
 
+        private void bouton1_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AjouterPret));
+        }
 
+        private async void bouton2_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(VisualiserClient));
+            AjouterClient dialog = new AjouterClient();
+            await dialog.ShowAsync();
+        }
+
+        private async void bouton3_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(VisualiserMateriel));
+            AjouterMateriel dialog = new AjouterMateriel();
+            await dialog.ShowAsync();
+        }
+
+        private async void bouton6_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(VisualiserUtilisateur));
+            AjouterUtilisateur dialog = new AjouterUtilisateur();
+            await dialog.ShowAsync();
+        }
     }
 }

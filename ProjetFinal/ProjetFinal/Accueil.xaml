@@ -24,30 +24,31 @@
         <StackPanel Orientation="Vertical" Grid.Row="1">
             <TextBlock Text="Bonjour {nom de l'utilisateur}"
                        x:Name="txtNomUsager"
-                   Foreground="White"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="40"/>
+                       Foreground="White"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="60"/>
             <TextBlock Text="Date et heure actuelle"
                        x:Name="dateHeure"
                        FontStyle="Italic"
                        Foreground="White"
                        HorizontalAlignment="Center"
                        Grid.Row="1"
-                       FontSize="30"/>
+                       FontSize="40"
+                       TextAlignment="Center"/>
         </StackPanel>
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Grid.Row="2">
             <TextBlock x:Name="tbQuoiFaire" Text="Que voulez-vous faire aujourd'hui?" FontSize="50" FontStyle="Italic" Foreground="White"/>
             <StackPanel Orientation="Horizontal" Margin="10">
-                <Button x:Name="bouton1" Width="350" Height="250" Content="ALLO" CornerRadius="50" Margin="10"/>
-                <Button x:Name="bouton2" Width="350" Height="250" Content="ALLO" CornerRadius="50" Margin="10"/>
-                <Button x:Name="bouton3" Width="350" Height="250" Content="ALLO" CornerRadius="50" Margin="10"/>
+                <Button x:Name="bouton1" Width="350" Height="150" Content="Nouveau Prêt" FontSize="40" CornerRadius="50" Margin="10" Click="bouton1_Click"/>
+                <Button x:Name="bouton2" Width="350" Height="150" Content="Nouveau Client" FontSize="40" CornerRadius="50" Margin="10" Click="bouton2_Click"/>
+                <Button x:Name="bouton3" Width="350" Height="150" Content="Nouveau Matériel" FontSize="40" CornerRadius="50" Margin="10" Click="bouton3_Click"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="10">
-                <Button x:Name="bouton4" Width="350" Height="250" Content="ALLO" CornerRadius="50" Margin="10"/>
-                <Button x:Name="bouton5" Width="350" Height="250" Content="ALLO" CornerRadius="50" Margin="10"/>
-                <Button x:Name="bouton6" Width="350" Height="250" Content="ALLO" CornerRadius="50" Margin="10"/>
+                <Button x:Name="bouton4" Width="350" Height="150" Content="Retourner un Prêt" FontSize="40" CornerRadius="50" Margin="10"/>
+                <Button x:Name="bouton5" Width="350" Height="150" Content="ALLO" FontSize="40" CornerRadius="50" Margin="10"/>
+                <Button x:Name="bouton6" Width="350" Height="150" Content="Nouvel Utilisateur" FontSize="40" CornerRadius="50" Margin="10" Click="bouton6_Click"/>
             </StackPanel>
         </StackPanel>
 

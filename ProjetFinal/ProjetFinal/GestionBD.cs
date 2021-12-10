@@ -64,8 +64,8 @@ namespace ProjetFinal
 
                 while (r.Read())
                 {
-                    // VERIFIER L'ORDRE DE LA BD ET DU CONSTRUCTEUR 
-                    //listePret.Add(new Pret(r.GetInt32(0), r.GetInt32(1), r.GetString(2), r.GetString(3), r.GetString(4), r.GetString(5), r.GetString(6)));
+                    // VERIFIER L'ORDRE DE LA BD ET DU CONSTRUCTEUR -- FAIT
+                    listePret.Add(new Pret(r.GetInt32(0), r.GetInt32(1), r.GetString(2), r.GetString(3), r.GetString(4), r.GetInt32(5), r.GetBoolean(6)));
                 }
                 r.Close();
                 con.Close();
@@ -334,7 +334,7 @@ namespace ProjetFinal
             commande.Parameters.AddWithValue("date", p.DatePret);               //     \|/
             commande.Parameters.AddWithValue("heure", p.HeurePret);             //      V
             commande.Parameters.AddWithValue("dateRetour", p.DateRetour); //CALCULER EN BEFORE INSERT DANS LA BD
-            commande.Parameters.AddWithValue("idUtilisateur", idUser);  
+            commande.Parameters.AddWithValue("idUtilisateur", p.Id_Utilisateur);  
             commande.Parameters.AddWithValue("etat", p.Etat);
 
             con.Open();
@@ -352,7 +352,7 @@ namespace ProjetFinal
 
                 commande.Parameters.AddWithValue("idPret", id);
                 commande.Parameters.AddWithValue("idMateriel", item.Identifiant);
-                commande.Parameters.AddWithValue("etatLoation", 1);
+                commande.Parameters.AddWithValue("etatLoation", true);
                 commande.Parameters.AddWithValue("idUtilisateur", idUser);
             }
 

@@ -30,8 +30,10 @@
                                 Visibility="Collapsed"/>
             </NavigationView.AutoSuggestBox>-->
 
+            <!--<NavigationViewItem x:Name="Compte" Icon="Contact" Content="Compte" Tapped="Compte_Tapped" VerticalAlignment="Bottom"/>-->
+            
             <NavigationView.PaneFooter>
-                <NavigationViewItem x:ConnectionId='8' x:Name="Compte" Icon="Contact" Content="Compte"                       />
+                <NavigationViewItem x:ConnectionId='8' x:Name="Deconnexion" Icon="ClosePane" Content="Déconnexion"                            />
             </NavigationView.PaneFooter>
 
             <Frame x:ConnectionId='9' x:Name="mainFrame"/>

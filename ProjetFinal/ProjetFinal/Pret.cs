@@ -11,29 +11,31 @@ namespace ProjetFinal
     class Pret : INotifyPropertyChanged
     {
 
-        int id_Pret, id_Client, id_Utilisateur, etat;
+        int id_Pret, id_Client, id_Utilisateur;
+
+        bool etat;
 
         string datePret, heurePret, dateRetour;
 
-        public Pret(int id_Client, int id_Utilisateur, int etat, string datePret, string heurePret, string dateRetour)
+        public Pret(int id_Client, string datePret, string heurePret, string dateRetour, int id_Utilisateur, bool etat)
         {
             this.id_Client = id_Client;
-            this.id_Utilisateur = id_Utilisateur;
-            this.etat = etat;
             this.datePret = datePret;
             this.heurePret = heurePret;
             this.dateRetour = dateRetour;
+            this.id_Utilisateur = id_Utilisateur;
+            this.etat = etat;
         }
 
-        public Pret(int id_Pret, int id_Client, int id_Utilisateur, int etat, string datePret, string heurePret, string dateRetour)
+        public Pret(int id_Pret, int id_Client, string datePret, string heurePret, string dateRetour, int id_Utilisateur, bool etat)
         {
             this.id_Pret = id_Pret;
             this.id_Client = id_Client;
-            this.id_Utilisateur = id_Utilisateur;
-            this.etat = etat;
             this.datePret = datePret;
             this.heurePret = heurePret;
             this.dateRetour = dateRetour;
+            this.id_Utilisateur = id_Utilisateur;
+            this.etat = etat;
         }
 
         public int Id_Client 
@@ -52,24 +54,6 @@ namespace ProjetFinal
             set
             {
                 id_Pret = value;
-                this.OnPropertyChanged();
-            }
-        }
-        public int Id_Utilisateur 
-        { 
-            get => id_Utilisateur;
-            set
-            {
-                id_Utilisateur = value;
-                this.OnPropertyChanged();
-            }
-        }
-        public int Etat 
-        { 
-            get => etat;
-            set
-            {
-                etat = value;
                 this.OnPropertyChanged();
             }
         }
@@ -97,6 +81,24 @@ namespace ProjetFinal
             set
             {
                 dateRetour = value;
+                this.OnPropertyChanged();
+            }
+        }
+        public int Id_Utilisateur
+        {
+            get => id_Utilisateur;
+            set
+            {
+                id_Utilisateur = value;
+                this.OnPropertyChanged();
+            }
+        }
+        public bool Etat
+        {
+            get => etat;
+            set
+            {
+                etat = value;
                 this.OnPropertyChanged();
             }
         }

@@ -24,30 +24,31 @@
         <StackPanel Orientation="Vertical" Grid.Row="1">
             <TextBlock x:ConnectionId='9' Text="Bonjour {nom de l'utilisateur}"
                        x:Name="txtNomUsager"
-                   Foreground="White"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="40"/>
+                       Foreground="White"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="60"/>
             <TextBlock x:ConnectionId='10' Text="Date et heure actuelle"
                        x:Name="dateHeure"
                        FontStyle="Italic"
                        Foreground="White"
                        HorizontalAlignment="Center"
                        Grid.Row="1"
-                       FontSize="30"/>
+                       FontSize="40"
+                       TextAlignment="Center"/>
         </StackPanel>
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Grid.Row="2">
             <TextBlock x:ConnectionId='2' x:Name="tbQuoiFaire" Text="Que voulez-vous faire aujourd'hui?" FontSize="50" FontStyle="Italic" Foreground="White"/>
             <StackPanel Orientation="Horizontal" Margin="10">
-                <Button x:ConnectionId='6' x:Name="bouton1" Width="350" Height="250" Content="ALLO" CornerRadius="50" Margin="10"/>
-                <Button x:ConnectionId='7' x:Name="bouton2" Width="350" Height="250" Content="ALLO" CornerRadius="50" Margin="10"/>
-                <Button x:ConnectionId='8' x:Name="bouton3" Width="350" Height="250" Content="ALLO" CornerRadius="50" Margin="10"/>
+                <Button x:ConnectionId='6' x:Name="bouton1" Width="350" Height="150" Content="Nouveau Prêt" FontSize="40" CornerRadius="50" Margin="10"                      />
+                <Button x:ConnectionId='7' x:Name="bouton2" Width="350" Height="150" Content="Nouveau Client" FontSize="40" CornerRadius="50" Margin="10"                      />
+                <Button x:ConnectionId='8' x:Name="bouton3" Width="350" Height="150" Content="Nouveau Matériel" FontSize="40" CornerRadius="50" Margin="10"                      />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="10">
-                <Button x:ConnectionId='3' x:Name="bouton4" Width="350" Height="250" Content="ALLO" CornerRadius="50" Margin="10"/>
-                <Button x:ConnectionId='4' x:Name="bouton5" Width="350" Height="250" Content="ALLO" CornerRadius="50" Margin="10"/>
-                <Button x:ConnectionId='5' x:Name="bouton6" Width="350" Height="250" Content="ALLO" CornerRadius="50" Margin="10"/>
+                <Button x:ConnectionId='3' x:Name="bouton4" Width="350" Height="150" Content="Retourner un Prêt" FontSize="40" CornerRadius="50" Margin="10"/>
+                <Button x:ConnectionId='4' x:Name="bouton5" Width="350" Height="150" Content="ALLO" FontSize="40" CornerRadius="50" Margin="10"/>
+                <Button x:ConnectionId='5' x:Name="bouton6" Width="350" Height="150" Content="Nouvel Utilisateur" FontSize="40" CornerRadius="50" Margin="10"                      />
             </StackPanel>
         </StackPanel>
 
