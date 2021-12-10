@@ -35,7 +35,7 @@
                             FontSize="30"
                             Margin="10,0,50,0"/>
 
-                <AutoSuggestBox Name="boxUser" Header="Usager"
+                <AutoSuggestBox Name="boxUser" Header="Rechercher client par numero de telephone"
                             MinWidth="300"
                             HorizontalAlignment="Center" TextChanged="boxUser_TextChanged" SuggestionChosen="boxUser_SuggestionChosen">
                 </AutoSuggestBox>
@@ -63,7 +63,7 @@
         <StackPanel HorizontalAlignment="Center"
                     Grid.Column="1"
                     Margin="0,30,0,0">
-            <AutoSuggestBox Name="boxMateriel" Header="Materiel"
+            <AutoSuggestBox Name="boxMateriel" Header="Recherche materiel pour le pret"
                             MinWidth="300" TextChanged="boxMateriel_TextChanged" SuggestionChosen="boxMateriel_SuggestionChosen">
             </AutoSuggestBox>
 

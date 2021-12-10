@@ -4,17 +4,21 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ProjetFinal"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d" 
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Margin="20">
+    <Grid >
+        
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black"/>
                 <GradientStop Color="#FF002CF1" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -27,28 +31,21 @@
                    HorizontalAlignment="Center"
                    Grid.Row="0"/>
 
-        <GridView x:Name="gvPret" Grid.Row="1" SelectionChanged="gvPret_SelectionChanged">
-            <GridView.ItemTemplate>
-                <DataTemplate x:DataType="local:Pret">
-                    <Grid Background="#26FFFFFF" Margin="25">
-                        <StackPanel Orientation="Horizontal" Width="500">
+        <controls:DataGrid x:Name="gvPret" AutoGenerateColumns="False"
+                           Grid.Row="1"
+                           Margin="15" SelectionChanged="gvPret_SelectionChanged"
+                           SelectionMode="Single">
+            <controls:DataGrid.Columns>
+                    <controls:DataGridTextColumn 
+                    Header="Numero du pret"
+                    Binding="{Binding Id_Pret, Mode=TwoWay}"
+                    Width="*"/>
 
-                            <TextBlock Text="&#xE1D3;" FontFamily="Segoe UI Symbol" Margin="25" FontSize="200"/>
+                </controls:DataGrid.Columns>
 
-                            <StackPanel Orientation="Vertical" Margin="5">
-                                <TextBlock Text="{x:Bind Id_Pret, Mode=OneWay}" Foreground="White" FontSize="20" TextWrapping="Wrap"/>
-                                <TextBlock Text="{x:Bind Id_Client, Mode=OneWay}" Foreground="White" FontSize="20" TextWrapping="Wrap"/>
-                                <TextBlock Text="{x:Bind DatePret, Mode=OneWay}" Foreground="White" FontSize="15" TextWrapping="Wrap"/>
-                                <TextBlock Text="{x:Bind HeurePret, Mode=OneWay}" Foreground="White" FontSize="10" TextWrapping="Wrap"/>
-                                <TextBlock Text="{x:Bind DateRetour, Mode=OneWay}" Foreground="White" FontSize="10" TextWrapping="Wrap"/>
-                                <TextBlock Text="{x:Bind Id_Utilisateur, Mode=OneWay}" Foreground="White" FontSize="10" TextWrapping="Wrap"/>
-                                <TextBlock Text="{x:Bind Etat, Mode=OneWay}" Foreground="White" FontSize="10" TextWrapping="Wrap"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </Grid>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
+
+
+        </controls:DataGrid>
 
         <CommandBar Grid.Row="2" Background="Transparent" IsOpen="False" DefaultLabelPosition="Right">
             <AppBarButton x:Name="detailButton" Icon="List" Label="Détails du prêt" Click="detailButton_Click"/>

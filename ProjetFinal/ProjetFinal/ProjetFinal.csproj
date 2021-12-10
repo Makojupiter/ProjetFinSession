@@ -138,6 +138,7 @@
       <DependentUpon>BoiteAjout.xaml</DependentUpon>
     </Compile>
     <Compile Include="Client.cs" />
+    <Compile Include="DetailpretVue.cs" />
     <Compile Include="DetailsPret.cs" />
     <Compile Include="GestionBD.cs" />
     <Compile Include="MainPage.xaml.cs">

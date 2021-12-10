@@ -13,8 +13,6 @@ namespace ProjetFinal
 
         int id_Pret, id_Client, id_Utilisateur, etat;
 
-        
-
         string datePret, heurePret, dateRetour;
 
         public Pret(int id_Client, string datePret, string heurePret, string dateRetour, int id_Utilisateur, int etat)

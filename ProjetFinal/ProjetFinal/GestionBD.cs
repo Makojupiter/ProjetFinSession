@@ -14,6 +14,7 @@ namespace ProjetFinal
     {
         MySqlConnection con;
         ObservableCollection<Pret> listePret;
+        ObservableCollection<DetailpretVue> listePretVue;
         ObservableCollection<Client> listeClient;
         ObservableCollection<Materiel> listeMateriel;
         ObservableCollection<Utilisateur> listeUtilisateur;
@@ -25,6 +26,7 @@ namespace ProjetFinal
         int idUser;
 
         internal ObservableCollection<Pret> ListePret { get => listePret; set => listePret = value; }
+        internal ObservableCollection<DetailpretVue> ListePretVue { get => ListePretVue; set => ListePretVue = value; }
         internal ObservableCollection<Client> ListeClient { get => listeClient; set => listeClient = value; }
         internal ObservableCollection<Materiel> ListeMateriel { get => listeMateriel; set => listeMateriel = value; }
         internal ObservableCollection<Utilisateur> ListeUtilisateur { get => listeUtilisateur; set => listeUtilisateur = value; }
@@ -33,6 +35,7 @@ namespace ProjetFinal
         {
             this.con = new MySqlConnection("Server=cours.cegep3r.info;Database=a2021_420326ri_equipe_12;Uid=2029918;Pwd=Frtw6630+;");
             listePret = new ObservableCollection<Pret>();
+            ListePretVue = new ObservableCollection<DetailpretVue>();
             listeClient = new ObservableCollection<Client>();
             listeMateriel = new ObservableCollection<Materiel>();
             listeUtilisateur = new ObservableCollection<Utilisateur>();
@@ -41,6 +44,7 @@ namespace ProjetFinal
             getMateriel();
             getClient();
             getUtilisateur();
+            getPretVue();
         }
 
         public static GestionBD getInstance()
@@ -64,7 +68,6 @@ namespace ProjetFinal
 
                 while (r.Read())
                 {
-                    // VERIFIER L'ORDRE DE LA BD ET DU CONSTRUCTEUR -- FAIT
                     listePret.Add(new Pret(r.GetInt32(0), r.GetInt32(1), r.GetString(2), r.GetString(3), r.GetString(4), r.GetInt32(5), r.GetInt32(6)));
                 }
                 r.Close();
@@ -78,10 +81,44 @@ namespace ProjetFinal
                     con.Close();
                 return listePret;
             }
-        } 
+        }
+
+        public ObservableCollection<DetailpretVue> getPretVue()
+        {
+            try
+            {
+                MySqlCommand commande = new MySqlCommand();
+                commande.Connection = con;
+                commande.CommandText = "SELECT * FROM v_pret";
+
+                con.Open();
+                MySqlDataReader r = commande.ExecuteReader();
+
+                while (r.Read())
+                {
+                    // string nomClient, string dateCreer, string heureCreer, string dateRetour, string nomUtilisateur
+                    ListePretVue.Add(new DetailpretVue(r.GetInt32(0), r.GetInt32(6), r.GetString(1), r.GetString(2), r.GetString(3), r.GetString(4), r.GetString(5)));
+                }
+                r.Close();
+                con.Close();
+
+                return ListePretVue;
+            }
+            catch (MySqlException ex)
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                    con.Close();
+                return ListePretVue;
+            }
+        }
         public ObservableCollection<Pret> getListPret()
         {
             return listePret;
+        }
+
+        public ObservableCollection<DetailpretVue> getListPretVue()
+        {
+            return listePretVue;
         }
 
         public ObservableCollection<Client> getClient()
@@ -147,38 +184,6 @@ namespace ProjetFinal
             }
         }
 
-        public Client RechercherClient2(String client)
-        {
-
-             Client c = new Client("","","","","","");
-
-            try
-            {
-
-                MySqlCommand commande = new MySqlCommand();
-                commande.Connection = con;
-                commande.CommandText = "SELECT * FROM client WHERE numTel = " + client ;
-
-                con.Open();
-                MySqlDataReader r = commande.ExecuteReader();
-
-                while (r.Read())
-                {
-                    c = new Client(r.GetInt32(0), r.GetString(1), r.GetString(2), r.GetString(3), r.GetString(4), r.GetString(5), r.GetString(6));
-
-                }
-                r.Close();
-                con.Close();
-
-                return c;
-            }
-            catch (MySqlException ex)
-            {
-                if (con.State == System.Data.ConnectionState.Open)
-                    con.Close();
-                return c;
-            }
-        }
 
         public ObservableCollection<Client> getListClient()
         {
@@ -245,41 +250,6 @@ namespace ProjetFinal
                 if (con.State == System.Data.ConnectionState.Open)
                     con.Close();
                 return resultats;
-            }
-        }
-
-        public Materiel RechercherMateriel2(Materiel materiel)
-        {
-
-            Materiel m = new Materiel("BAD", "BAD", "BAD", "BAD", "BAD");
-
-            try
-            {
-
-                MySqlCommand commande = new MySqlCommand();
-                commande.Connection = con;
-                commande.CommandText = "SELECT * FROM materiel WHERE idMateriel = @idMateriel";
-
-                commande.Parameters.AddWithValue("@idMateriel", materiel);
-
-                con.Open();
-                MySqlDataReader r = commande.ExecuteReader();
-
-                while (r.Read())
-                {
-                    m = new Materiel(r.GetString(0), r.GetString(1), r.GetString(2), r.GetString(3), r.GetString(4));
-
-                }
-                r.Close();
-                con.Close();
-
-                return m;
-            }
-            catch (MySqlException ex)
-            {
-                if (con.State == System.Data.ConnectionState.Open)
-                    con.Close();
-                return m;
             }
         }
 

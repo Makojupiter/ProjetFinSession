@@ -74,14 +74,26 @@ namespace ProjetFinal
         private void boxUser_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
         {
 
-            string expression = ",";
-            string[] tableau = Regex.Split(args.SelectedItem.ToString(), expression);
-
-            numTel = tableau[1];
-
-            rClient = new Client(GestionBD.getInstance().RechercherClient2("numTel"));
+            rClient = (Client)args.SelectedItem;
 
             btnValider.IsEnabled = true;
+        }
+        private void boxMateriel_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            // DOIT inclure seulement le materiel disponible  -------
+            boxMateriel.ItemsSource = GestionBD.getInstance().RechercherMateriel(boxMateriel.Text);
+        }
+
+        private void boxMateriel_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
+        {
+
+            rMateriel = (Materiel)args.SelectedItem;
+            listeMaterielTEMPO.Add(rMateriel);
+
+            btnAddPret.IsEnabled = true;
+
+            boxMateriel.Text = "";
+
         }
 
         private void btnValider_Click(object sender, RoutedEventArgs e)
@@ -130,27 +142,6 @@ namespace ProjetFinal
         {
             GestionBD.getInstance().AjouterPret(p, listeMaterielTEMPO);
             this.Frame.Navigate(typeof(VisualiserPret));
-        }
-
-        private void boxMateriel_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
-        {
-            // DOIT inclure seulement le materiel disponible  -------
-            boxMateriel.ItemsSource = GestionBD.getInstance().RechercherMateriel(boxMateriel.Text);
-        }
-
-        private void boxMateriel_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
-        {
-
-           
-
-            rMateriel = (Materiel)args.SelectedItem;
-            listeMaterielTEMPO.Add(rMateriel);
-
-            btnAddPret.IsEnabled = true;
-
-            boxMateriel.Text = "";
-
-
         }
 
 

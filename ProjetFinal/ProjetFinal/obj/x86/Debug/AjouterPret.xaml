@@ -35,7 +35,7 @@
                             FontSize="30"
                             Margin="10,0,50,0"/>
 
-                <AutoSuggestBox x:ConnectionId='7' Name="boxUser" Header="Usager"
+                <AutoSuggestBox x:ConnectionId='7' Name="boxUser" Header="Rechercher client par numero de telephone"
                             MinWidth="300"
                             HorizontalAlignment="Center"                                                                              >
                 </AutoSuggestBox>
@@ -63,7 +63,7 @@
         <StackPanel HorizontalAlignment="Center"
                     Grid.Column="1"
                     Margin="0,30,0,0">
-            <AutoSuggestBox x:ConnectionId='5' Name="boxMateriel" Header="Materiel"
+            <AutoSuggestBox x:ConnectionId='5' Name="boxMateriel" Header="Recherche materiel pour le pret"
                             MinWidth="300"                                                                                      >
             </AutoSuggestBox>
 

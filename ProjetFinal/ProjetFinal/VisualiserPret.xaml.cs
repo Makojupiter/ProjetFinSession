@@ -28,7 +28,7 @@ namespace ProjetFinal
             this.InitializeComponent();
             deleteButton.IsEnabled = false;
             editButton.IsEnabled = false;
-            gvPret.ItemsSource = GestionBD.getInstance().getListPret();
+           // gvPret.ItemsSource = GestionBD.getInstance().getPretVue();
         }
 
         private void addButton_Click(object sender, RoutedEventArgs e)
@@ -38,7 +38,7 @@ namespace ProjetFinal
 
         private void editButton_Click(object sender, RoutedEventArgs e)
         {
-            index = gvPret.SelectedIndex;
+            //index = gvPret.SelectedIndex;
             //ModifierPret dialog = new ModifierPret();
             //await dialog.ShowAsync();
         }
@@ -59,18 +59,18 @@ namespace ProjetFinal
             }
             else
             {
-                Pret c = (Pret)gvPret.SelectedItem;
-                GestionBD.getInstance().supprimerPret(c);
+                //Pret c = (Pret)gvPret.SelectedItem;
+                //GestionBD.getInstance().supprimerPret(c);
             }
         }
 
-        private void gvPret_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            deleteButton.IsEnabled = true;
-            editButton.IsEnabled = true;
-        }
 
         private void detailButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void gvPret_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
