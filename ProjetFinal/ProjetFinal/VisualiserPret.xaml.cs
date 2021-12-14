@@ -28,7 +28,7 @@ namespace ProjetFinal
             this.InitializeComponent();
             deleteButton.IsEnabled = false;
             editButton.IsEnabled = false;
-           // gvPret.ItemsSource = GestionBD.getInstance().getPretVue();
+            gvPret.ItemsSource = GestionBD.getInstance().getListPretVue();
         }
 
         private void addButton_Click(object sender, RoutedEventArgs e)
@@ -64,13 +64,12 @@ namespace ProjetFinal
             }
         }
 
-
-        private void detailButton_Click(object sender, RoutedEventArgs e)
+        private void gvPret_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
 
-        private void gvPret_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void detailButton_Click(object sender, RoutedEventArgs e)
         {
 
         }

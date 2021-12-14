@@ -13,38 +13,40 @@ namespace ProjetFinal
     class GestionBD
     {
         MySqlConnection con;
+
         ObservableCollection<Pret> listePret;
         ObservableCollection<DetailpretVue> listePretVue;
         ObservableCollection<Client> listeClient;
         ObservableCollection<Materiel> listeMateriel;
         ObservableCollection<Utilisateur> listeUtilisateur;
+
         static GestionBD gestionBD = null;
 
-        internal int connexion;
         string usernameLogged;
         int logged;
         int idUser;
 
-        internal ObservableCollection<Pret> ListePret { get => listePret; set => listePret = value; }
-        internal ObservableCollection<DetailpretVue> ListePretVue { get => ListePretVue; set => ListePretVue = value; }
-        internal ObservableCollection<Client> ListeClient { get => listeClient; set => listeClient = value; }
-        internal ObservableCollection<Materiel> ListeMateriel { get => listeMateriel; set => listeMateriel = value; }
-        internal ObservableCollection<Utilisateur> ListeUtilisateur { get => listeUtilisateur; set => listeUtilisateur = value; }
+        //public ObservableCollection<Pret> ListePret { get => listePret; }
+        //public ObservableCollection<DetailpretVue> ListePretVue { get => ListePretVue;  }
+        //public ObservableCollection<Client> ListeClient { get => listeClient;  }
+        //public ObservableCollection<Materiel> ListeMateriel { get => listeMateriel; }
+        //public ObservableCollection<Utilisateur> ListeUtilisateur { get => listeUtilisateur; }
 
         public GestionBD()
         {
-            this.con = new MySqlConnection("Server=cours.cegep3r.info;Database=a2021_420326ri_equipe_12;Uid=2029918;Pwd=Frtw6630+;");
+            //this.con = new MySqlConnection("Server=cours.cegep3r.info;Database=a2021_420326ri_equipe_12;Uid=2029918;Pwd=Frtw6630+;");
+            this.con = new MySqlConnection("Server=localhost;Database=projetfinsession;Uid=root;Pwd=root;");
             listePret = new ObservableCollection<Pret>();
-            ListePretVue = new ObservableCollection<DetailpretVue>();
+            listePretVue = new ObservableCollection<DetailpretVue>();
             listeClient = new ObservableCollection<Client>();
             listeMateriel = new ObservableCollection<Materiel>();
             listeUtilisateur = new ObservableCollection<Utilisateur>();
 
-            //getPret();
+            getPretVue();
             getMateriel();
             getClient();
             getUtilisateur();
-            getPretVue();
+            getListPretVue();
         }
 
         public static GestionBD getInstance()
@@ -89,26 +91,26 @@ namespace ProjetFinal
             {
                 MySqlCommand commande = new MySqlCommand();
                 commande.Connection = con;
-                commande.CommandText = "SELECT * FROM v_pret";
+                //commande.CommandText = "SELECT * FROM v_pret";
+                commande.CommandText = "SELECT * FROM detailspretvue";
 
                 con.Open();
                 MySqlDataReader r = commande.ExecuteReader();
 
                 while (r.Read())
                 {
-                    // string nomClient, string dateCreer, string heureCreer, string dateRetour, string nomUtilisateur
-                    ListePretVue.Add(new DetailpretVue(r.GetInt32(0), r.GetInt32(6), r.GetString(1), r.GetString(2), r.GetString(3), r.GetString(4), r.GetString(5)));
+                    listePretVue.Add(new DetailpretVue(r.GetInt32(0), r.GetString(1), r.GetString(2), r.GetString(3), r.GetInt32(4), r.GetInt32(5), r.GetInt32(6), r.GetInt32(7), r.GetString(8)));
                 }
                 r.Close();
                 con.Close();
 
-                return ListePretVue;
+                return listePretVue;
             }
             catch (MySqlException ex)
             {
                 if (con.State == System.Data.ConnectionState.Open)
                     con.Close();
-                return ListePretVue;
+                return listePretVue;
             }
         }
         public ObservableCollection<Pret> getListPret()

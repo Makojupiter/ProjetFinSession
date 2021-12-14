@@ -2,7 +2,15 @@
 <Roots >
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Marque" />
-    <RootPropertyPathName Name="Id_Pret" />
+    <RootPropertyPathName Name="NomUtilisateur" />
+    <RootPropertyPathName Name="EtatMateriel" />
+    <RootPropertyPathName Name="NbrMaterielRetourne" />
+    <RootPropertyPathName Name="NbrMaterielEnCours" />
+    <RootPropertyPathName Name="NbrMateriel" />
+    <RootPropertyPathName Name="DateRetour" />
+    <RootPropertyPathName Name="Date" />
+    <RootPropertyPathName Name="Nom" />
+    <RootPropertyPathName Name="IdPret" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -69,6 +77,7 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Opacity" />
       <RootProperty Name="IsEnabled" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontWeight" />
@@ -156,6 +165,7 @@
     </RootType>
     <RootType FullName="ProjetFinal.AjouterUtilisateur" />
     <RootType FullName="ProjetFinal.BoiteAjout" />
+    <RootType FullName="ProjetFinal.Compte" />
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationView">
       <RootProperty Name="IsSettingsVisible" />
       <RootProperty Name="IsBackEnabled" />
@@ -203,6 +213,7 @@
       <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="ProjetFinal.VisualiserClient" />
+    <RootType FullName="ProjetFinal.VisualiserDetailsPret" />
     <RootType FullName="ProjetFinal.VisualiserMateriel" />
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarSeparator" />
     <RootType FullName="ProjetFinal.VisualiserPret" />

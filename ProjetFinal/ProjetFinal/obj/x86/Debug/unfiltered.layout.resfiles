@@ -13,6 +13,7 @@ AjouterPret.xbf
 AjouterUtilisateur.xbf
 App.xbf
 BoiteAjout.xbf
+Compte.xbf
 MainPage.xbf
 ModifierClient.xbf
 ModifierMateriel.xbf
@@ -20,6 +21,7 @@ ModifierUtilisateur.xbf
 PageConnexion.xbf
 ProjetFinal.xr.xml
 VisualiserClient.xbf
+VisualiserDetailsPret.xbf
 VisualiserMateriel.xbf
 VisualiserPret.xbf
 VisualiserUtilisateur.xbf

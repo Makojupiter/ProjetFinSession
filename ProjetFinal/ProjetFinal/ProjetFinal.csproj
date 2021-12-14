@@ -138,6 +138,9 @@
       <DependentUpon>BoiteAjout.xaml</DependentUpon>
     </Compile>
     <Compile Include="Client.cs" />
+    <Compile Include="Compte.xaml.cs">
+      <DependentUpon>Compte.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DetailpretVue.cs" />
     <Compile Include="DetailsPret.cs" />
     <Compile Include="GestionBD.cs" />
@@ -162,6 +165,9 @@
     <Compile Include="Utilisateur.cs" />
     <Compile Include="VisualiserClient.xaml.cs">
       <DependentUpon>VisualiserClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisualiserDetailsPret.xaml.cs">
+      <DependentUpon>VisualiserDetailsPret.xaml</DependentUpon>
     </Compile>
     <Compile Include="VisualiserMateriel.xaml.cs">
       <DependentUpon>VisualiserMateriel.xaml</DependentUpon>
@@ -217,6 +223,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Compte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -238,6 +248,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="VisualiserClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisualiserDetailsPret.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

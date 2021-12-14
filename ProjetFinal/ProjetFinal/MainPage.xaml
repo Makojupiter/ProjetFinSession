@@ -16,22 +16,17 @@
                         SelectionChanged="nvMenue_SelectionChanged"
                         IsBackEnabled="True"
                         BackRequested="nvMenue_BackRequested">
-            
+
             <NavigationView.MenuItems>
                 <NavigationViewItem Icon="Home" Content="Accueil" x:Name="Accueil"/>
+                <NavigationViewItem Icon="Contact2" Content="Mon Compte" x:Name="MonCompte"/>
                 <NavigationViewItemSeparator/>
                 <NavigationViewItem Icon="Tag" Content="Materiel" x:Name="ViewMateriel"/>
                 <NavigationViewItem Icon="Contact" Content="Utilisateur" x:Name="ViewUsers"/>
                 <NavigationViewItem Icon="BrowsePhotos" Content="Pret" x:Name="ViewPrets"/>
                 <NavigationViewItem Icon="People" Content="Client" x:Name="ViewClients"/>
             </NavigationView.MenuItems>
-            <!--<NavigationView.AutoSuggestBox>
-                <AutoSuggestBox QueryIcon="Find" x:Name="SearchBar"
-                                Visibility="Collapsed"/>
-            </NavigationView.AutoSuggestBox>-->
 
-            <!--<NavigationViewItem x:Name="Compte" Icon="Contact" Content="Compte" Tapped="Compte_Tapped" VerticalAlignment="Bottom"/>-->
-            
             <NavigationView.PaneFooter>
                 <NavigationViewItem x:Name="Deconnexion" Icon="ClosePane" Content="Déconnexion" Tapped="Deconnexion_Tapped"/>
             </NavigationView.PaneFooter>

@@ -11,60 +11,79 @@ namespace ProjetFinal
     class DetailpretVue : INotifyPropertyChanged
     {
 
-        int id_Pret, etat;
+        int idPret, nbrMateriel, nbrMaterielEnCours, nbrMaterielRetourne, etatMateriel;
 
-        string nomClient, dateCreer,heureCreer, dateRetour, nomUtilisateur;
+        string nom, date, dateRetour, nomUtilisateur;
 
-        public DetailpretVue(int id_Pret, int etat, string nomClient, string dateCreer, string heureCreer, string dateRetour, string nomUtilisateur)
+        public DetailpretVue(int idPret, string nom, string date, string dateRetour, int nbrMateriel, int nbrMaterielEnCours, int nbrMaterielRetourne, int etatMateriel, string nomUtilisateur)
         {
-            this.id_Pret = id_Pret;
-            this.etat = etat;
-            this.nomClient = nomClient;
-            this.dateCreer = dateCreer;
-            this.heureCreer = heureCreer;
+            this.idPret = idPret;
+            this.nom = nom;
+            this.date = date;
             this.dateRetour = dateRetour;
+            this.nbrMateriel = nbrMateriel;
+            this.nbrMaterielEnCours = nbrMaterielEnCours;
+            this.nbrMaterielRetourne = nbrMaterielRetourne;
+            this.etatMateriel = etatMateriel;
             this.nomUtilisateur = nomUtilisateur;
         }
 
-        public int Id_Pret { get => id_Pret; set => id_Pret = value; }
-        public int Etat 
-        { 
-            get => etat;
+        public int IdPret
+        {
+            get => idPret;
             set
             {
-                etat = value;
+                idPret = value;
                 this.OnPropertyChanged();
             }
         }
-        public string NomClient 
+        public int NbrMateriel 
         { 
-            get => nomClient;
+            get => nbrMateriel;
             set
             {
-                nomClient = value;
+                nbrMateriel = value;
                 this.OnPropertyChanged();
             }
         }
-        public string DateCreer 
+        public int NbrMaterielEnCours 
         { 
-            get => dateCreer;
+            get => nbrMaterielEnCours;
             set
             {
-                dateCreer = value;
+                nbrMaterielEnCours = value;
                 this.OnPropertyChanged();
             }
         }
-        public string HeureCreer 
-        { 
-            get => heureCreer;
+        public int NbrMaterielRetourne
+        {
+            get => nbrMaterielRetourne;
             set
             {
-                heureCreer = value;
+                nbrMaterielRetourne = value;
                 this.OnPropertyChanged();
             }
         }
-        public string DateRetour 
-        { 
+        public string Nom
+        {
+            get => nom;
+            set
+            {
+                nom = value;
+                this.OnPropertyChanged();
+            }
+        }
+        public string Date
+        {
+            get => date;
+            set
+            {
+                date = value;
+                this.OnPropertyChanged();
+            }
+        }
+        public string DateRetour
+        {
             get => dateRetour;
             set
             {
@@ -72,8 +91,8 @@ namespace ProjetFinal
                 this.OnPropertyChanged();
             }
         }
-        public string NomUtilisateur 
-        { 
+        public string NomUtilisateur
+        {
             get => nomUtilisateur;
             set
             {
@@ -81,7 +100,15 @@ namespace ProjetFinal
                 this.OnPropertyChanged();
             }
         }
-
+        public int EtatMateriel
+        {
+            get => etatMateriel;
+            set
+            {
+                etatMateriel = value;
+                this.OnPropertyChanged();
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

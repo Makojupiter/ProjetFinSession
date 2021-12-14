@@ -16,27 +16,22 @@
                                                                    
                         IsBackEnabled="True"
                                                              >
-            
+
             <NavigationView.MenuItems>
                 <NavigationViewItem x:ConnectionId='3' Icon="Home" Content="Accueil" x:Name="Accueil"/>
+                <NavigationViewItem x:ConnectionId='4' Icon="Contact2" Content="Mon Compte" x:Name="MonCompte"/>
                 <NavigationViewItemSeparator/>
-                <NavigationViewItem x:ConnectionId='4' Icon="Tag" Content="Materiel" x:Name="ViewMateriel"/>
-                <NavigationViewItem x:ConnectionId='5' Icon="Contact" Content="Utilisateur" x:Name="ViewUsers"/>
-                <NavigationViewItem x:ConnectionId='6' Icon="BrowsePhotos" Content="Pret" x:Name="ViewPrets"/>
-                <NavigationViewItem x:ConnectionId='7' Icon="People" Content="Client" x:Name="ViewClients"/>
+                <NavigationViewItem x:ConnectionId='5' Icon="Tag" Content="Materiel" x:Name="ViewMateriel"/>
+                <NavigationViewItem x:ConnectionId='6' Icon="Contact" Content="Utilisateur" x:Name="ViewUsers"/>
+                <NavigationViewItem x:ConnectionId='7' Icon="BrowsePhotos" Content="Pret" x:Name="ViewPrets"/>
+                <NavigationViewItem x:ConnectionId='8' Icon="People" Content="Client" x:Name="ViewClients"/>
             </NavigationView.MenuItems>
-            <!--<NavigationView.AutoSuggestBox>
-                <AutoSuggestBox QueryIcon="Find" x:Name="SearchBar"
-                                Visibility="Collapsed"/>
-            </NavigationView.AutoSuggestBox>-->
 
-            <!--<NavigationViewItem x:Name="Compte" Icon="Contact" Content="Compte" Tapped="Compte_Tapped" VerticalAlignment="Bottom"/>-->
-            
             <NavigationView.PaneFooter>
-                <NavigationViewItem x:ConnectionId='8' x:Name="Deconnexion" Icon="ClosePane" Content="Déconnexion"                            />
+                <NavigationViewItem x:ConnectionId='9' x:Name="Deconnexion" Icon="ClosePane" Content="Déconnexion"                            />
             </NavigationView.PaneFooter>
 
-            <Frame x:ConnectionId='9' x:Name="mainFrame"/>
+            <Frame x:ConnectionId='10' x:Name="mainFrame"/>
 
         </NavigationView>
     </Grid>

@@ -20,10 +20,10 @@
             <TextBox x:Name="txtUserName"
                      Header="Nom d'usager"
                      Margin="0,0,0,10"
-                     Text="Stef124"/>
+                     Text="admin"/>
             <PasswordBox x:Name="pwdPassword"
                          Header="Mot de passe"
-                         Password="123455"/>
+                         Password="admin"/>
             <Button x:Name="btnConnexion"
                     Content="Connexion"
                     HorizontalAlignment="Center"

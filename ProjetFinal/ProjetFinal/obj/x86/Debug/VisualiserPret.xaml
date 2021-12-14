@@ -36,14 +36,43 @@
                            Margin="15"                                           
                            SelectionMode="Single">
             <controls:DataGrid.Columns>
-                    <controls:DataGridTextColumn 
-                    Header="Numero du pret"
-                    Binding="{Binding Id_Pret, Mode=TwoWay}"
-                    Width="*"/>
-
-                </controls:DataGrid.Columns>
-
-
+                <controls:DataGridTextColumn 
+                    Header="Id" 
+                    Binding="{Binding IdPret, Mode=OneWay}"
+                    Width="Auto"/>
+                <controls:DataGridTextColumn 
+                    Header="Nom du Client" 
+                    Binding="{Binding Nom, Mode=OneWay}"
+                    Width="Auto"/>
+                <controls:DataGridTextColumn 
+                    Header="Date" 
+                    Binding="{Binding Date, Mode=OneWay}"
+                    Width="Auto"/>
+                <controls:DataGridTextColumn 
+                    Header="Date de Retour" 
+                    Binding="{Binding DateRetour, Mode=OneWay}"
+                    Width="Auto"/>
+                <controls:DataGridTextColumn 
+                    Header="Nombre de Matériels" 
+                    Binding="{Binding NbrMateriel, Mode=OneWay}"
+                    Width="Auto"/>
+                <controls:DataGridTextColumn 
+                    Header="Nombre de Matériels en Prêt" 
+                    Binding="{Binding NbrMaterielEnCours, Mode=OneWay}"
+                    Width="Auto"/>
+                <controls:DataGridTextColumn 
+                    Header="Nombre de Matériels Retournés" 
+                    Binding="{Binding NbrMaterielRetourne, Mode=OneWay}"
+                    Width="Auto"/>
+                <controls:DataGridTextColumn 
+                    Header="Prêt fait par:" 
+                    Binding="{Binding EtatMateriel, Mode=OneWay}"
+                    Width="Auto"/>
+                <controls:DataGridTextColumn 
+                    Header="Prêt fait par:" 
+                    Binding="{Binding NomUtilisateur, Mode=OneWay}"
+                    Width="Auto"/>
+            </controls:DataGrid.Columns>
 
         </controls:DataGrid>
 

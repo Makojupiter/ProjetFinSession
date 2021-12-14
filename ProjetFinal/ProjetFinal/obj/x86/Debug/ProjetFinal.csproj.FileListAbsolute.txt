@@ -445,3 +445,14 @@ C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\De
 C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\FxResources.System.Security.Permissions.SR.resw
 C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424995200000000.json
 C:\Users\Landry\Source\Repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\ProjetFinal.csproj.AssemblyReference.cache
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424995200000000.json
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\VisualiserDetailsPret.xbf
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\VisualiserDetailsPret.g.i.cs
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\VisualiserDetailsPret.g.cs
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\VisualiserDetailsPret.xaml
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\VisualiserDetailsPret.xbf
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\bin\x86\Debug\Compte.xbf
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\Compte.g.i.cs
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\Compte.g.cs
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\Compte.xaml
+C:\Users\makoj\source\repos\ProjetFinSession\ProjetFinal\ProjetFinal\obj\x86\Debug\Compte.xbf

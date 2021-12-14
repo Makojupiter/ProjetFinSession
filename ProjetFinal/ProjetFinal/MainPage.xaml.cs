@@ -40,6 +40,9 @@ namespace ProjetFinal
                 case "Accueil":
                     mainFrame.Navigate(typeof(Accueil));
                     break;
+                case "MonCompte":
+                    mainFrame.Navigate(typeof(Compte));
+                    break;
                 case "ViewMateriel":
                     mainFrame.Navigate(typeof(VisualiserMateriel));
                     break;
