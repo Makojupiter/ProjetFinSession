@@ -65,8 +65,8 @@
                     Binding="{Binding NbrMaterielRetourne, Mode=OneWay}"
                     Width="Auto"/>
                 <controls:DataGridTextColumn 
-                    Header="Prêt fait par:" 
-                    Binding="{Binding EtatMateriel, Mode=OneWay}"
+                    Header="État du Prêt:" 
+                    Binding="{Binding EtatPret, Mode=OneWay}"
                     Width="Auto"/>
                 <controls:DataGridTextColumn 
                     Header="Prêt fait par:" 

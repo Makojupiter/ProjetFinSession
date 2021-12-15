@@ -11,11 +11,11 @@ namespace ProjetFinal
     class DetailpretVue : INotifyPropertyChanged
     {
 
-        int idPret, nbrMateriel, nbrMaterielEnCours, nbrMaterielRetourne, etatMateriel;
+        int idPret, nbrMateriel, nbrMaterielEnCours, nbrMaterielRetourne, etatPret;
 
         string nom, date, dateRetour, nomUtilisateur;
 
-        public DetailpretVue(int idPret, string nom, string date, string dateRetour, int nbrMateriel, int nbrMaterielEnCours, int nbrMaterielRetourne, int etatMateriel, string nomUtilisateur)
+        public DetailpretVue(int idPret, string nom, string date, string dateRetour, int nbrMateriel, int nbrMaterielEnCours, int nbrMaterielRetourne, int etatPret, string nomUtilisateur)
         {
             this.idPret = idPret;
             this.nom = nom;
@@ -24,7 +24,7 @@ namespace ProjetFinal
             this.nbrMateriel = nbrMateriel;
             this.nbrMaterielEnCours = nbrMaterielEnCours;
             this.nbrMaterielRetourne = nbrMaterielRetourne;
-            this.etatMateriel = etatMateriel;
+            this.etatPret = etatPret;
             this.nomUtilisateur = nomUtilisateur;
         }
 
@@ -100,12 +100,12 @@ namespace ProjetFinal
                 this.OnPropertyChanged();
             }
         }
-        public int EtatMateriel
+        public int EtatPret
         {
-            get => etatMateriel;
+            get => etatPret;
             set
             {
-                etatMateriel = value;
+                etatPret = value;
                 this.OnPropertyChanged();
             }
         }

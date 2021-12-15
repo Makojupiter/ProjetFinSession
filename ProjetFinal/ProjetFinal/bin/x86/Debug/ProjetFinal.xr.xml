@@ -3,7 +3,7 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Marque" />
     <RootPropertyPathName Name="NomUtilisateur" />
-    <RootPropertyPathName Name="EtatMateriel" />
+    <RootPropertyPathName Name="EtatPret" />
     <RootPropertyPathName Name="NbrMaterielRetourne" />
     <RootPropertyPathName Name="NbrMaterielEnCours" />
     <RootPropertyPathName Name="NbrMateriel" />
