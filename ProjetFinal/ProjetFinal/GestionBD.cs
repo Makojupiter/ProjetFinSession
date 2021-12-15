@@ -26,12 +26,6 @@ namespace ProjetFinal
         int logged;
         int idUser;
 
-        //public ObservableCollection<Pret> ListePret { get => listePret; }
-        //public ObservableCollection<DetailpretVue> ListePretVue { get => ListePretVue;  }
-        //public ObservableCollection<Client> ListeClient { get => listeClient;  }
-        //public ObservableCollection<Materiel> ListeMateriel { get => listeMateriel; }
-        //public ObservableCollection<Utilisateur> ListeUtilisateur { get => listeUtilisateur; }
-
         public GestionBD()
         {
             //this.con = new MySqlConnection("Server=cours.cegep3r.info;Database=a2021_420326ri_equipe_12;Uid=2029918;Pwd=Frtw6630+;");
@@ -258,6 +252,36 @@ namespace ProjetFinal
         public ObservableCollection<Materiel> getListMateriel()
         {
             return listeMateriel;
+        }
+
+        public ObservableCollection<Materiel> getMaterielPret()
+        {
+
+            try
+            {
+                MySqlCommand commande = new MySqlCommand("p_materiel_pret");
+                commande.Connection = con;
+                commande.CommandType = System.Data.CommandType.StoredProcedure;
+
+                con.Open();
+                MySqlDataReader r = commande.ExecuteReader();
+
+                while (r.Read())
+                {
+                    listeMaterielPret.Add(new DetailpretVue(r.GetInt32(0), r.GetString(1), r.GetString(2), r.GetString(3), r.GetInt32(4), r.GetInt32(5), r.GetInt32(6), r.GetInt32(7), r.GetString(8)));
+                }
+                r.Close();
+                con.Close();
+
+                return listeMaterielPret;
+            }
+            catch (MySqlException ex)
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                    con.Close();
+                return listeMaterielPret;
+            }
+
         }
 
         public ObservableCollection<Utilisateur> getUtilisateur()
