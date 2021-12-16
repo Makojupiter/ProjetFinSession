@@ -18,11 +18,14 @@ namespace ProjetFinal
         ObservableCollection<DetailpretVue> listePretVue;
         ObservableCollection<Client> listeClient;
         ObservableCollection<Materiel> listeMateriel;
+        ObservableCollection<Materiel> listeMaterielPret;
         ObservableCollection<Utilisateur> listeUtilisateur;
 
         static GestionBD gestionBD = null;
 
         string usernameLogged;
+        string UsagerduPret = "";
+        string UsagerduPretMail = "";
         int logged;
         int idUser;
 
@@ -34,6 +37,7 @@ namespace ProjetFinal
             listePretVue = new ObservableCollection<DetailpretVue>();
             listeClient = new ObservableCollection<Client>();
             listeMateriel = new ObservableCollection<Materiel>();
+            listeMaterielPret = new ObservableCollection<Materiel>();
             listeUtilisateur = new ObservableCollection<Utilisateur>();
 
             getPretVue();
@@ -254,7 +258,17 @@ namespace ProjetFinal
             return listeMateriel;
         }
 
-        public ObservableCollection<Materiel> getMaterielPret()
+        public ObservableCollection<Materiel> getListMaterielPret()
+        {
+            return listeMaterielPret;
+        }
+
+        public void delListMaterielPret()
+        {
+            listeMaterielPret.Clear();
+        }
+
+        public ObservableCollection<Materiel> getMaterielPret(int ID)
         {
 
             try
@@ -263,12 +277,16 @@ namespace ProjetFinal
                 commande.Connection = con;
                 commande.CommandType = System.Data.CommandType.StoredProcedure;
 
+                commande.Parameters.AddWithValue("recherche", ID);
+
                 con.Open();
                 MySqlDataReader r = commande.ExecuteReader();
 
                 while (r.Read())
                 {
-                    listeMaterielPret.Add(new DetailpretVue(r.GetInt32(0), r.GetString(1), r.GetString(2), r.GetString(3), r.GetInt32(4), r.GetInt32(5), r.GetInt32(6), r.GetInt32(7), r.GetString(8)));
+                    listeMaterielPret.Add(new Materiel(r.GetString(0), r.GetString(1), r.GetString(2), r.GetString(3), r.GetString(4)));
+                    UsagerduPret = r.GetString(5);
+                    UsagerduPretMail = r.GetString(6);
                 }
                 r.Close();
                 con.Close();
@@ -366,6 +384,24 @@ namespace ProjetFinal
         public int getId()
         {
             return idUser;
+        }
+
+        public void retourMateriel(int IDMateriel)
+        {
+
+            MySqlCommand commande = new MySqlCommand();
+            commande.Connection = con;
+            commande.CommandText = "UPDATE detailsPret SET  etatLocation = @etat where idMateriel = @idMateriel";
+
+            commande.Parameters.AddWithValue("@idMateriel", IDMateriel);
+            commande.Parameters.AddWithValue("@etat", 0);
+
+            con.Open();
+            commande.Prepare();
+            commande.ExecuteNonQuery();
+
+            con.Close();
+
         }
 
         public int AjouterClient(Client c)
@@ -632,6 +668,11 @@ namespace ProjetFinal
         public string getUsername()
         {
             return usernameLogged;
+        }
+
+        public string getUsagerduPret()
+        {
+            return UsagerduPret  + " (" + UsagerduPretMail + ")";
         }
     }
 }

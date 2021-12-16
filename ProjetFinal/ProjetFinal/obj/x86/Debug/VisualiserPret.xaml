@@ -25,16 +25,16 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Liste de Prêts" 
+        <TextBlock x:ConnectionId='2' Text="Liste de Prêts" 
                    Foreground="White"
                    FontSize="55"
                    HorizontalAlignment="Center"
                    Grid.Row="0"
                    x:Name="titre"/>
 
-        <controls:DataGrid x:Name="gvPret" AutoGenerateColumns="False"
+        <controls:DataGrid x:ConnectionId='3' x:Name="gvPret" AutoGenerateColumns="False"
                            Grid.Row="1"
-                           Margin="15" SelectionChanged="gvPret_SelectionChanged"
+                           Margin="15"                                           
                            SelectionMode="Single">
             <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn 
@@ -78,12 +78,13 @@
         </controls:DataGrid>
 
         <CommandBar Grid.Row="2" Background="Transparent" IsOpen="False" DefaultLabelPosition="Right">
-            <AppBarButton x:Name="detailButton" Icon="List" Label="Détails du prêt" Click="detailButton_Click"/>
+            <AppBarButton x:ConnectionId='4' x:Name="detailButton" Icon="List" Label="Détails du prêt"                           />
             <AppBarSeparator/>
-            <AppBarButton x:Name="addButton" Icon="Add" Label="Ajouter" Click="addButton_Click"/>
-            <AppBarButton x:Name="editButton" Icon="Edit" Label="Modifier" Click="editButton_Click"/>
-            <AppBarButton x:Name="deleteButton" Icon="Delete" Label="Supprimer" Click="deleteButton_Click"/>
+            <AppBarButton x:ConnectionId='5' x:Name="addButton" Icon="Add" Label="Ajouter"                        />
+            <AppBarButton x:ConnectionId='6' x:Name="editButton" Icon="Edit" Label="Modifier"                         />
+            <AppBarButton x:ConnectionId='7' x:Name="deleteButton" Icon="Delete" Label="Supprimer"                           />
         </CommandBar>
 
     </Grid>
 </Page>
+

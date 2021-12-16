@@ -1,0 +1,83 @@
+﻿<Page
+    x:Class="ProjetFinal.ModifierPret"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjetFinal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF002CF1" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:ConnectionId='2' x:Name="txtClient"
+                   Text="Client "
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="30"
+                   Margin="30"
+                   Grid.ColumnSpan="2"/>
+
+        <controls:DataGrid x:ConnectionId='3' x:Name="gvDetailPret" AutoGenerateColumns="False"
+                           Grid.Row="1"
+                           Margin="15"
+                           SelectionMode="Single"
+                           HorizontalAlignment="Stretch">
+            <controls:DataGrid.Columns>
+                <controls:DataGridTextColumn 
+                    Header="Marque" 
+                    Binding="{Binding Marque, Mode=OneWay}"
+                    Width="Auto"/>
+                <controls:DataGridTextColumn 
+                    Header="Model" 
+                    Binding="{Binding Model, Mode=OneWay}"
+                    Width="Auto"/>
+                <controls:DataGridTextColumn 
+                    Header="Note" 
+                    Binding="{Binding Note, Mode=OneWay}"
+                    Width="Auto"/>
+
+            </controls:DataGrid.Columns>
+
+        </controls:DataGrid>
+
+        <Button x:ConnectionId='4' x:Name="retour"
+                Content="Retourner materiel selectionner"
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                                    />
+
+        <Button x:ConnectionId='5' x:Name="btnTerminer"
+                Content="Terminer"
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"  
+                                         
+                Margin="60"/>
+
+
+    </Grid>
+</Page>
+

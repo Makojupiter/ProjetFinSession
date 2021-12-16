@@ -154,6 +154,9 @@
     <Compile Include="ModifierMateriel.xaml.cs">
       <DependentUpon>ModifierMateriel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ModifierPret.xaml.cs">
+      <DependentUpon>ModifierPret.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ModifierUtilisateur.xaml.cs">
       <DependentUpon>ModifierUtilisateur.xaml</DependentUpon>
     </Compile>
@@ -236,6 +239,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ModifierMateriel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModifierPret.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

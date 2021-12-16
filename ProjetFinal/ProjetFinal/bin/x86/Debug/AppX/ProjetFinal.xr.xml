@@ -2,6 +2,8 @@
 <Roots >
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Marque" />
+    <RootPropertyPathName Name="Note" />
+    <RootPropertyPathName Name="Model" />
     <RootPropertyPathName Name="NomUtilisateur" />
     <RootPropertyPathName Name="EtatPret" />
     <RootPropertyPathName Name="NbrMaterielRetourne" />
@@ -124,6 +126,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="SelectionMode" />
       <RootProperty Name="Columns" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn">
@@ -189,6 +192,7 @@
     </RootType>
     <RootType FullName="ProjetFinal.ModifierClient" />
     <RootType FullName="ProjetFinal.ModifierMateriel" />
+    <RootType FullName="ProjetFinal.ModifierPret" />
     <RootType FullName="ProjetFinal.ModifierUtilisateur" />
     <RootType FullName="ProjetFinal.PageConnexion" />
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">

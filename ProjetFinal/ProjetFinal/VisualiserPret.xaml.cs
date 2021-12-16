@@ -38,9 +38,7 @@ namespace ProjetFinal
 
         private void editButton_Click(object sender, RoutedEventArgs e)
         {
-            //index = gvPret.SelectedIndex;
-            //ModifierPret dialog = new ModifierPret();
-            //await dialog.ShowAsync();
+            titre.Text = Convert.ToString( gvPret.SelectedIndex);
         }
 
         private async void deleteButton_Click(object sender, RoutedEventArgs e)
@@ -66,12 +64,18 @@ namespace ProjetFinal
 
         private void gvPret_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            
+
+            
 
         }
 
         private void detailButton_Click(object sender, RoutedEventArgs e)
         {
 
+            DetailpretVue dp = (DetailpretVue)gvPret.SelectedItem;
+            GestionBD.getInstance().getMaterielPret(dp.IdPret);
+            this.Frame.Navigate(typeof(ModifierPret));
         }
     }
 }
